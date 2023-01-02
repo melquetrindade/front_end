@@ -1,5 +1,5 @@
 # front_end
-![capa_betaAtu](https://user-images.githubusercontent.com/111925696/210245969-15369d4b-f174-4f02-bcd7-14d70a0e304b.png)
+![Aesthetic - Copia2](https://user-images.githubusercontent.com/111925696/210247079-2c5ddf77-3f60-4485-834a-e57803347779.png)
  <h2>Repositório dedicado aos meus mini projetos de Front End</h2>
  <p>
   Tecnologias Utilizadas
