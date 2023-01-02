@@ -3,5 +3,5 @@
  <p>
   Tecnologias Utilizadas
  </p>
- 
-<a href="https://melquetrindade.github.io/front_end2/adivinhe_num/ex6.html">>>> ADIVINHE O NÚMERO <<< </a>
+
+<a href="https://melquetrindade.github.io/front_end/adivinhe_num/ex6.html">>>> ADIVINHE O NÚMERO <<< </a>
