@@ -5,4 +5,4 @@
   # HTML5<br>
   # CSS3<br>
 <h3>Confira abaixo um pouco do meu trabalho</h3>
-# Jogo do Adivinha o Número:<a href="https://melquetrindade.github.io/front_end/adivinhe_num/ex6.html"> > Clique AQUI <</a>
+# Jogo do Adivinha o Número:<a href="https://melquetrindade.github.io/front_end/adivinhe_num/ex6.html"> > Clique AQUI < </a>
