@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Idade</title>
+    <link rel="stylesheet" href="estilo1.css">
+</head>
+<body>
+    <header>
+        <h1>CALCULANDO IDADE</h1>
+    </header>
+    <section>
+        <div>
+            <p>ANO DE NASCIMENTO: 
+                <input type="number" name="txtano" id="txtano" min="0">
+            </p>
+            <p>SEXO: 
+                <input type="radio" name="radsex" id="radm" checked>
+                <label for="radm">MASCULINO</label>
+                <input type="radio" name="radsex" id="radf">
+                <label for="radf">FEMININO</label>
+            </p>
+            <P>
+                <input type="button" value="VERIFICAR" onclick="verificar()">
+            </P>
+        </div>
+        <div id="res">
+            <p>
+                Preencha os dados acima para ver o resultado
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <img id="fotoins" src="insta.png" alt="foto do insta"> <br>
+            @melquetrindade 
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

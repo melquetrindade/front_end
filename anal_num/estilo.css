@@ -1,0 +1,44 @@
+body{
+    background: rgb(164, 81, 206);
+}
+header{
+    color: white;
+    text-align: center;
+    font: normal 15pt Arial;
+}
+section{
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px black;
+    font: normal 10pt Arial;
+}
+select#lista{
+    width: 150px;
+}
+/*
+div#res{
+    margin: 10px;
+    background: aquamarine;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 5px 5px 10px rgb(130, 122, 122);
+    font: normal 10pt Arial;
+    color: rgb(72, 65, 65);
+    font-weight: bold
+*/
+div#de_cima{
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 2px 2px 2px rgb(130, 122, 122);
+    font: normal 10pt Arial;
+}
+footer{
+    color: white;
+    text-align: center;
+    font: normal 15pt Arial;
+    padding: 50px;
+}
