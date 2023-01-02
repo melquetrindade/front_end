@@ -1,5 +1,5 @@
 # front_end
-![capa_mod2](https://user-images.githubusercontent.com/111925696/210242184-ef11d5a7-2b34-4bbb-9cbb-5ccf4f6e7c8f.png)
+![Aesthetic_nova](https://user-images.githubusercontent.com/111925696/210243784-f4abed06-8d75-4927-addf-508713cb0d83.png)
  <h2>Repositório dedicado aos meus mini projetos de Front End</h2>
  <p>
   Tecnologias Utilizadas
