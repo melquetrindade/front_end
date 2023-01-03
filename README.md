@@ -8,7 +8,7 @@
   # CSS3<br>
   # Python<br>
   # C<br>
-<h3>Confira abaixo um pouco do meu trabalho</h3>
+<h3>Confira abaixo um pouco do meu trabalho:</h3>
   # Jogo do Adivinha o Número:<a href="https://melquetrindade.github.io/front_end/adivinhe_num/ex6.html"> > Clique AQUI < </a> <br>
   ---------------------------------------------------------------------------------- <br>
   # APP: Analizador de Números:<a href="https://melquetrindade.github.io/front_end/anal_num/ex.html"> > Clique AQUI < </a> <br>
