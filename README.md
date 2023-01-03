@@ -1,5 +1,7 @@
 # console.log('Hello, Word!')
 ![nova_capa2](https://user-images.githubusercontent.com/111925696/210368354-c2b78f05-6224-4efa-ae8b-c8f0ad181928.png)
+ <h3>Sobre mim:</h3>
+  Olá, me chamo Melque Rodrigues, tenho 20 anos, sou estudante do curso de Bacharel em Sistemas de Informação na Universidade Federal do Rio Grande do Norte. Meu interesse pelo mundo da tecnologia surgi ainda quando criança, agora busco conhecimento e experiência na área da programação para expandir ainda mais meus conhecimentos. 
  <h3>Tecnologias Estudadas:</h3>
   # JavaScript<br>
   # HTML5<br>
