@@ -1,6 +1,6 @@
 # console.log('Hello, Word!')
 ![nova_capa2](https://user-images.githubusercontent.com/111925696/210368354-c2b78f05-6224-4efa-ae8b-c8f0ad181928.png)
- <h3>Tecnologias Utilizadas:</h3>
+ <h3>Tecnologias Estudadas:</h3>
   # JavaScript<br>
   # HTML5<br>
   # CSS3<br>
