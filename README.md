@@ -1,5 +1,5 @@
 # console.log('Hello, Word!')
-![nova_capa1](https://user-images.githubusercontent.com/111925696/210267659-cb7e3a6a-1af6-44dc-b8e7-42534c67e475.png)
+![nova_capa2](https://user-images.githubusercontent.com/111925696/210368354-c2b78f05-6224-4efa-ae8b-c8f0ad181928.png)
  <h3>Tecnologias Utilizadas:</h3>
   # JavaScript<br>
   # HTML5<br>
