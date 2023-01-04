@@ -21,3 +21,5 @@
   ---------------------------------------------------------------------------------- <br>
   # APP: Tabuada:<a href="https://melquetrindade.github.io/front_end/tabuada/ex.html"> > Clique AQUI < </a> <br>
   ---------------------------------------------------------------------------------- <br>
+ <h3>Redes Sociais</h3><br>
+ <a href="https://melquetrindade.github.io/front_end/adivinhe_num/ex6.html"></a> <br>
