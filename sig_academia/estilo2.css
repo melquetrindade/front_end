@@ -4,13 +4,13 @@ body{
 div#sobre{
     background: white;
     font: normal 16px Arial;
-    width: 1400px;
+    width: 1200px;
     padding: 8px;
     margin: auto;
+    padding-left: 30px;
 }
 div#down{
     background: white;
-    font: normal 16px Arial;
     width: 1400px;
     padding: 8px;
     margin: auto;
