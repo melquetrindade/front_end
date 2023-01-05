@@ -1,0 +1,56 @@
+body{
+    background: mediumpurple;
+}
+div#regras{
+    background: white;
+    font: normal 12px Arial;
+    width: 515px;
+    border-radius: 10px;
+    margin: auto;
+    padding: 8px;
+}
+div#espaçamento{
+    background: mediumpurple;
+    padding: 15px;
+}
+header{
+    color: white;
+    font: normal 18pt Arial;
+    text-align: center;
+    padding: 25px;
+    font-weight: bold
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    width: 500px;
+    margin: auto;
+    box-shadow: 5px 5px 10px black;
+    font: normal 12pt Arial;
+}
+select#lista{
+    width: 150px;
+}
+div#res{
+    font: normal 12px Arial;
+    background: aqua;
+    width: 450px;
+    padding: 4px;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 2px 2px 10px black;
+}
+p#listasc{
+    font: normal 12px Arial;
+    background: beige;
+    width: 170px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px black;
+}
+footer{
+    color: white;
+    font: normal 12pt Arial;
+    text-align: center;
+    padding: 20px;
+}

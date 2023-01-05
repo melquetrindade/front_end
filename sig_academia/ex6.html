@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinhe</title>
+    <link rel="stylesheet" href="estilo2.css">
+</head>
+<body>
+    <header>
+        ADIVINHE O NÚMERO
+    </header>
+    <div id="regras">
+        <p>
+            REGRAS E MANUAL: <br><br>
+            1- VOCÊ TERÁ APENAS 10 CHANCES DE ACERTAR O NÚMERO; <br>
+            2- VOCÊ TERÁ QUE ADIVINHAR O NÚMERO SORTEADO PELO PC ENTRE 1 - 100; <br>
+            3- A CADA PALPITE DADO O INTERVALO DOS NÚMEROS IRÁ DIMINUIR; <br>
+            4- O NÚMERO SORTEADO SEMPRE SERÁ INTEIRO.
+        </p>
+    </div>
+    <div id="espaçamento"></div>
+    <section>
+        <div>
+            <p>
+                <ul><ul><ul><ul><img id="fotovid" src="vidente.png" alt="fotoV"></ul></ul></ul></ul>
+                INFORME O NÚMERO:
+                <input type="number" name="numsort" id="numtxt">
+                <input type="button" value="VERIFICAR" onclick="verificar()"><br><br>
+                <p id="listasc">
+                    VALORES JÁ ESCOLHIDOS <br><br>
+                    <select name="list" id="lista"></select>
+                </p>
+            </p>
+        </div>
+        <br>
+        <div id="res">
+        </div>
+    </section>
+    <footer>
+        <img id="fotoins" src="insta.png" alt="foto do insta"><br>
+        @melquetrindade
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
