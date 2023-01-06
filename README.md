@@ -8,7 +8,7 @@
   # CSS3<br>
   # Python<br>
   # C<br>
-<h3>Confira abaixo um pouco do meu trabalho:</h3>
+<h3>Confira abaixo um pouco do meu trabalho:</h3><br>
   # Jogo do Adivinha o Número:<a href="https://melquetrindade.github.io/front_end/adivinhe_num/ex6.html"> > Clique AQUI < </a> <br>
   ---------------------------------------------------------------------------------- <br>
   # APP: Analizador de Números:<a href="https://melquetrindade.github.io/front_end/anal_num/ex.html"> > Clique AQUI < </a> <br>
@@ -21,4 +21,7 @@
   ---------------------------------------------------------------------------------- <br>
   # APP: Tabuada:<a href="https://melquetrindade.github.io/front_end/tabuada/ex.html"> > Clique AQUI < </a> <br>
   ---------------------------------------------------------------------------------- <br>
- <h3>Redes Sociais</h3><br>
+ <h3>Projetos mais avançados:</h3><br>
+  # SIG-Inventory: <a href="https://melquetrindade.github.io/front_end/sig_inventory/ex6.html"> > Clique AQUI < </a> <br>
+  ---------------------------------------------------------------------------------- <br>
+  # SIG-Gym: <a href="https://melquetrindade.github.io/front_end/sig_academia/ex6.html"> > Clique AQUI < </a> <br>
