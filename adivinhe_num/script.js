@@ -35,7 +35,7 @@ function verificar(){
     if(valNum(numtxt.value) && inLista(valores, numtxt.value)){
         valores.push(Number(numtxt.value))
         let item = document.createElement('option')
-        item.text = `Valor ${numtxt.value} adiionado`
+        item.text = `Valor ${numtxt.value} adicionado`
         lista.appendChild(item)
         res.innerHTML = ''
         var acertou = false
