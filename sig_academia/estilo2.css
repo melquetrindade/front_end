@@ -4,15 +4,7 @@ body{
 div#sobre{
     background: white;
     font: normal 16px Arial;
-    width: 1200px;
-    padding: 8px;
-    margin: auto;
-    padding-left: 30px;
-}
-div#down{
-    background: white;
-    width: 1400px;
-    padding: 8px;
+    padding: 15px;
     margin: auto;
 }
 header{
@@ -25,44 +17,18 @@ header{
 }
 div#meio{
     background: white;
-    width: 1000px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px black;
-    padding-right: 40px;
-    margin: auto;
-    padding-top: 20px;
-}
-a#git{
-    padding-right: 30px;
-}
-img#fotogit{
-    padding-right: 30px;
-}
-a#insta{
-    padding-right: 30px;
-}
-img#fotoinsta{
-    padding-right: 30px;
-}
-a#face{
-    padding-right: 30px;
-}
-img#fotoface{
-    padding-right: 30px;
-}
-a#linkd{
-    padding-right: 30px;
-}
-img#fotolinkd{
-    padding-right: 30px;
-}
-img#downFot{
-    background: white;
-    width: 1200px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px black;
     margin: auto;
     padding: 15px;
+}
+a#pLink{
+    padding-right: 15px;
+    font: normal 5px Arial;
+    color: black;
+}
+img#pImg{
+    padding-right: 15px;
 }
 div#area{
     background: dodgerblue;
@@ -82,8 +48,6 @@ div#area2{
     text-align: center;
     color: black;
     font: normal 18px Arial;
-    margin-left: 60px;
-    margin-top: -20px;
     font-weight: bold;
 }
 footer{
