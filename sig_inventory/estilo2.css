@@ -22,28 +22,11 @@ div#meio{
     margin: auto;
     padding: 15px;
 }
-a#git{
+a#pLink{
     padding-right: 30px;
+    font: normal 5px Arial;
 }
-img#fotogit{
-    padding-right: 30px;
-}
-a#insta{
-    padding-right: 30px;
-}
-img#fotoinsta{
-    padding-right: 30px;
-}
-a#face{
-    padding-right: 30px;
-}
-img#fotoface{
-    padding-right: 30px;
-}
-a#linkd{
-    padding-right: 30px;
-}
-img#fotolinkd{
+img#pImg{
     padding-right: 30px;
 }
 div#area{
