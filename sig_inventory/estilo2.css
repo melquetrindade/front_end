@@ -4,13 +4,7 @@ body{
 div#sobre{
     background: white;
     font: normal 16px Arial;
-    padding: 8px;
-    margin: auto;
-}
-div#down{
-    background: white;
-    font: normal 16px Arial;
-    padding: 8px;
+    padding: 15px;
     margin: auto;
 }
 header{
@@ -26,8 +20,7 @@ div#meio{
     border-radius: 10px;
     box-shadow: 2px 2px 10px black;
     margin: auto;
-    padding-top: 20px;
-    padding-left: 60px;
+    padding: 15px;
 }
 a#git{
     padding-right: 30px;
@@ -52,14 +45,6 @@ a#linkd{
 }
 img#fotolinkd{
     padding-right: 30px;
-}
-img#downFot{
-    background: white;
-    width: 1200px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px black;
-    margin: auto;
-    padding: 15px;
 }
 div#area{
     background: dodgerblue;
