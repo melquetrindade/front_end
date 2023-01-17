@@ -29,6 +29,10 @@ body{
     font-family: var(--font-padrao);
 }
 
+a.externo::after{
+    content: '\000A0\1F517';
+}
+
 header{
     background-color: #25223B;
     min-height: 150px;
@@ -106,13 +110,14 @@ main a{
 }
 
 main a:hover{
-    background: #55A0F2;
+    background: #315c8a;
     color: white;
     text-decoration: underline;
 }
 
 main h1, h2{
     font-family: var(--font-android);
+    font-weight: normal;
     background-image: linear-gradient(to right, rgb(199, 206, 211), transparent);
 }
 
@@ -126,7 +131,55 @@ main img#bug{
     max-width: 350px;
 }
 
+div.video{
+    background-color: rgb(224, 231, 237);
+    padding: 20px;
+    margin: 0px -20px;
+    position: relative;
+    padding-bottom: 53%;
+    margin-top: 20px;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    width: 90%;
+    height: 98%;
+}
+
+aside{
+    background-color: rgb(199, 206, 211);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+aside > h3{
+    background-color: rgb(137, 147, 155);
+    padding: 8px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul{
+    list-style-position: inside;
+    columns: 2;
+}
+
 footer{
     background-color: black;
     color: white;
+    padding: 9px;
+    text-align: center;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: #55A0F2;
 }
