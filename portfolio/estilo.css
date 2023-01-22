@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
 body{
     background-color: white;
 }
@@ -7,15 +9,7 @@ body{
 }
 
 header{
-    background-color: rgb(182, 109, 200);
-}
-
-header > h1{
-    text-align: center;
-    color: black;
-    background-color: white;
-    padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(44, 44, 44);
 }
 
 header img{
@@ -27,11 +21,16 @@ header img{
 nav{
     padding: 10px;
     padding-left: 40px;
-    background-color: rgb(149, 86, 165);
+    background-color: rgb(44, 44, 44);
+    border-color: blueviolet;
+    border-style: solid;
+    border-bottom: 0px;
+    border-left: 0px;
+    border-right: 0px;
 }
 
 nav > a{
-    background-color: rgb(149, 86, 165);
+    background-color: rgb(44, 44, 44);
     padding: 6px;
     color: white;
     text-decoration: none;
@@ -42,6 +41,33 @@ nav > a{
 
 nav > a:hover{
     background-color: rgb(115, 199, 203);
-    color: rgb(149, 86, 165);
-    transition-duration: 0.2s;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+main{
+    min-width: 300px;
+    max-width: 900px;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main > article > h2{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+main p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
+
+div#prin{
+    background-color: rgb(44, 44, 44);
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
 }
