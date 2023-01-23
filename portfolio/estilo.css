@@ -50,6 +50,7 @@ main{
     max-width: 900px;
     margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
 }
 
 main > article > h2{
@@ -65,9 +66,32 @@ main p{
     line-height: 1.5em;
 }
 
-div#prin{
-    background-color: rgb(44, 44, 44);
+div#projetos{
+    background-image:linear-gradient(to right, rgb(0, 155, 252) 30%, blue);
+    padding: 15px;
+    border-radius: 7px;
+}
+
+div#projetos > h2{
+    text-indent: 30px;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 30px;
+}
+
+div#projetos > picture{
+    margin-left: 200px;
+    max-width: 350px;
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+div#projetos > div{
+    display: none;
+}
+
+div#projetos:hover > div{
+    display: block;
 }
