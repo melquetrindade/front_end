@@ -7,9 +7,6 @@
 
 body{
     background-color: white;
-}
-
-*{
     margin: 0px;
 }
 
@@ -36,7 +33,7 @@ nav{
 nav > a{
     background-color: rgb(44, 44, 44);
     padding: 6px;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
@@ -70,44 +67,116 @@ main p{
     line-height: 1.5em;
 }
 
-div#projetos{
+/*============================= JOGOS =============================*/
+div#games{
     background-image:linear-gradient(to right, rgb(0, 155, 252) 30%, blue);
     padding: 0px 15px 10px 15px;
     border-radius: 7px;
     min-width: 300px;
     max-width: 900px;
-
+    margin-top: 50px;
 }
 
 h2.games{
     font-size: 20px;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: -30px;
     color: white;
     font-family: 'games';
 }
 
-div#projetos img{
-    display: block;
-    margin: auto;
-    width: 80%;
-    margin-top: 0px;
-    padding-bottom: 0px;
-}
-
-div#projetos > a{
+div#games > picture,a.games{
     display: none;
 }
 
-div#projetos:hover > a{
+div#games:hover picture{
     display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 35px;
+    padding-bottom: 10px;
+}
+
+a.games{
+    text-decoration: none;
     background-color: rgb(66, 88, 228);
     color: rgb(255, 255, 255);
     text-decoration: none;
-    margin: 20px;
     padding: 5px;
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
+    width: 300px;
+}
+
+div#games:hover > a.games{
+    display: block;
+    margin: auto;
+}
+
+a.games:hover{
+    background-image: linear-gradient(to right, rgb(253, 233, 80) 40%, rgb(255, 255, 0));
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    transition-duration: 0.5s;
+}
+/*============================= JOGOS =============================*/
+
+/*============================== APP ==============================*/
+div#app{
+    background-image:linear-gradient(to right, rgb(0, 155, 252) 30%, blue);
+    padding: 0px 15px 10px 15px;
+    border-radius: 7px;
+    min-width: 300px;
+    max-width: 900px;
+}
+
+h2.app{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: -30px;
+    color: white;
+    font-family: 'games';
+}
+
+div#app > picture,a.app{
+    display: none;
+}
+
+div#app:hover picture{
+    display: block;
+    margin: auto;
+    width: 80%;
+    margin-top: 35px;
+    padding-bottom: 10px;
+}
+
+a.app{
+    text-decoration: none;
+    background-color: rgb(66, 88, 228);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    width: 300px;
+}
+
+div#app:hover > a.app{
+    display: block;
+    margin: auto;
+}
+
+a.app:hover{
+    background-image: linear-gradient(to right, rgb(253, 233, 80) 40%, rgb(255, 255, 0));
+    color: rgb(255, 255, 255);
+    margin: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    transition-duration: 0.5s;
 }
