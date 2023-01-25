@@ -125,6 +125,10 @@ div#games:hover > a.games{
     margin: auto;
 }
 
+div#games:hover > div.espa{
+    height: 10px;
+}
+
 a.games:hover{
     background-image: linear-gradient(to right, rgb(247, 218, 0) 30%, rgb(248, 255, 48));
     color: rgb(255, 255, 255);
@@ -193,6 +197,10 @@ div#app:hover > a.app{
     margin: auto;
 }
 
+div#app:hover > div.espa{
+    height: 10px;
+}
+
 a.app:hover{
     background-image: linear-gradient(to right, rgb(247, 218, 0) 30%, rgb(248, 255, 48));
     color: rgb(255, 255, 255);
@@ -235,7 +243,7 @@ div#proj > picture{
 a.proj{
     display: block;
     text-decoration: none;
-    background-color: rgb(94, 0, 149);
+    background-color: rgb(214, 129, 1);
     color: rgb(255, 255, 255);
     padding: 5px;
     border-radius: 5px;
@@ -261,6 +269,10 @@ div#proj:hover > a.proj{
     margin: auto;
 }
 
+div#proj:hover > div.espa{
+    height: 10px;
+}
+
 a.proj:hover{
     background-image: linear-gradient(to right, rgb(247, 218, 0) 30%, rgb(248, 255, 48));
     color: rgb(255, 255, 255);
@@ -268,4 +280,17 @@ a.proj:hover{
     padding: 10px;
     border-radius: 6px;
     transition-duration: 0.5s;
+}
+
+footer{
+    background-color: rgb(44, 44, 44);
+    margin: 0px;
+}
+
+footer > p{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 15px;
 }
