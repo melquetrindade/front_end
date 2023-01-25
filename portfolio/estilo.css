@@ -7,11 +7,12 @@
 
 body{
     background-color: white;
-    margin: 0px;
+    margin: auto;
 }
 
 header{
     background-color: rgb(44, 44, 44);
+    margin: 0px;
 }
 
 header img{
@@ -76,6 +77,7 @@ div#games{
     max-width: 900px;
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 h2.games{
@@ -148,6 +150,7 @@ div#app{
     max-width: 900px;
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 h2.app{
@@ -220,6 +223,7 @@ div#proj{
     max-width: 900px;
     margin-top: 30px;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 h2.proj{
@@ -281,10 +285,12 @@ a.proj:hover{
     border-radius: 6px;
     transition-duration: 0.5s;
 }
+/*============================ PROJETOS ============================*/
 
 footer{
     background-color: rgb(44, 44, 44);
-    margin: 0px;
+    padding-bottom: 15px;
+    text-align: center;
 }
 
 footer > p{
@@ -292,5 +298,19 @@ footer > p{
     text-align: center;
     font-size: 30px;
     color: white;
-    padding: 15px;
+    padding-top: 15px;
+}
+
+footer > a{
+    display: inline-block;
+}
+
+footer picture{
+    display: inline-block;   
+}
+
+footer > div{
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
 }
