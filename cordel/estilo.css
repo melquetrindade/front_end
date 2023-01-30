@@ -27,6 +27,7 @@ header > h1{
     padding-top: 50px;
     font-family: var(--font1);
     font-variant: small-caps;
+    font-size: 40px;
 }
 header > p{
     padding-bottom: 20px;
@@ -81,4 +82,12 @@ footer{
     color: white;
     background-color: black;
     text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: rgb(54, 54, 255);
+    font-weight: bold;
+}
+footer a:hover{
+    text-decoration: underline;
 }
