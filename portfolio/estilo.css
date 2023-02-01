@@ -287,6 +287,37 @@ a.proj:hover{
 }
 /*============================ PROJETOS ============================*/
 
+section{
+    max-width: 900px;
+    min-width: 300px;
+    height: 90vh;
+    position: relative;
+    background-image: url('imagem/back_galaxia.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+div#telefone{
+    width: 305px;
+    height: 627px;
+    background-color: blueviolet;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    background: url('imagem/tela_cell4.png') no-repeat top center;
+}
+
+iframe#tela{
+    height: 547px;
+    width: 266px;
+    position: absolute;
+    left: 6.3%;
+    top: 1.3%;
+    border-radius: 30px;
+}
+
 footer{
     background-color: rgb(44, 44, 44);
     padding-bottom: 15px;
