@@ -290,12 +290,13 @@ a.proj:hover{
 section{
     max-width: 900px;
     min-width: 300px;
-    height: 90vh;
+    height: 95vh;
     position: relative;
     background-image: url('imagem/back_galaxia.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    border-radius: 15px;
 }
 
 div#telefone{
@@ -305,7 +306,7 @@ div#telefone{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -40%);
     background: url('imagem/tela_cell4.png') no-repeat top center;
 }
 
@@ -320,48 +321,27 @@ iframe#tela{
 
 footer{
     background-color: rgb(44, 44, 44);
-    padding-bottom: 15px;
-    text-align: center;
-}
-
-footer > p{
+    padding: 6px;
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     color: white;
-    padding-top: 15px;
-}
-
-footer > a{
-    display: inline-block;
-}
-
-footer picture{
-    display: inline-block;   
-}
-
-footer > div{
-    display: inline;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-div#redes img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin: 15px;
-    display: block;
+    margin-top: 20px;
 }
 
 div#red{
-    position: absolute;
-    top: 3%;
-    text-align: right;
-    display: block;
+    transform: translate(0%, 10%);
+    text-align: center;
 }
 
-div#redes  img:hover{
+div#red img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin: 8px;
+}
+
+div#red img:hover{
     border: 2px solid white;
     transform: translate(-4px, -4px);
     box-shadow: 4px 4px 10px black;
