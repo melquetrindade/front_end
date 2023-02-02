@@ -345,3 +345,24 @@ footer > div{
     padding-left: 15px;
     padding-right: 15px;
 }
+
+div#redes img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 15px;
+    display: block;
+}
+
+div#red{
+    position: absolute;
+    top: 3%;
+    text-align: right;
+    display: block;
+}
+
+div#redes  img:hover{
+    border: 2px solid white;
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 10px black;
+}
