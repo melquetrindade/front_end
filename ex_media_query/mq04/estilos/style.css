@@ -20,8 +20,17 @@ header > h1{
     padding: 10px;
 }
 
-menu {
+span#menu{
+    background-color: rgb(145, 145, 145);
+    color: black;
+    text-align: center;
     display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+menu {
+    display: none;
 }
 
 menu > ul{
