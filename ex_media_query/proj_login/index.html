@@ -31,12 +31,17 @@
                         <input class="form" type="password" name="senha" id="isenha" placeholder="senha" required autocomplete="current-password" minlength="8" maxlength="30">
                         <label for="isenha">Senha</label>
                     </div>
-                    <input type="submit" value="Entrar">
+                    <input type="submit" value="Entrar" onclick="entrar()">
                     <a id="criar" href="#">Criar conta</a>
                     <a id="email" href="#">Esqueceu a senha? <span id="email" class="material-symbols-outlined">mail</span></a>
                 </form>
             </div>
         </section>
     </main>
+    <script>
+        function entrar(){
+            window.alert('Olá, seja bem vindo(a) de volta!')
+        }
+    </script>
 </body>
 </html>
