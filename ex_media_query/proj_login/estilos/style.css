@@ -53,6 +53,7 @@ div#formulario > h1{
 
 div#formulario > p{
     font-size: 0.8em;
+    margin-bottom: 15px;
 }
 
 div.campo {
@@ -71,11 +72,20 @@ div.campo label{
 
 div.campo > span{
     color: white;
+    font-size: 2em;
+    padding: 3px;
+    width: 30px;
+    transform: translateX(-3px);
 }
 
 input.form{
-    border: 1px solid black;
-    padding: 2px;
+    border: 2px solid #5f2c82;
+    padding: 3px;
+    border-radius: 30px;
+    height: 39px;
+    width: calc(100% - 35px);
+    transform: translateY(-9px);
+    padding-left: 15px;
 }
 
 form > input[type=submit]{
@@ -95,21 +105,45 @@ form > input[type=submit]:hover{
     background-color: #5fd0cd;
 }
 
-form > a{
+span#email{
+    transform: translateY(6px);
+}
+
+form > a#email{
     border: 1px solid black;
     text-align: center;
     height: 40px;
-    width: 100%;
+    width: 65%;
     background-color: white;
-    display: block;
+    display: inline-block;
     margin-top: 10px;
     border-radius: 30px;
-    font-size: 1em;
+    font-size: 0.8em;
     text-decoration: none;
     color: black;
+    margin-left: 5px;
 }
 
-form > a:hover{
+form > a#criar{
+    border: 1px solid black;
+    text-align: center;
+    height: 40px;
+    width: 30%;
+    background-color: white;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 0.8em;
+    text-decoration: none;
+    color: black;
+    padding-top: 9px;
+}
+
+form > a#criar:hover{
+    background-color: #8c51b4;
+    color: white;
+}
+
+form > a#email:hover{
     background-color: #8c51b4;
     color: white;
 }
