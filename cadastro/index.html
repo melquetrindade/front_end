@@ -10,9 +10,9 @@
 <body>
     <section>
         <h1>Cadastro</h1>
-        <form action="cadastro.php" method="post" autocomplete="on">
-            <fieldset>
-                <legend>Dados Pessoais</legend>
+        <form method="post" autocomplete="on">
+            <fieldset id="pessoal">
+                <legend class="grupo">Dados Pessoais</legend>
                 <label for="inome">Nome Completo *</label><br>
                 <input type="text" name="nome" id="inome" required placeholder="nome completo" autocomplete="name"><br>
 
@@ -22,14 +22,77 @@
                 <label for="inas">Data de Nascimento *</label><br>
                 <input type="date" name="" id=""><br>
 
-                <legend>Sexo</legend>
+                <legend style="font-size: 0.8em;">Sexo *</legend>
                 <input type="radio" name="sexo" id="isexM" checked>
                 <label for="isexM">Masculino</label>
                 <input type="radio" name="sexo" id="isexF">
                 <label for="isexF">Feminino</label>
-                
             </fieldset>
+            <fieldset id="endereco">
+                <legend class="grupo">Endereço</legend>
+                <label for="iestado">Estado *</label><br>
+                <select name="estado" id="iestado" required>
+                    <optgroup label="Norte">
+                        <option value="">Amazonas</option>
+                        <option value="">Acre</option>
+                        <option value="">Pará</option>
+                        <option value="">Rondônia</option>
+                        <option value="">Roraima</option>
+                        <option value="">Amapá</option>
+                        <option value="">Tocantins</option>
+                    </optgroup>
+                    <optgroup label="Nordeste">
+                        <option value="">Ceará</option>
+                        <option value="">Rio Grande do Norte</option>
+                        <option value="">Paraíba</option>
+                        <option value="">Pernanbuco</option>
+                        <option value="">Alagoas</option>
+                        <option value="">Sergipe</option>
+                        <option value="">Bahia</option>
+                        <option value="">Maranhão</option>
+                        <option value="">Piauí</option>
+                    </optgroup>
+                    <optgroup label="Sudeste">
+                        <option value="">Espírito Santo</option>
+                        <option value="">Minas Gerais</option>
+                        <option value="">Rio de Janeiro</option>
+                        <option value="">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Centro-Oeste">
+                        <option value="">Mato Grosso</option>
+                        <option value="">Mato Grosso do Sul</option>
+                        <option value="">Goiás</option>
+                    </optgroup>
+                    <optgroup label="Sul">
+                        <option value="">Paraná</option>
+                        <option value="">Santa Catarina</option>
+                        <option value="">Rio Grande do Sul</option>
+                    </optgroup>
+                </select>
+
+                <label for="icep">CEP *</label>
+                <input type="text" name="cep" id="icep" required placeholder="00000-000" minlength="8" maxlength="9" size="10"><br>
+
+                <label for="ibairro">Bairro *</label><br>
+                <input type="text" name="bairro" id="ibairro" maxlength="50" required size="20" placeholder="Centro">
+
+                <label for="icomp">Complemento</label>
+                <input type="text" name="comp" id="icomp" placeholder="Casa" size="10"><br>
+
+                <label for="irua">Rua *</label><br>
+                <input type="text" name="rua" id="irua" maxlength="50" required size="20" placeholder="Fulando da Silva">
+
+                <label for="inum">Nº *</label>
+                <input type="text" name="num" id="inum" required maxlength="10" size="5" placeholder="10">
+            </fieldset>
+
+            <input type="submit" value="Realizar Cadastro" id="cad" onclick="enviar()">
         </form>
     </section>
+    <script>
+        function enviar(){
+            window.alert('Cadastro Realizado com sucesso!')
+        }
+    </script>
 </body>
 </html>
