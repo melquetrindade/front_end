@@ -7,26 +7,24 @@
     box-sizing: border-box;
 }
 
-html, body{
-    width: 100vw;
-    height: 100vh;
+body{
+    width: 96vw;
 }
 
 body{
-    background-color: aquamarine;
     background: black url('../imagens/fundo_cad.jpg') no-repeat;
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    width: 100vw;
-    height: 100vh;
 }
 
 section{
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    height: 620px;
+    height: 770px;
     width: 90vw;
+    margin-top: 40px;
+    margin-bottom: 30px;
     box-shadow: 0px 0px 8px black;
     position: absolute;
     top: 50%;
@@ -88,21 +86,15 @@ section fieldset#endereco{
     margin-bottom: 15px;
 }
 
+section fieldset#endereco > input{
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
 fieldset#endereco > select{
     background-color: rgb(243, 243, 243);
     height: 25px;
     border-radius: 5px;
-    margin-right: 30px;
-    margin-left: 10px;
-}
-
-fieldset#endereco > input#ibairro{
-    margin-right: 15px;
-    margin-left: 10px;
-}
-
-fieldset#endereco > input#irua{
-    margin-right: 15px;
     margin-left: 10px;
 }
 
