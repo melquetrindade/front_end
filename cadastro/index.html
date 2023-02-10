@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="estilos/style.css">
+</head>
+<body>
+    <section>
+        <h1>Cadastro</h1>
+        <form action="cadastro.php" method="post" autocomplete="on">
+            <fieldset>
+                <legend>Dados Pessoais</legend>
+                <label for="inome">Nome Completo *</label><br>
+                <input type="text" name="nome" id="inome" required placeholder="nome completo" autocomplete="name"><br>
+
+                <label for="iCpf">CPF *</label><br>
+                <input type="text" name="cpf" id="iCpf" required placeholder="000.000.000-00"><br>
+                
+                <label for="inas">Data de Nascimento *</label><br>
+                <input type="date" name="" id=""><br>
+
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="isexM" checked>
+                <label for="isexM">Masculino</label>
+                <input type="radio" name="sexo" id="isexF">
+                <label for="isexF">Feminino</label>
+                
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
