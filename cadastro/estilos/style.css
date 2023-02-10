@@ -4,7 +4,6 @@
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
 }
 
 body{
@@ -12,24 +11,20 @@ body{
 }
 
 body{
-    background: black url('../imagens/fundo_cad.jpg') no-repeat;
-    background-position: center center;
+    background: black url('../imagens/fundo_cad.jpg') center center no-repeat fixed;
     background-size: cover;
-    background-attachment: fixed;
 }
 
 section{
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-    height: 770px;
     width: 90vw;
-    margin-top: 40px;
-    margin-bottom: 30px;
     box-shadow: 0px 0px 8px black;
     position: absolute;
-    top: 50%;
+    transition: width 0.4s, height 0.4s;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
 }
 
 section > h1{
@@ -58,8 +53,8 @@ input{
 
 legend.grupo{
     font-weight: bold;
-    background-color: blue;
-    color: white;
+    background-color: rgb(0, 255, 183);
+    color: blue;
     padding: 4px;
     border-radius: 10px;
     font-size: 0.9em;
@@ -112,4 +107,8 @@ input#cad{
 input#cad:hover{
     background-color: rgb(0, 255, 183);
     color: blue;
+}
+
+div{
+    height: 30px;
 }
