@@ -39,17 +39,22 @@ main > menu > span{
     color: white;
     transform: translateY(-200%);
     margin-left: 35px;
+    cursor: pointer;
 }
 
-main > menu > p.icone{
+p.icone{
     display: none;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    padding: 7px;
 }
 
-/*
-main > menu > span:hover{
-    background-color: yellow;
-}
-*/
+main > menu > p.img1{ background-color: yellow; }
+main > menu > p.img2{ background-color: rgb(22, 22, 22); }
+main > menu > p.img3{ background-color: rgb(22, 22, 22); }
+main > menu > p.img4{ background-color: rgb(22, 22, 22); }
+
 
 main > section > h1{
     color: white;
