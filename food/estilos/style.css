@@ -35,11 +35,21 @@ main > header p#palavra2{
     color: red;
 }
 
-main > menu{
+main > menu > span{
     color: white;
-    transform: translateY(-260%);
-    margin-left: 20px;
+    transform: translateY(-200%);
+    margin-left: 35px;
 }
+
+main > menu > p.icone{
+    display: none;
+}
+
+/*
+main > menu > span:hover{
+    background-color: yellow;
+}
+*/
 
 main > section > h1{
     color: white;
