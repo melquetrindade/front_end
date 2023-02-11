@@ -17,6 +17,7 @@ body{
 main > header{
     background-color: rgb(22, 22, 22);
     padding: 20px;
+    margin-left: calc(96vw - 170px);
 }
 
 main > header > div{
@@ -34,21 +35,43 @@ main > header p#palavra2{
     color: red;
 }
 
+main > menu{
+    color: white;
+    transform: translateY(-260%);
+    margin-left: 20px;
+}
+
+main > section > h1{
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 main > section > div{
     display: block;
     color: white;
     width: 300px;
     background-color: rgba(0, 0, 0, 0.529);
     margin: auto;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     padding: 10px;
     border-radius: 10px;
+    box-shadow: 1px 1px 5px red;
+}
+
+main > section > div > h2{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 1em;
+    padding-top: 20px;
+    padding-bottom: 5px;
 }
 
 main > section > div > img{
     display: block;
     margin: auto;
-    padding: 3px;
+    padding: 6px;
 }
 
 section#hamburguer{ display: block; }
@@ -57,5 +80,33 @@ section#bebidas{ display: none; }
 section#sorvetes{ display: none; }
 
 main > section > div > p{
-    font-size: 0.7em;
+    font-size: 0.6em;
+    padding-left: 15px;
+}
+
+div.preco{
+    display: block;
+    margin-top: 10px;
+    padding-left: 15px;
+}
+
+div.preco > p.valor{
+    text-align: left;
+    display: inline;
+    font-size: 1.3em;
+}
+
+div.preco > p.botao{
+    text-align: right;
+    display: inline;
+    margin-left: 130px;
+    background-color: red;
+    padding: 4px 10px;
+    font-size: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+div.preco > p.botao:hover{
+    background-color: rgb(195, 0, 0);
 }
