@@ -45,6 +45,7 @@
         <section id="hamburguer">
             <h1>HAMBÚRGUERES</h1>
             <div id="simples">
+                <div id="unidSimples" class="qtd">0</div>
                 <h2>SIMPLES</h2>
                 <img src="imagens/simples.jpg" alt="simples">
                 <p>
@@ -52,10 +53,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 7,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="simples()">+</p>
                 </div>
             </div>
             <div id="x-picanha">
+                <div id="unidPicanha" class="qtd">0</div>
                 <h2>X-PICANHA</h2>
                 <img src="imagens/x-picanha.jpg" alt="picanha">
                 <p>
@@ -63,10 +65,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 13,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="picanha()">+</p>
                 </div>
             </div>
             <div id="x-tudo">
+                <div id="unidTudo" class="qtd">0</div>
                 <h2>X-TUDO</h2>
                 <img src="imagens/x-tudo.jpg" alt="tudo">
                 <p>
@@ -74,10 +77,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 10,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="tudo()">+</p>
                 </div>
             </div>
             <div id="chicken">
+                <div id="unidChicken" class="qtd">0</div>
                 <h2>CHICKEN</h2>
                 <img src="imagens/chekin.jpg" alt="chicken">
                 <p>
@@ -85,10 +89,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 12,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" id="oi" onclick="chicken()">+</p>
                 </div>
             </div>
             <div id="duplo">
+                <div id="unidDuplo" class="qtd">0</div>
                 <h2>DUPLO X-TUDO DE PICANHA</h2>
                 <img src="imagens/duplo.jpg" alt="duplo">
                 <p>
@@ -96,14 +101,16 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 17,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="duplo()">+</p>
                 </div>
             </div>
         </section>
 
         <!-- ============== SESSÃO DE PIZZA ============-->
         <section id="pizza">
-            <div id="chefe">
+            <h1>PIZZA</h1>
+            <div id="unidChefe" id="chefe">
+                <div class="qtd">0</div>
                 <h2>CHEFE</h2>
                 <img src="imagens/chefe.jpg" alt="chefe">
                 <p>
@@ -111,10 +118,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 19,50</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="chefe()">+</p>
                 </div>
             </div>
             <div id="4-queijos">
+                <div id="unidQueijos" class="qtd">0</div>
                 <h2>4 QUEIJOS</h2>
                 <img src="imagens/4-queijos.jpg" alt="queijo">
                 <p>
@@ -122,10 +130,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 20,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="queijos()">+</p>
                 </div>
             </div>
             <div id="paulista">
+                <div id="unidPaulista" class="qtd">0</div>
                 <h2>PAULISTA</h2>
                 <img src="imagens/paulista.jpg" alt="paulista">
                 <p>
@@ -133,10 +142,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 19,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="paulista()">+</p>
                 </div>
             </div>
             <div id="romana">
+                <div id="unidRomana" class="qtd">0</div>
                 <h2>ROMANA</h2>
                 <img src="imagens/romana.jpg" alt="romana">
                 <p>
@@ -144,10 +154,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 19,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="romana()">+</p>
                 </div>
             </div>
             <div id="carne">
+                <div id="unidCarne" class="qtd">0</div>
                 <h2>CARNE</h2>
                 <img src="imagens/carne.jpg" alt="carne">
                 <p>
@@ -155,14 +166,16 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 20,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="carne()">+</p>
                 </div>
             </div>
         </section>
 
         <!-- ================ SESSÃO DE BEBIDAS ==============-->
         <section id="bebidas">
+            <h1>BEBIDAS</h1>
             <div id="coca">
+                <div class="qtd">0</div>
                 <h2>COCA-COLA</h2>
                 <img src="imagens/coca.jpg" alt="coca">
                 <p>
@@ -174,6 +187,7 @@
                 </div>
             </div>
             <div id="fanta">
+                <div class="qtd">0</div>
                 <h2>FANTA</h2>
                 <img src="imagens/fanta.jpg" alt="fanta">
                 <p>
@@ -185,6 +199,7 @@
                 </div>
             </div>
             <div id="guarana">
+                <div class="qtd">0</div>
                 <h2>GUARANÁ</h2>
                 <img src="imagens/guarana.jpeg" alt="guara">
                 <p>
@@ -196,6 +211,7 @@
                 </div>
             </div>
             <div id="suco">
+                <div class="qtd">0</div>
                 <h2>SUCO DE LARANJA</h2>
                 <img src="imagens/suco.jpg" alt="suco">
                 <p>
@@ -207,6 +223,7 @@
                 </div>
             </div>
             <div id="agua">
+                <div class="qtd">0</div>
                 <h2>ÁGUA MINERAL</h2>
                 <img src="imagens/agua.jpg" alt="agua">
                 <p>
@@ -221,7 +238,9 @@
 
         <!-- ================ SESSÃO DE SORVETES =============-->
         <section id="sorvetes">
+            <h1>SOBREMESA</h1>
             <div id="choco">
+                <div class="qtd">0</div>
                 <h2>SORVETE DE CHOCOLATE</h2>
                 <img src="imagens/sovete_choco.jpg" alt="choco">
                 <p>
@@ -233,6 +252,7 @@
                 </div>
             </div>
             <div id="milk">
+                <div class="qtd">0</div>
                 <h2>MILKSHAKE</h2>
                 <img src="imagens/milkshake.jpg" alt="shake">
                 <p>
@@ -244,6 +264,7 @@
                 </div>
             </div>
             <div id="acai">
+                <div class="qtd">0</div>
                 <h2>AÇAÍ</h2>
                 <img src="imagens/acai.jpg" alt="acai">
                 <p>
@@ -255,6 +276,7 @@
                 </div>
             </div>
             <div id="morango">
+                <div class="qtd">0</div>
                 <h2>SORVETE DE MORANGO</h2>
                 <img src="imagens/sorvete_morango.jpg" alt="morango">
                 <p>
@@ -266,6 +288,7 @@
                 </div>
             </div>
             <div id="picole">
+                <div class="qtd">0</div>
                 <h2>PICOLÉ</h2>
                 <img src="imagens/picole.jpg" alt="pico">
                 <p>
