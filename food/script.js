@@ -18,7 +18,7 @@ secSorvetes.style.display = 'none'
 menu.style.display = 'none'
 
 function clicou(){
-        if(fundoMenu.style.display == 'none'){
+        if(menu.style.display == 'none'){
                 imenu.style.backgroundColor = 'red'
                 imenu.style.borderRadius = '50%'
                 imenu.style.padding = '5px'
@@ -56,6 +56,10 @@ function clicou1(){
                 secSorvetes.style.display = 'none'
                 secHam.style.display = 'block'
         }
+        menu.style.display = 'none'
+        imenu.style.backgroundColor = 'rgb(22, 22, 22)'
+        imenu.style.borderRadius = 'none'
+        imenu.style.padding = '0px'
 }
 
 function clicou2(){
@@ -69,6 +73,10 @@ function clicou2(){
                 secSorvetes.style.display = 'none'
                 secPizza.style.display = 'block'
         }
+        menu.style.display = 'none'
+        imenu.style.backgroundColor = 'rgb(22, 22, 22)'
+        imenu.style.borderRadius = 'none'
+        imenu.style.padding = '0px'
 }
 
 function clicou3(){
@@ -82,6 +90,10 @@ function clicou3(){
                 secSorvetes.style.display = 'none'
                 secBebidas.style.display = 'block'
         }
+        menu.style.display = 'none'
+        imenu.style.backgroundColor = 'rgb(22, 22, 22)'
+        imenu.style.borderRadius = 'none'
+        imenu.style.padding = '0px'
 }
 
 function clicou4(){
@@ -95,12 +107,8 @@ function clicou4(){
                 secBebidas.style.display = 'none'
                 secSorvetes.style.display = 'block'
         }
+        menu.style.display = 'none'
+        imenu.style.backgroundColor = 'rgb(22, 22, 22)'
+        imenu.style.borderRadius = 'none'
+        imenu.style.padding = '0px'
 }
-
-//function entrou(){
-//    menu.style.backgroundColor = 'red'
-//}
-
-//function saiu(){
-//    menu.style.backgroundColor = 'rgb(22, 22, 22)'
-//}
