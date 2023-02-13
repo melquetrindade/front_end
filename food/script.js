@@ -5,6 +5,23 @@ let secHam = window.document.getElementById('hamburguer')
 let secPizza = window.document.getElementById('pizza')
 let secBebidas = window.document.getElementById('bebidas')
 let secSorvetes = window.document.getElementById('sorvetes')
+let compras = window.document.getElementById('compra')
+
+let temp = window.document.getElementById('tempo')
+
+compras.style.position = 'absolute'
+compras.style.right = '0px'
+compras.style.opacity ='1'
+compras.style.display = 'none'
+
+function dCompra(){
+        compras.style.display = 'block'
+        compras.style.marginTop = '-70px'
+        compras.style.transitionDuration = '1.5s'
+        setTimeout(function(){
+                compras.style.display = 'none' 
+        }, 1200);
+}
 
 // PEGANDO TODOS OS ID's DAS QUANTIDADES DE CADA ELEMENTO
 
@@ -21,6 +38,20 @@ let unidQueijos = window.document.getElementById('unidQueijos')
 let unidPaulista = window.document.getElementById('unidPaulista')
 let unidRomana = window.document.getElementById('unidRomana')
 let unidCarne = window.document.getElementById('unidCarne')
+
+// ------- SESSÃO DE BEBIDAS --------
+let unidCoca = window.document.getElementById('unidCoca')
+let unidFanta = window.document.getElementById('unidFanta')
+let unidGuarana = window.document.getElementById('unidGuarana')
+let unidSuco = window.document.getElementById('unidSuco')
+let unidAgua = window.document.getElementById('unidAgua')
+
+// ------- SESSÃO DE SOBREMESA --------
+let unidChoco = window.document.getElementById('unidChoco')
+let unidMilk = window.document.getElementById('unidMilk')
+let unidAcai = window.document.getElementById('unidAcai')
+let unidMorango = window.document.getElementById('unidMorango')
+let unidPicole = window.document.getElementById('unidPicole')
 
 // PEGANDO OS ID's DOS ÍCONES DE CADA SESSÃO
 let i1 = window.document.getElementById('img1')
@@ -51,6 +82,18 @@ var qtdQueijos = 0
 var qtdPaulista = 0
 var qtdRomana = 0
 var qtdCarne = 0
+// ------- SESSÃO DE BEBIDAS --------
+var qtdCoca = 0
+var qtdFanta = 0
+var qtdGuarana = 0
+var qtdSuco = 0
+var qtdAgua = 0
+// ------- SESSÃO DE SOBREMESA --------
+var qtdChoco = 0
+var qtdMilk = 0
+var qtdAcai = 0
+var qtdMorango = 0
+var qtdPicole = 0
 
 
 // FUNÇÕES QUE ADICIONAM A QUANTIADE DOS PRODUTOS
@@ -60,6 +103,19 @@ function simples(){
         qtdSimples += 1
         unidSimples.style.display = 'block'
         unidSimples.innerHTML = `${qtdSimples}`
+        setTimeout(function(){
+                compras.style.display = 'block'
+                compras.style.marginTop = '100px'
+
+        }, 0);
+        setTimeout(function(){
+                compras.style.marginTop = '-40px'
+                compras.style.transitionDuration = '0.8s'
+        }, 1000);
+        setTimeout(function(){
+                compras.style.display = 'none' 
+        }, 2000);
+        
 }
 
 function picanha(){
@@ -78,6 +134,18 @@ function chicken(){
         qtdChicken += 1
         unidChicken.style.display = 'block'
         unidChicken.innerHTML = `${qtdChicken}`
+        setTimeout(function(){
+                compras.style.display = 'block'
+                compras.style.marginTop = '970px'
+
+        }, 0);
+        setTimeout(function(){
+                compras.style.marginTop = '-50px'
+                compras.style.transitionDuration = '1.5s'
+        }, 1000);
+        setTimeout(function(){
+                compras.style.display = 'none' 
+        }, 2000);
 }
 
 function duplo(){
@@ -114,6 +182,66 @@ function carne(){
         qtdCarne += 1
         unidCarne.style.display = 'block'
         unidCarne.innerHTML = `${qtdCarne}`
+}
+// ------- SESSÃO DE BEBIDAS --------
+function coca(){
+        qtdCoca += 1
+        unidCoca.style.display = 'block'
+        unidCoca.innerHTML = `${qtdCoca}`
+}
+
+function fanta(){
+        qtdFanta += 1
+        unidFanta.style.display = 'block'
+        unidFanta.innerHTML = `${qtdFanta}`
+}
+
+function guarana(){
+        qtdGuarana += 1
+        unidGuarana.style.display = 'block'
+        unidGuarana.innerHTML = `${qtdGuarana}`
+}
+
+function suco(){
+        qtdSuco += 1
+        unidSuco.style.display = 'block'
+        unidSuco.innerHTML = `${qtdSuco}`
+}
+
+function agua(){
+        qtdAgua += 1
+        unidAgua.style.display = 'block'
+        unidAgua.innerHTML = `${qtdAgua}`
+}
+// ------- SESSÃO DE SOBREMESA --------
+function choco(){
+        qtdChoco += 1
+        unidChoco.style.display = 'block'
+        unidChoco.innerHTML = `${qtdChoco}`
+}
+
+function milk(){
+        qtdMilk += 1
+        unidMilk.style.display = 'block'
+        unidMilk.innerHTML = `${qtdMilk}`
+}
+
+function acai(){
+        qtdAcai += 1
+        unidAcai.style.display = 'block'
+        unidAcai.innerHTML = `${qtdAcai}`
+}
+
+function morango(){
+        qtdMorango += 1
+        unidMorango.style.display = 'block'
+        unidMorango.innerHTML = `${qtdMorango}`
+}
+
+function picole(){
+        qtdPicole += 1
+        unidPicole.style.display = 'block'
+        unidPicole.innerHTML = `${qtdPicole}`
 }
 
 

@@ -40,6 +40,9 @@
                 <img src="imagens/iSorvete.png" alt="sorvete" onclick="clicou4()">
             </p>
         </menu>
+        <div id="compra">
+
+        </div>
 
         <!-- ========= SESSÃO DE HAMBÚRGUERES ========-->
         <section id="hamburguer">
@@ -109,8 +112,8 @@
         <!-- ============== SESSÃO DE PIZZA ============-->
         <section id="pizza">
             <h1>PIZZA</h1>
-            <div id="unidChefe" id="chefe">
-                <div class="qtd">0</div>
+            <div id="chefe">
+                <div id="unidChefe" class="qtd">0</div>
                 <h2>CHEFE</h2>
                 <img src="imagens/chefe.jpg" alt="chefe">
                 <p>
@@ -175,7 +178,7 @@
         <section id="bebidas">
             <h1>BEBIDAS</h1>
             <div id="coca">
-                <div class="qtd">0</div>
+                <div id="unidCoca" class="qtd">0</div>
                 <h2>COCA-COLA</h2>
                 <img src="imagens/coca.jpg" alt="coca">
                 <p>
@@ -183,11 +186,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 2,50</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="coca()">+</p>
                 </div>
             </div>
             <div id="fanta">
-                <div class="qtd">0</div>
+                <div id="unidFanta" class="qtd">0</div>
                 <h2>FANTA</h2>
                 <img src="imagens/fanta.jpg" alt="fanta">
                 <p>
@@ -195,11 +198,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 2,50</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="fanta()">+</p>
                 </div>
             </div>
             <div id="guarana">
-                <div class="qtd">0</div>
+                <div id="unidGuarana" class="qtd">0</div>
                 <h2>GUARANÁ</h2>
                 <img src="imagens/guarana.jpeg" alt="guara">
                 <p>
@@ -207,11 +210,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 2,50</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="guarana()">+</p>
                 </div>
             </div>
             <div id="suco">
-                <div class="qtd">0</div>
+                <div id="unidSuco" class="qtd">0</div>
                 <h2>SUCO DE LARANJA</h2>
                 <img src="imagens/suco.jpg" alt="suco">
                 <p>
@@ -219,11 +222,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 1,50</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="suco()">+</p>
                 </div>
             </div>
             <div id="agua">
-                <div class="qtd">0</div>
+                <div id="unidAgua" class="qtd">0</div>
                 <h2>ÁGUA MINERAL</h2>
                 <img src="imagens/agua.jpg" alt="agua">
                 <p>
@@ -231,7 +234,7 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 1,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="agua()">+</p>
                 </div>
             </div>
         </section>
@@ -240,7 +243,7 @@
         <section id="sorvetes">
             <h1>SOBREMESA</h1>
             <div id="choco">
-                <div class="qtd">0</div>
+                <div id="unidChoco" class="qtd">0</div>
                 <h2>SORVETE DE CHOCOLATE</h2>
                 <img src="imagens/sovete_choco.jpg" alt="choco">
                 <p>
@@ -248,11 +251,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 10,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="choco()">+</p>
                 </div>
             </div>
             <div id="milk">
-                <div class="qtd">0</div>
+                <div id="unidMilk" class="qtd">0</div>
                 <h2>MILKSHAKE</h2>
                 <img src="imagens/milkshake.jpg" alt="shake">
                 <p>
@@ -260,11 +263,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 9,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="milk()">+</p>
                 </div>
             </div>
             <div id="acai">
-                <div class="qtd">0</div>
+                <div id="unidAcai" class="qtd">0</div>
                 <h2>AÇAÍ</h2>
                 <img src="imagens/acai.jpg" alt="acai">
                 <p>
@@ -272,11 +275,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 14,50</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="acai()">+</p>
                 </div>
             </div>
             <div id="morango">
-                <div class="qtd">0</div>
+                <div id="unidMorango" class="qtd">0</div>
                 <h2>SORVETE DE MORANGO</h2>
                 <img src="imagens/sorvete_morango.jpg" alt="morango">
                 <p>
@@ -284,11 +287,11 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 10,00</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="morango()">+</p>
                 </div>
             </div>
             <div id="picole">
-                <div class="qtd">0</div>
+                <div id="unidPicole" class="qtd">0</div>
                 <h2>PICOLÉ</h2>
                 <img src="imagens/picole.jpg" alt="pico">
                 <p>
@@ -296,7 +299,7 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 3,50</p>
-                    <p class="botao">+</p>
+                    <p class="botao" onclick="picole()">+</p>
                 </div>
             </div>
         </section>

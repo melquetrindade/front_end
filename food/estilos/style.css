@@ -60,6 +60,16 @@ p.icone:hover{
     background-color: yellow;
 }
 
+main > div#compra{
+    background-color: white;
+    width: 250px;
+    height: 50px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top: 4px solid rgb(39, 181, 39);
+    border-bottom: 4px solid rgb(39, 181, 39);
+    border-left: 4px solid rgb(39, 181, 39);
+}
 
 main > section > h1{
     color: white;
