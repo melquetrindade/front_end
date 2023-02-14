@@ -162,3 +162,34 @@ div.preco > p.botao{
 div.preco > p.botao:hover{
     background-color: rgb(195, 0, 0);
 }
+
+section#carrinho{
+    background-color: red;
+    width: 170px;
+    margin-left: auto;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+section#carrinho > p{
+    display: inline;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+section#carrinho > span{
+    color: white;
+    padding-right: 7px;
+}
+
+section#carrinho > p#qtdCarro{
+    color: yellow;
+    display: inline;
+    font-size: 1.6em;
+}
+
+section#carrinho:hover{
+    background-color: rgb(204, 2, 2);
+}

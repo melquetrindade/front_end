@@ -6,6 +6,7 @@ let secPizza = window.document.getElementById('pizza')
 let secBebidas = window.document.getElementById('bebidas')
 let secSorvetes = window.document.getElementById('sorvetes')
 let compras = window.document.getElementById('info')
+let numCompras = window.document.getElementById('qtdCarro')
 
 compras.style.position = 'absolute'
 compras.style.right = '0px'
@@ -71,170 +72,291 @@ secBebidas.style.display = 'none'
 secSorvetes.style.display = 'none'
 
 
-// VARIÁVEIS RELACIONADAS A QUANTIDADE COMPRADA DE CADA PRODUTO
+// LISTA RELACIONADA A QUANTIDADE COMPRADA DE CADA PRODUTO
+var qtdGeral = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
-// ------- SESSÃO DE HAMBÚRGUERES --------
-var qtdSimples = 0
-var qtdPicanha = 0
-var qtdTudo = 0
-var qtdChicken = 0
-var qtdDuplo = 0
-// ------- SESSÃO DE PIZZA --------
-var qtdChefe = 0
-var qtdQueijos = 0
-var qtdPaulista = 0
-var qtdRomana = 0
-var qtdCarne = 0
-// ------- SESSÃO DE BEBIDAS --------
-var qtdCoca = 0
-var qtdFanta = 0
-var qtdGuarana = 0
-var qtdSuco = 0
-var qtdAgua = 0
-// ------- SESSÃO DE SOBREMESA --------
-var qtdChoco = 0
-var qtdMilk = 0
-var qtdAcai = 0
-var qtdMorango = 0
-var qtdPicole = 0
+var totalCarro = 0
 
+//function AtualCarro(){
+//        var lenGeral = qtdGeral.length
+//        for(var i=0; i < lenGeral; i++){
+//                if(qtdGeral[i] > 0){
+//                        totalCarro += 1
+//                }
+//                else{
+//                        continue
+//                }
+//        }
+//        numCompras.innerHTML = `${totalCarro}`
+//}
 
-// FUNÇÕES QUE ADICIONAM A QUANTIADE DOS PRODUTOS
+// FUNÇÕES QUE ADICIONAM A QUANTIADE DOS PRODUTOS COMPRADOS
 
 // ------- SESSÃO DE HAMBÚRGUERES --------
 function simples(aviso){
-        qtdSimples += 1
+        qtdGeral[0] += 1
         unidSimples.style.display = 'inline'
-        unidSimples.innerHTML = `${qtdSimples}`
-        if(qtdSimples == 1){
-                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdSimples} Simples adicionado aos pedidos!`
+        unidSimples.innerHTML = `${qtdGeral[0]}`
+        if(qtdGeral[0] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[0]} Simples adicionado aos pedidos!`
+                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) SIMPLES adicionado aos pedidos!'
         }
         aviso
+        numCompras.innerHTML = `${totalCarro}`
         
 }
 
-function picanha(){
-        qtdPicanha += 1
+function picanha(aviso){
+        qtdGeral[1] += 1
         unidPicanha.style.display = 'block'
-        unidPicanha.innerHTML = `${qtdPicanha}`
-        if(qtdPicanha == 1){
-                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdPicanha} X-Picanha adicionado aos pedidos!`
+        unidPicanha.innerHTML = `${qtdGeral[1]}`
+        if(qtdGeral[1] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[1]} X-Picanha adicionado aos pedidos!`
+                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) X-Picanha adicionado aos pedidos!'
         }
+        aviso
+        numCompras.innerHTML = `${totalCarro}`
+        
 }
 
-function tudo(){
-        qtdTudo += 1
+function tudo(aviso){
+        qtdGeral[2] += 1
         unidTudo.style.display = 'block'
-        unidTudo.innerHTML = `${qtdTudo}`
-}
-
-function chicken(aviso){
-        qtdChicken += 1
-        unidChicken.style.display = 'block'
-        unidChicken.innerHTML = `${qtdChicken}`
+        unidTudo.innerHTML = `${qtdGeral[2]}`
+        if(qtdGeral[2] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[2]} X-Tudo adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) X-Tudo adicionado aos pedidos!'
+        }
         aviso
 }
 
-function duplo(){
-        qtdDuplo += 1
+function chicken(aviso){
+        qtdGeral[3] += 1
+        unidChicken.style.display = 'block'
+        unidChicken.innerHTML = `${qtdGeral[3]}`
+        if(qtdGeral[3] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[3]} Chicken adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Chicken adicionado aos pedidos!'
+        }
+        aviso
+}
+
+function duplo(aviso){
+        qtdGeral[4] += 1
         unidDuplo.style.display = 'block'
-        unidDuplo.innerHTML = `${qtdDuplo}`
+        unidDuplo.innerHTML = `${qtdGeral[4]}`
+        if(qtdGeral[4] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[4]} Duplo X-Tudo de Picanha adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Duplo X-Tudo de Picanha adicionado aos pedidos!'
+        }
+        aviso
 }
 // ------- SESSÃO DE PIZZA --------
-function chefe(){
-        qtdChefe += 1
+function chefe(aviso){
+        qtdGeral[5] += 1
         unidChefe.style.display = 'block'
-        unidChefe.innerHTML = `${qtdChefe}`
+        unidChefe.innerHTML = `${qtdGeral[5]}`
+        if(qtdGeral[5] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[5]} Chefe adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Chefe adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function queijos(){
-        qtdQueijos += 1
+function queijos(aviso){
+        qtdGeral[6] += 1
         unidQueijos.style.display = 'block'
-        unidQueijos.innerHTML = `${qtdQueijos}`
+        unidQueijos.innerHTML = `${qtdGeral[6]}`
+        if(qtdGeral[6] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[6]} 4-Queijos adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) 4-Queijos adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function paulista(){
-        qtdPaulista += 1
+function paulista(aviso){
+        qtdGeral[7] += 1
         unidPaulista.style.display = 'block'
-        unidPaulista.innerHTML = `${qtdPaulista}`
+        unidPaulista.innerHTML = `${qtdGeral[7]}`
+        if(qtdGeral[7] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[7]} Paulista adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Paulista adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function romana(){
-        qtdRomana += 1
+function romana(aviso){
+        qtdGeral[8] += 1
         unidRomana.style.display = 'block'
-        unidRomana.innerHTML = `${qtdRomana}`
+        unidRomana.innerHTML = `${qtdGeral[8]}`
+        if(qtdGeral[8] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[8]} Romana adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Romana adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function carne(){
-        qtdCarne += 1
+function carne(aviso){
+        qtdGeral[9] += 1
         unidCarne.style.display = 'block'
-        unidCarne.innerHTML = `${qtdCarne}`
+        unidCarne.innerHTML = `${qtdGeral[9]}`
+        if(qtdGeral[9] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[9]} Carne adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Carne adicionado aos pedidos!'
+        }
+        aviso
 }
 // ------- SESSÃO DE BEBIDAS --------
-function coca(){
-        qtdCoca += 1
+function coca(aviso){
+        qtdGeral[10] += 1
         unidCoca.style.display = 'block'
-        unidCoca.innerHTML = `${qtdCoca}`
+        unidCoca.innerHTML = `${qtdGeral[10]}`
+        if(qtdGeral[10] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[10]} Coca-Cola adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Coca-Cola adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function fanta(){
-        qtdFanta += 1
+function fanta(aviso){
+        qtdGeral[11] += 1
         unidFanta.style.display = 'block'
-        unidFanta.innerHTML = `${qtdFanta}`
+        unidFanta.innerHTML = `${qtdGeral[11]}`
+        if(qtdGeral[11] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[11]} Fanta adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Fanta adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function guarana(){
-        qtdGuarana += 1
+function guarana(aviso){
+        qtdGeral[12] += 1
         unidGuarana.style.display = 'block'
-        unidGuarana.innerHTML = `${qtdGuarana}`
+        unidGuarana.innerHTML = `${qtdGeral[12]}`
+        if(qtdGeral[12] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[12]} Guaraná adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Guaraná adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function suco(){
-        qtdSuco += 1
+function suco(aviso){
+        qtdGeral[13] += 1
         unidSuco.style.display = 'block'
-        unidSuco.innerHTML = `${qtdSuco}`
+        unidSuco.innerHTML = `${qtdGeral[13]}`
+        if(qtdGeral[13] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[13]} Suco de Laranja adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Suco de Laranja adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function agua(){
-        qtdAgua += 1
+function agua(aviso){
+        qtdGeral[14] += 1
         unidAgua.style.display = 'block'
-        unidAgua.innerHTML = `${qtdAgua}`
+        unidAgua.innerHTML = `${qtdGeral[14]}`
+        if(qtdGeral[14] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[14]} Água adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Água adicionado aos pedidos!'
+        }
+        aviso
 }
 // ------- SESSÃO DE SOBREMESA --------
-function choco(){
-        qtdChoco += 1
+function choco(aviso){
+        qtdGeral[15] += 1
         unidChoco.style.display = 'block'
-        unidChoco.innerHTML = `${qtdChoco}`
+        unidChoco.innerHTML = `${qtdGeral[15]}`
+        if(qtdGeral[15] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[15]} Sorvete de Chocolate adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Sorvete de Chocolate adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function milk(){
-        qtdMilk += 1
+function milk(aviso){
+        qtdGeral[16] += 1
         unidMilk.style.display = 'block'
-        unidMilk.innerHTML = `${qtdMilk}`
+        unidMilk.innerHTML = `${qtdGeral[16]}`
+        if(qtdGeral[16] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[16]} MilkShake adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) MilkShake adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function acai(){
-        qtdAcai += 1
+function acai(aviso){
+        qtdGeral[17] += 1
         unidAcai.style.display = 'block'
-        unidAcai.innerHTML = `${qtdAcai}`
+        unidAcai.innerHTML = `${qtdGeral[17]}`
+        if(qtdGeral[17] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[17]} Açaí adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Açaí adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function morango(){
-        qtdMorango += 1
+function morango(aviso){
+        qtdGeral[18] += 1
         unidMorango.style.display = 'block'
-        unidMorango.innerHTML = `${qtdMorango}`
+        unidMorango.innerHTML = `${qtdGeral[18]}`
+        if(qtdGeral[18] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[18]} Sorvete de Morango adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Sorvete de Morango adicionado aos pedidos!'
+        }
+        aviso
 }
 
-function picole(){
-        qtdPicole += 1
+function picole(aviso){
+        qtdGeral[19] += 1
         unidPicole.style.display = 'block'
-        unidPicole.innerHTML = `${qtdPicole}`
+        unidPicole.innerHTML = `${qtdGeral[19]}`
+        if(qtdGeral[19] == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[19]} Picolé adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Picolé adicionado aos pedidos!'
+        }
+        aviso
 }
 
 
