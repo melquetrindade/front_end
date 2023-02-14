@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
-    <main>
-
+    <main id="pagPrincipal">
         <!-- ========= CABEÇALHO ========-->
         <header>
             <img src="imagens/iFood.png" alt="food">
@@ -303,12 +302,33 @@
                 </div>
             </div>
         </section>
-        <section id="carrinho">
+        <section id="carrinho" onclick="secRevisao()">
             <p>Meu Pedido</p>
             <span class="material-symbols-outlined">shopping_cart_checkout</span>
             <p id="qtdCarro">0</p>
         </section>
     </main>
+    <section id="revisao">
+        <header>
+            <div id="voltar">
+
+            </div>
+            <div id="logo">
+                <img src="imagens/iFood.png" alt="food">
+                <div id="logo">
+                    <p id="palavra1">
+                        Food
+                    </p><br>
+                    <p id="palavra2">
+                        Parelhas
+                    </p>
+                </div>
+            </div>
+            <div id="carinho2">
+
+            </div>
+        </header>
+    </section>
 
     <!-- ============== JAVASCRIPT ============-->
     <script src="script.js"></script>
