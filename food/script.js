@@ -10,8 +10,8 @@ let numCompras = window.document.getElementById('qtdCarro')
 let mainPrincipal = window.document.getElementById('pagPrincipal')
 let mainRevisao = window.document.getElementById('revisao')
 
-mainRevisao.style.display = 'none'
-mainPrincipal.style.display = 'block'
+mainRevisao.style.display = 'block'
+mainPrincipal.style.display = 'none'
 
 compras.style.position = 'absolute'
 compras.style.right = '0px'

@@ -195,13 +195,80 @@ section#carrinho:hover{
     background-color: rgb(204, 2, 2);
 }
 
+/* ------ CONFIGURAÇÕES DA PÁGINA DE REVISÃO -------- */
 section#revisao{
     width: 100vw;
-    background-color: white;
-    color: black;
-    
 }
 
 section#revisao > header{
-    background-color: rgb(22, 22, 22);
+    text-align: center;
+    margin-top: 10px;
 }
+
+section#revisao > header > div#voltar{
+    width: 60px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+div#voltar:hover{
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+section#revisao > header > div#voltar > p{
+    font-size: 0.7em;
+    font-weight: bold;
+}
+
+section#revisao > header > div#voltar > span{
+    font-size: 1.5em;
+}
+
+section#revisao > header > div#logo2{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px 5px;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+}
+
+
+section#revisao > header div{
+    background-color: rgb(22, 22, 22);
+    display: inline-block;
+}
+
+section#revisao > header p#palavra3{
+    display: inline;
+    font-weight: bold;
+    color: white;
+    font-size: 0.7em;
+}
+section#revisao > header p#palavra4{
+    display: inline;
+    font-weight: bold;
+    color: red;
+    font-size: 0.7em;
+}
+
+section#revisao > header > div#carrinho2 > p#frase{
+    display: inline;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7em;
+}
+
+section#revisao > header > div#carrinho2 > p#qtdCarro2{
+    display: block;
+    color: yellow;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+section#revisao > header > span{
+    font-size: 2em;
+    color: white;
+}
+/* ---------------------- XXX -------------------- */
