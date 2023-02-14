@@ -60,15 +60,25 @@ p.icone:hover{
     background-color: yellow;
 }
 
-main > div#compra{
+main > div#info{
     background-color: white;
     width: 250px;
     height: 50px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-top: 4px solid rgb(39, 181, 39);
     border-bottom: 4px solid rgb(39, 181, 39);
-    border-left: 4px solid rgb(39, 181, 39);
+    font-size: 0.9em;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+main > div#info > span{
+    background-color: rgb(34, 198, 34);
+    border-radius: 50%;
+    padding: 2px;
+    margin-top: 2px;
+    width: 27px;
 }
 
 main > section > h1{

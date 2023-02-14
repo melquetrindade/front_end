@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
@@ -40,9 +41,7 @@
                 <img src="imagens/iSorvete.png" alt="sorvete" onclick="clicou4()">
             </p>
         </menu>
-        <div id="compra">
-
-        </div>
+        <div id="info">oi</div>
 
         <!-- ========= SESSÃO DE HAMBÚRGUERES ========-->
         <section id="hamburguer">
@@ -56,7 +55,7 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 7,00</p>
-                    <p class="botao" onclick="simples()">+</p>
+                    <p class="botao" onclick="simples(dCompra())">+</p>
                 </div>
             </div>
             <div id="x-picanha">
@@ -68,7 +67,7 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 13,00</p>
-                    <p class="botao" onclick="picanha()">+</p>
+                    <p class="botao" onclick="picanha(dCompra())">+</p>
                 </div>
             </div>
             <div id="x-tudo">
@@ -92,7 +91,7 @@
                 </p>
                 <div class="preco">
                     <p class="valor">R$ 12,00</p>
-                    <p class="botao" id="oi" onclick="chicken()">+</p>
+                    <p class="botao" id="oi" onclick="chicken(dCompra())">+</p>
                 </div>
             </div>
             <div id="duplo">

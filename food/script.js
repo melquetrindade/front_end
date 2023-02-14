@@ -5,9 +5,7 @@ let secHam = window.document.getElementById('hamburguer')
 let secPizza = window.document.getElementById('pizza')
 let secBebidas = window.document.getElementById('bebidas')
 let secSorvetes = window.document.getElementById('sorvetes')
-let compras = window.document.getElementById('compra')
-
-let temp = window.document.getElementById('tempo')
+let compras = window.document.getElementById('info')
 
 compras.style.position = 'absolute'
 compras.style.right = '0px'
@@ -15,12 +13,17 @@ compras.style.opacity ='1'
 compras.style.display = 'none'
 
 function dCompra(){
-        compras.style.display = 'block'
-        compras.style.marginTop = '-70px'
-        compras.style.transitionDuration = '1.5s'
+        setTimeout(function(){
+                compras.style.display = 'block'
+                compras.style.marginTop = '150px'
+        }, 0);
+        setTimeout(function(){
+                compras.style.marginTop = '-10px'
+                compras.style.transitionDuration = '0.8s'
+        }, 1000);
         setTimeout(function(){
                 compras.style.display = 'none' 
-        }, 1200);
+        }, 2000);
 }
 
 // PEGANDO TODOS OS ID's DAS QUANTIDADES DE CADA ELEMENTO
@@ -99,22 +102,17 @@ var qtdPicole = 0
 // FUNÇÕES QUE ADICIONAM A QUANTIADE DOS PRODUTOS
 
 // ------- SESSÃO DE HAMBÚRGUERES --------
-function simples(){
+function simples(aviso){
         qtdSimples += 1
-        unidSimples.style.display = 'block'
+        unidSimples.style.display = 'inline'
         unidSimples.innerHTML = `${qtdSimples}`
-        setTimeout(function(){
-                compras.style.display = 'block'
-                compras.style.marginTop = '100px'
-
-        }, 0);
-        setTimeout(function(){
-                compras.style.marginTop = '-40px'
-                compras.style.transitionDuration = '0.8s'
-        }, 1000);
-        setTimeout(function(){
-                compras.style.display = 'none' 
-        }, 2000);
+        if(qtdSimples == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdSimples} Simples adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) SIMPLES adicionado aos pedidos!'
+        }
+        aviso
         
 }
 
@@ -122,6 +120,12 @@ function picanha(){
         qtdPicanha += 1
         unidPicanha.style.display = 'block'
         unidPicanha.innerHTML = `${qtdPicanha}`
+        if(qtdPicanha == 1){
+                compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdPicanha} X-Picanha adicionado aos pedidos!`
+        }
+        else{
+                compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) X-Picanha adicionado aos pedidos!'
+        }
 }
 
 function tudo(){
@@ -130,22 +134,11 @@ function tudo(){
         unidTudo.innerHTML = `${qtdTudo}`
 }
 
-function chicken(){
+function chicken(aviso){
         qtdChicken += 1
         unidChicken.style.display = 'block'
         unidChicken.innerHTML = `${qtdChicken}`
-        setTimeout(function(){
-                compras.style.display = 'block'
-                compras.style.marginTop = '970px'
-
-        }, 0);
-        setTimeout(function(){
-                compras.style.marginTop = '-50px'
-                compras.style.transitionDuration = '1.5s'
-        }, 1000);
-        setTimeout(function(){
-                compras.style.display = 'none' 
-        }, 2000);
+        aviso
 }
 
 function duplo(){
