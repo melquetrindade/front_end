@@ -9,7 +9,7 @@ let compras = window.document.getElementById('info')
 let numCompras = window.document.getElementById('qtdCarro')
 let mainPrincipal = window.document.getElementById('pagPrincipal')
 let mainRevisao = window.document.getElementById('revisao')
-let divMain2 = window.document.getElementById('cabecaRev')
+let divMain2 = window.document.getElementById('main2')
 
 
 
@@ -23,52 +23,115 @@ compras.style.display = 'none'
 
 var valorTotal = 0
 
+
+
 function calc01(){
         var total01 = 7 * qtdGeral[0]
         valorTotal += total01
 
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
-        p1.setAttribute('id', 'p1')
-        divMain2.appendChild(p1)
+        divRevisao.appendChild(p1)
         p1.innerHTML = 'LANCHE'
-
         let p2 = document.createElement('p')
-        p2.setAttribute('id', 'p2')
-        divMain2.appendChild(p2)
+        divRevisao.appendChild(p2)
         p2.innerHTML = 'QTD'
-
         let p3 = document.createElement('p')
-        p3.setAttribute('id', 'p3')
-        divMain2.appendChild(p3)
+        divRevisao.appendChild(p3)
         p3.innerHTML = 'SUBTOTAL'
 
         let div1 = document.createElement('div')
         p1.appendChild(div1)
         div1.innerHTML = `produto: simples`
-        div1.style.backgroundColor = 'black'
-        div1.style.color = 'white'
+
+        let b1 = document.createElement('div')
+        b1.setAttribute('id', 'menos')
+        b1.innerHTML = '-'
+        b1.style.display = 'inline'
+        b1.style.color = 'yellow'
+        p2.appendChild(b1)
 
         let div2 = document.createElement('div')
         p2.appendChild(div2)
+        div2.style.display = 'inline'
         div2.innerHTML = `qtd: ${qtdGeral[0]}`
-        div2.style.backgroundColor = 'black'
-        div2.style.color = 'white'
+        div2.style.backgroundColor = 'white'
+        div2.style.color = 'black'
+
+        let b2 = document.createElement('div')
+        b2.setAttribute('id', 'mais')
+        b2.innerHTML = '+'
+        b2.style.display = 'inline'
+        b2.style.color = 'yellow'
+        b2.addEventListener('click', function(){
+                qtdGeral[0] += 1
+                div2.innerHTML = `qtd: ${qtdGeral[0]}`
+        })
+        p2.appendChild(b2)
 
         let div3 = document.createElement('div')
         p3.appendChild(div3)
         div3.innerHTML = `subtotal: ${total01}`
-        div3.style.backgroundColor = 'black'
-        div3.style.color = 'white'
 }
 
 function calc02(){
-        let div2 = document.createElement('div')
-        divMain2.appendChild(div2)
+
         var total02 = 13 * qtdGeral[1]
         valorTotal += total02
-        div2.innerHTML = `produto: x-picanha - qtd: ${qtdGeral[1]} - subtotal: ${total02}`
-        div2.style.backgroundColor = 'black'
-        div2.style.color = 'white'
+
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
+        let p1 = document.createElement('p')
+        divRevisao.appendChild(p1)
+        p1.innerHTML = 'LANCHE'
+        let p2 = document.createElement('p')
+        divRevisao.appendChild(p2)
+        p2.innerHTML = 'QTD'
+        let p3 = document.createElement('p')
+        divRevisao.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL'
+
+        let div1 = document.createElement('div')
+        p1.appendChild(div1)
+        div1.innerHTML = `produto: X-Picanha`
+        let div2 = document.createElement('div')
+        p2.appendChild(div2)
+        div2.innerHTML = `qtd: ${qtdGeral[1]}`
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `subtotal: ${total02}`
+}
+
+function calc03(){
+
+        var total03 = 10 * qtdGeral[2]
+        valorTotal += total03
+
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
+        let p1 = document.createElement('p')
+        divRevisao.appendChild(p1)
+        p1.innerHTML = 'LANCHE'
+        let p2 = document.createElement('p')
+        divRevisao.appendChild(p2)
+        p2.innerHTML = 'QTD'
+        let p3 = document.createElement('p')
+        divRevisao.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL'
+
+        let div1 = document.createElement('div')
+        p1.appendChild(div1)
+        div1.innerHTML = `produto: X-Tudo`
+        let div2 = document.createElement('div')
+        p2.appendChild(div2)
+        div2.innerHTML = `qtd: ${qtdGeral[2]}`
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `subtotal: ${total03}`
 }
 
 function secRevisao(){
@@ -84,12 +147,13 @@ function secRevisao(){
                                 else if(i == 1){
                                         calc02()
                                 }
-                        }
-                        else{
-                                continue
+                                else if(i == 2){
+                                        calc03()
+                                }
                         }
                 }
                 let numTotal = document.createElement('p')
+                numTotal.setAttribute('id', 'numTotal')
                 divMain2.appendChild(numTotal)
                 numTotal.innerHTML = `Total a pagar: ${valorTotal}`
                 numTotal.style.backgroundColor = 'black'

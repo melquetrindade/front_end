@@ -277,7 +277,7 @@ div#main2{
     width: 90vw;
 }
 
-div#main2 > div#cabecaRev{
+div#main2 > div.telaRev{
     width: 90vw;
     background-color: black;
     margin-top: 15px;
@@ -285,7 +285,7 @@ div#main2 > div#cabecaRev{
     margin-right: 6vw;
 }
 
-div#main2 > div#cabecaRev > p{
+div#main2 > div.telaRev > p{
     display: block;
     color: white;
     font-size: 0.8em;
@@ -293,6 +293,18 @@ div#main2 > div#cabecaRev > p{
     padding-bottom: 15px;
     padding-left: 10px;
     font-weight: 600;
+}
+
+div#main2 > div.telaRev > p > div{
+    background-color: black;
+    color: white;
+}
+
+div#main2 > p#numTotal{
+    width: 90vw;
+    margin-top: 10px;
+    margin-left: 4vw;
+    margin-right: 6vw;
 }
 
 /* ---------------------- XXX -------------------- */
