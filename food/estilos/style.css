@@ -172,6 +172,7 @@ section#carrinho{
     margin-bottom: 20px;
     margin-right: 20px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 section#carrinho > p{
@@ -279,26 +280,19 @@ div#main2{
 div#main2 > div#cabecaRev{
     width: 90vw;
     background-color: black;
-    padding: 10px;
-    margin-left: 3vw;
-    margin-right: 7vw;
+    margin-top: 15px;
+    margin-left: 4vw;
+    margin-right: 6vw;
 }
 
 div#main2 > div#cabecaRev > p{
-    display: inline;
+    display: block;
     color: white;
     font-size: 0.8em;
-}
-
-p#p1{
-    margin-left: 3vw;
-}
-p#p2{
-    margin-left: 20vw;
-    margin-right: 20vw;
-}
-p#p3{
-    margin-right: 3vw;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10px;
+    font-weight: 600;
 }
 
 /* ---------------------- XXX -------------------- */

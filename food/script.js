@@ -21,18 +21,79 @@ compras.style.right = '0px'
 compras.style.opacity ='1'
 compras.style.display = 'none'
 
+var valorTotal = 0
+
+function calc01(){
+        var total01 = 7 * qtdGeral[0]
+        valorTotal += total01
+
+        let p1 = document.createElement('p')
+        p1.setAttribute('id', 'p1')
+        divMain2.appendChild(p1)
+        p1.innerHTML = 'LANCHE'
+
+        let p2 = document.createElement('p')
+        p2.setAttribute('id', 'p2')
+        divMain2.appendChild(p2)
+        p2.innerHTML = 'QTD'
+
+        let p3 = document.createElement('p')
+        p3.setAttribute('id', 'p3')
+        divMain2.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL'
+
+        let div1 = document.createElement('div')
+        p1.appendChild(div1)
+        div1.innerHTML = `produto: simples`
+        div1.style.backgroundColor = 'black'
+        div1.style.color = 'white'
+
+        let div2 = document.createElement('div')
+        p2.appendChild(div2)
+        div2.innerHTML = `qtd: ${qtdGeral[0]}`
+        div2.style.backgroundColor = 'black'
+        div2.style.color = 'white'
+
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `subtotal: ${total01}`
+        div3.style.backgroundColor = 'black'
+        div3.style.color = 'white'
+}
+
+function calc02(){
+        let div2 = document.createElement('div')
+        divMain2.appendChild(div2)
+        var total02 = 13 * qtdGeral[1]
+        valorTotal += total02
+        div2.innerHTML = `produto: x-picanha - qtd: ${qtdGeral[1]} - subtotal: ${total02}`
+        div2.style.backgroundColor = 'black'
+        div2.style.color = 'white'
+}
+
 function secRevisao(){
         if(numCompras.innerHTML != '0'){
                 mainPrincipal.style.display = 'none'
                 mainRevisao.style.display = 'block'
 
-                for(var i=0; i < Number(numCompras.innerHTML); i++){
-                        let div2 = document.createElement('div')
-                        divMain2.appendChild(div2)
-                        div2.innerHTML = `a quantidade total é de ${Number(numCompras.innerHTML)}`
-                        div2.style.backgroundColor = 'black'
-                        div2.style.color = 'white'
+                for(var i=0; i < qtdGeral.length; i++){
+                        if(qtdGeral[i] > 0){
+                                if(i == 0){
+                                        calc01()
+                                }
+                                else if(i == 1){
+                                        calc02()
+                                }
+                        }
+                        else{
+                                continue
+                        }
                 }
+                let numTotal = document.createElement('p')
+                divMain2.appendChild(numTotal)
+                numTotal.innerHTML = `Total a pagar: ${valorTotal}`
+                numTotal.style.backgroundColor = 'black'
+                numTotal.style.color = 'white'
         }
         else{
                 window.alert('[ERRO] Nenhum lanche foi adiciodado ao carrinho!')
