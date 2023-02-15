@@ -9,9 +9,12 @@ let compras = window.document.getElementById('info')
 let numCompras = window.document.getElementById('qtdCarro')
 let mainPrincipal = window.document.getElementById('pagPrincipal')
 let mainRevisao = window.document.getElementById('revisao')
+let divMain2 = window.document.getElementById('cabecaRev')
 
-mainRevisao.style.display = 'block'
-mainPrincipal.style.display = 'none'
+
+
+mainRevisao.style.display = 'none'
+mainPrincipal.style.display = 'block'
 
 compras.style.position = 'absolute'
 compras.style.right = '0px'
@@ -19,8 +22,21 @@ compras.style.opacity ='1'
 compras.style.display = 'none'
 
 function secRevisao(){
-        mainPrincipal.style.display = 'none'
-        mainRevisao.style.display = 'block'
+        if(numCompras.innerHTML != '0'){
+                mainPrincipal.style.display = 'none'
+                mainRevisao.style.display = 'block'
+
+                for(var i=0; i < Number(numCompras.innerHTML); i++){
+                        let div2 = document.createElement('div')
+                        divMain2.appendChild(div2)
+                        div2.innerHTML = `a quantidade total é de ${Number(numCompras.innerHTML)}`
+                        div2.style.backgroundColor = 'black'
+                        div2.style.color = 'white'
+                }
+        }
+        else{
+                window.alert('[ERRO] Nenhum lanche foi adiciodado ao carrinho!')
+        }
 }
 
 function dCompra(){

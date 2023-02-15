@@ -271,4 +271,34 @@ section#revisao > header > span{
     font-size: 2em;
     color: white;
 }
+
+div#main2{
+    width: 90vw;
+}
+
+div#main2 > div#cabecaRev{
+    width: 90vw;
+    background-color: black;
+    padding: 10px;
+    margin-left: 3vw;
+    margin-right: 7vw;
+}
+
+div#main2 > div#cabecaRev > p{
+    display: inline;
+    color: white;
+    font-size: 0.8em;
+}
+
+p#p1{
+    margin-left: 3vw;
+}
+p#p2{
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+p#p3{
+    margin-right: 3vw;
+}
+
 /* ---------------------- XXX -------------------- */
