@@ -23,10 +23,24 @@ compras.style.display = 'none'
 
 var valorTotal = 0
 
-function botaomenos(p2){
+function botaomenos(div2, p2, num){
         let b1 = document.createElement('div')
         b1.setAttribute('id', 'menos')
         b1.innerHTML = '-'
+        b1.addEventListener('click', function(){
+                qtdGeral[num] -= 1
+                if(qtdGeral[num] < 0){
+                        div2.innerHTML = `0`
+                        qtdGeral[num] = 0
+                }
+                else{
+                        div2.innerHTML = `${qtdGeral[num]}`
+                }
+                if(num == 0){
+                        let qtd01 = document.getElementById('unidSimples')
+                        qtd01.innerHTML = `${qtdGeral[num]}`
+                }
+        })
         p2.appendChild(b1)
 }
 
@@ -37,6 +51,10 @@ function botaomais(div2, p2, num){
         b2.addEventListener('click', function(){
                 qtdGeral[num] += 1
                 div2.innerHTML = `${qtdGeral[num]}`
+                if(num == 0){
+                        let qtd01 = document.getElementById('unidSimples')
+                        qtd01.innerHTML = `${qtdGeral[num]}`
+                }
         })
         p2.appendChild(b2)
 }
@@ -60,9 +78,12 @@ function voltarPag(){
         mainPrincipal.style.display = 'block'
 }
 
+var verifica = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+
 function calc01(){
         var total01 = 7 * qtdGeral[0]
         valorTotal += total01
+        verifica[0] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
@@ -83,9 +104,10 @@ function calc01(){
         div1.setAttribute('class', 'nomePdt')
         div1.innerHTML = `Simples ----- R$ 7,00`
 
-        botaomenos(p2)
         let div2 = document.createElement('div')
+        botaomenos(div2, p2, 0)
         p2.appendChild(div2)
+        div2.setAttribute('id', 'unid01')
         div2.setAttribute('class', 'unidades')
         div2.innerHTML = `${qtdGeral[0]}`
         botaomais(div2, p2, 0)
@@ -100,6 +122,7 @@ function calc02(){
 
         var total02 = 13 * qtdGeral[1]
         valorTotal += total02
+        verifica[1] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
@@ -124,6 +147,7 @@ function calc02(){
         let div2 = document.createElement('div')
         p2.appendChild(div2)
         div2.setAttribute('class', 'unidades')
+        div2.setAttribute('id', 'unid02')
         div2.innerHTML = `${qtdGeral[1]}`
         botaomais(div2, p2, 1)
 
@@ -137,6 +161,7 @@ function calc03(){
 
         var total03 = 10 * qtdGeral[2]
         valorTotal += total03
+        verifica[2] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
@@ -161,6 +186,7 @@ function calc03(){
         let div2 = document.createElement('div')
         p2.appendChild(div2)
         div2.setAttribute('class', 'unidades')
+        div2.setAttribute('id', 'unid03')
         div2.innerHTML = `${qtdGeral[2]}`
         botaomais(div2, p2, 2)
 
@@ -170,6 +196,36 @@ function calc03(){
         criaLixeira(divRevisao)
 }
 
+function criarSimples(){
+        if(verifica[0] == 0){
+                calc01()
+        }
+        else{
+                let divUnid = document.getElementById('unid01')
+                divUnid.innerHTML = `${qtdGeral[0]}`
+        }
+}
+function criarPicanha(){
+        if(verifica[1] == 0){
+                calc02()
+        }
+        else{
+                let divUnid = document.getElementById('unid02')
+                divUnid.innerHTML = `${qtdGeral[1]}`
+        }
+}
+function criarTudo(){
+        if(verifica[2] == 0){
+                calc03()
+        }
+        else{
+                let divUnid = document.getElementById('unid03')
+                divUnid.innerHTML = `${qtdGeral[2]}`
+        }
+}
+
+
+var contadorRev = 0
 function secRevisao(){
         if(numCompras.innerHTML != '0'){
                 mainPrincipal.style.display = 'none'
@@ -178,22 +234,29 @@ function secRevisao(){
                 for(var i=0; i < qtdGeral.length; i++){
                         if(qtdGeral[i] > 0){
                                 if(i == 0){
-                                        calc01()
+                                        criarSimples()
                                 }
                                 else if(i == 1){
-                                        calc02()
+                                        criarPicanha()
                                 }
                                 else if(i == 2){
-                                        calc03()
+                                        criarTudo()
                                 }
                         }
                 }
-                let numTotal = document.createElement('p')
-                numTotal.setAttribute('id', 'numTotal')
-                divMain2.appendChild(numTotal)
-                numTotal.innerHTML = `Total a pagar: ${valorTotal}`
-                numTotal.style.backgroundColor = 'black'
-                numTotal.style.color = 'white'
+                if(contadorRev == 0){
+                        let numTotal = document.createElement('p')
+                        numTotal.setAttribute('id', 'numTotal')
+                        divMain2.appendChild(numTotal)
+                        numTotal.innerHTML = `Total a pagar: ${valorTotal}`
+                        numTotal.style.backgroundColor = 'black'
+                        numTotal.style.color = 'white'
+                }
+                else{
+                        let divTotal = document.getElementById('numTotal')
+                        divTotal.innerHTML = `Total a pagar: ${valorTotal}`
+                }
+                contadorRev = 1
         }
         else{
                 window.alert('[ERRO] Nenhum lanche foi adiciodado ao carrinho!')
