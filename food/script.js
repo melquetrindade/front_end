@@ -23,7 +23,42 @@ compras.style.display = 'none'
 
 var valorTotal = 0
 
+function botaomenos(p2){
+        let b1 = document.createElement('div')
+        b1.setAttribute('id', 'menos')
+        b1.innerHTML = '-'
+        p2.appendChild(b1)
+}
 
+function botaomais(div2, p2, num){
+        let b2 = document.createElement('div')
+        b2.setAttribute('id', 'mais')
+        b2.innerHTML = '+'
+        b2.addEventListener('click', function(){
+                qtdGeral[num] += 1
+                div2.innerHTML = `${qtdGeral[num]}`
+        })
+        p2.appendChild(b2)
+}
+
+function criaIconeHam(p1){
+        let iconeHam = document.createElement('img')
+        iconeHam.setAttribute('class', 'iconeRev')
+        iconeHam.setAttribute('src', 'imagens/iHam2.png')
+        p1.appendChild(iconeHam)
+}
+
+function criaLixeira(divRevisao){
+        let lixeira = document.createElement('div')
+        lixeira.setAttribute('class', 'lixo')
+        lixeira.innerHTML = `<span class="material-symbols-outlined">delete</span>`
+        divRevisao.appendChild(lixeira)
+}
+
+function voltarPag(){
+        mainRevisao.style.display = 'none'
+        mainPrincipal.style.display = 'block'
+}
 
 function calc01(){
         var total01 = 7 * qtdGeral[0]
@@ -34,46 +69,31 @@ function calc01(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
+        criaIconeHam(p1)
         let div1 = document.createElement('div')
         p1.appendChild(div1)
-        div1.innerHTML = `produto: simples`
+        div1.setAttribute('class', 'nomePdt')
+        div1.innerHTML = `Simples ----- R$ 7,00`
 
-        let b1 = document.createElement('div')
-        b1.setAttribute('id', 'menos')
-        b1.innerHTML = '-'
-        b1.style.display = 'inline'
-        b1.style.color = 'yellow'
-        p2.appendChild(b1)
-
+        botaomenos(p2)
         let div2 = document.createElement('div')
         p2.appendChild(div2)
-        div2.style.display = 'inline'
-        div2.innerHTML = `qtd: ${qtdGeral[0]}`
-        div2.style.backgroundColor = 'white'
-        div2.style.color = 'black'
-
-        let b2 = document.createElement('div')
-        b2.setAttribute('id', 'mais')
-        b2.innerHTML = '+'
-        b2.style.display = 'inline'
-        b2.style.color = 'yellow'
-        b2.addEventListener('click', function(){
-                qtdGeral[0] += 1
-                div2.innerHTML = `qtd: ${qtdGeral[0]}`
-        })
-        p2.appendChild(b2)
+        div2.setAttribute('class', 'unidades')
+        div2.innerHTML = `${qtdGeral[0]}`
+        botaomais(div2, p2, 0)
 
         let div3 = document.createElement('div')
         p3.appendChild(div3)
-        div3.innerHTML = `subtotal: ${total01}`
+        div3.innerHTML = `${total01}`
+        criaLixeira(divRevisao)
 }
 
 function calc02(){
@@ -86,23 +106,31 @@ function calc02(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
+        criaIconeHam(p1)
         let div1 = document.createElement('div')
         p1.appendChild(div1)
-        div1.innerHTML = `produto: X-Picanha`
+        div1.setAttribute('class', 'nomePdt')
+        div1.innerHTML = `X-Picanha`
+
+        botaomenos(p2)
         let div2 = document.createElement('div')
         p2.appendChild(div2)
-        div2.innerHTML = `qtd: ${qtdGeral[1]}`
+        div2.setAttribute('class', 'unidades')
+        div2.innerHTML = `${qtdGeral[1]}`
+        botaomais(div2, p2, 1)
+
         let div3 = document.createElement('div')
         p3.appendChild(div3)
-        div3.innerHTML = `subtotal: ${total02}`
+        div3.innerHTML = `${total02}`
+        criaLixeira(divRevisao)
 }
 
 function calc03(){
@@ -123,15 +151,23 @@ function calc03(){
         divRevisao.appendChild(p3)
         p3.innerHTML = 'SUBTOTAL'
 
+        criaIconeHam(p1)
         let div1 = document.createElement('div')
+        div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `produto: X-Tudo`
+        div1.innerHTML = `X-Tudo`
+
+        botaomenos(p2)
         let div2 = document.createElement('div')
         p2.appendChild(div2)
-        div2.innerHTML = `qtd: ${qtdGeral[2]}`
+        div2.setAttribute('class', 'unidades')
+        div2.innerHTML = `${qtdGeral[2]}`
+        botaomais(div2, p2, 2)
+
         let div3 = document.createElement('div')
         p3.appendChild(div3)
-        div3.innerHTML = `subtotal: ${total03}`
+        div3.innerHTML = `${total03}`
+        criaLixeira(divRevisao)
 }
 
 function secRevisao(){
