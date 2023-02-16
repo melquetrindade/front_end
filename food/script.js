@@ -26,6 +26,7 @@ var valorTotal = 0
 function botaomenos(div2, p2, num){
         let b1 = document.createElement('div')
         b1.setAttribute('id', 'menos')
+        p2.appendChild(b1)
         b1.innerHTML = '-'
         b1.addEventListener('click', function(){
                 qtdGeral[num] -= 1
@@ -41,7 +42,6 @@ function botaomenos(div2, p2, num){
                         qtd01.innerHTML = `${qtdGeral[num]}`
                 }
         })
-        p2.appendChild(b1)
 }
 
 function botaomais(div2, p2, num){
@@ -143,8 +143,8 @@ function calc02(){
         div1.setAttribute('class', 'nomePdt')
         div1.innerHTML = `X-Picanha`
 
-        botaomenos(p2)
         let div2 = document.createElement('div')
+        botaomenos(div2, p2, 1)
         p2.appendChild(div2)
         div2.setAttribute('class', 'unidades')
         div2.setAttribute('id', 'unid02')
@@ -182,8 +182,8 @@ function calc03(){
         p1.appendChild(div1)
         div1.innerHTML = `X-Tudo`
 
-        botaomenos(p2)
         let div2 = document.createElement('div')
+        botaomenos(div2, p2, 2)
         p2.appendChild(div2)
         div2.setAttribute('class', 'unidades')
         div2.setAttribute('id', 'unid03')
