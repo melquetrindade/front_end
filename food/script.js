@@ -10,7 +10,7 @@ let numCompras = window.document.getElementById('qtdCarro')
 let mainPrincipal = window.document.getElementById('pagPrincipal')
 let mainRevisao = window.document.getElementById('revisao')
 let divMain2 = window.document.getElementById('main2')
-
+let numCompras2 = window.document.getElementById('qtdCarro2')
 
 
 mainRevisao.style.display = 'none'
@@ -142,6 +142,24 @@ function criaIconeHam(p1){
         iconeHam.setAttribute('src', 'imagens/iHam2.png')
         p1.appendChild(iconeHam)
 }
+function criaIconePizza(p1){
+        let iconePizza = document.createElement('img')
+        iconePizza.setAttribute('class', 'iconeRev')
+        iconePizza.setAttribute('src', 'imagens/iPizza3.png')
+        p1.appendChild(iconePizza)
+}
+function criaIconeBebidas(p1){
+        let iconeBeb = document.createElement('img')
+        iconeBeb.setAttribute('class', 'iconeRev')
+        iconeBeb.setAttribute('src', 'imagens/iBebidas3.png')
+        p1.appendChild(iconeBeb)
+}
+function criaIconeSobre(p1){
+        let iconeSobre = document.createElement('img')
+        iconeSobre.setAttribute('class', 'iconeRev')
+        iconeSobre.setAttribute('src', 'imagens/Isobre4.png')
+        p1.appendChild(iconeSobre)
+}
 
 function criaLixeira(divRevisao){
         let lixeira = document.createElement('div')
@@ -153,10 +171,20 @@ function criaLixeira(divRevisao){
 function voltarPag(){
         mainRevisao.style.display = 'none'
         mainPrincipal.style.display = 'block'
+        var cont = 0
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        cont += 1
+                }
+        }
+        numCompras.innerHTML = `${cont}`
+        numCompras2.innerHTML = `${cont} Lanches`
+
 }
 
 var verifica = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
+// ---------------- SESSÃO DE SOBREMESA ----------------
 function calc01(){
         var total01 = 7 * qtdGeral[0]
         valorTotal += total01
@@ -245,13 +273,13 @@ function calc03(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
         criaIconeHam(p1)
         let div1 = document.createElement('div')
@@ -284,13 +312,13 @@ function calc04(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
         criaIconeHam(p1)
         let div1 = document.createElement('div')
@@ -323,13 +351,13 @@ function calc05(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
         criaIconeHam(p1)
         let div1 = document.createElement('div')
@@ -351,6 +379,7 @@ function calc05(){
         criaLixeira(divRevisao)
 }
 
+// ---------------- SESSÃO DE PIZZA ----------------
 function calc06(){
 
         var total06 = 19.50 * qtdGeral[5]
@@ -362,15 +391,15 @@ function calc06(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconePizza(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -401,15 +430,15 @@ function calc07(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconePizza(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -440,15 +469,15 @@ function calc08(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconePizza(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -479,54 +508,15 @@ function calc09(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
-        let div1 = document.createElement('div')
-        div1.setAttribute('class', 'nomePdt')
-        p1.appendChild(div1)
-        div1.innerHTML = `Romana`
-
-        let div2 = document.createElement('div')
-        botaomenos(div2, p2, 8)
-        p2.appendChild(div2)
-        div2.setAttribute('class', 'unidades')
-        div2.setAttribute('id', 'unid09')
-        div2.innerHTML = `${qtdGeral[8]}`
-        botaomais(div2, p2, 8)
-
-        let div3 = document.createElement('div')
-        p3.appendChild(div3)
-        div3.innerHTML = `${total09}`
-        criaLixeira(divRevisao)
-}
-
-function calc09(){
-
-        var total09 = 19 * qtdGeral[8]
-        valorTotal += total09
-        verifica[8] = 1
-
-        let divRevisao = document.createElement('div')
-        divRevisao.setAttribute('class', 'telaRev')
-        divMain2.appendChild(divRevisao)
-        let p1 = document.createElement('p')
-        divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
-        let p2 = document.createElement('p')
-        divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
-        let p3 = document.createElement('p')
-        divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
-
-        criaIconeHam(p1)
+        criaIconePizza(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -557,15 +547,15 @@ function calc10(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconePizza(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -585,6 +575,7 @@ function calc10(){
         criaLixeira(divRevisao)
 }
 
+// ---------------- SESSÃO DE BEBIDAS ----------------
 function calc11(){
 
         var total11 = 2.50 * qtdGeral[10]
@@ -596,15 +587,15 @@ function calc11(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconeBebidas(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -635,15 +626,15 @@ function calc12(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconeBebidas(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -674,15 +665,15 @@ function calc13(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconeBebidas(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -713,15 +704,15 @@ function calc14(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconeBebidas(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -752,15 +743,15 @@ function calc15(){
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
-        p1.innerHTML = 'LANCHE'
+        p1.innerHTML = 'LANCHE:'
         let p2 = document.createElement('p')
         divRevisao.appendChild(p2)
-        p2.innerHTML = 'QTD'
+        p2.innerHTML = 'QTD:'
         let p3 = document.createElement('p')
         divRevisao.appendChild(p3)
-        p3.innerHTML = 'SUBTOTAL'
+        p3.innerHTML = 'SUBTOTAL:'
 
-        criaIconeHam(p1)
+        criaIconeBebidas(p1)
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
@@ -777,6 +768,202 @@ function calc15(){
         let div3 = document.createElement('div')
         p3.appendChild(div3)
         div3.innerHTML = `${total15}`
+        criaLixeira(divRevisao)
+}
+
+// ---------------- SESSÃO DE SOBREMESA ----------------
+function calc16(){
+
+        var total16 = 1 * qtdGeral[15]
+        valorTotal += total16
+        verifica[15] = 1
+
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
+        let p1 = document.createElement('p')
+        divRevisao.appendChild(p1)
+        p1.innerHTML = 'LANCHE:'
+        let p2 = document.createElement('p')
+        divRevisao.appendChild(p2)
+        p2.innerHTML = 'QTD:'
+        let p3 = document.createElement('p')
+        divRevisao.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL:'
+
+        criaIconeSobre(p1)
+        let div1 = document.createElement('div')
+        div1.setAttribute('class', 'nomePdt')
+        p1.appendChild(div1)
+        div1.innerHTML = `Sorvete de Chocolate`
+
+        let div2 = document.createElement('div')
+        botaomenos(div2, p2, 15)
+        p2.appendChild(div2)
+        div2.setAttribute('class', 'unidades')
+        div2.setAttribute('id', 'unid16')
+        div2.innerHTML = `${qtdGeral[15]}`
+        botaomais(div2, p2, 15)
+
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `${total16}`
+        criaLixeira(divRevisao)
+}
+
+function calc17(){
+
+        var total17 = 1 * qtdGeral[16]
+        valorTotal += total17
+        verifica[16] = 1
+
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
+        let p1 = document.createElement('p')
+        divRevisao.appendChild(p1)
+        p1.innerHTML = 'LANCHE:'
+        let p2 = document.createElement('p')
+        divRevisao.appendChild(p2)
+        p2.innerHTML = 'QTD:'
+        let p3 = document.createElement('p')
+        divRevisao.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL:'
+
+        criaIconeSobre(p1)
+        let div1 = document.createElement('div')
+        div1.setAttribute('class', 'nomePdt')
+        p1.appendChild(div1)
+        div1.innerHTML = `Milkshake`
+
+        let div2 = document.createElement('div')
+        botaomenos(div2, p2, 16)
+        p2.appendChild(div2)
+        div2.setAttribute('class', 'unidades')
+        div2.setAttribute('id', 'unid17')
+        div2.innerHTML = `${qtdGeral[16]}`
+        botaomais(div2, p2, 16)
+
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `${total17}`
+        criaLixeira(divRevisao)
+}
+
+function calc18(){
+
+        var total18 = 1 * qtdGeral[17]
+        valorTotal += total18
+        verifica[17] = 1
+
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
+        let p1 = document.createElement('p')
+        divRevisao.appendChild(p1)
+        p1.innerHTML = 'LANCHE:'
+        let p2 = document.createElement('p')
+        divRevisao.appendChild(p2)
+        p2.innerHTML = 'QTD:'
+        let p3 = document.createElement('p')
+        divRevisao.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL:'
+
+        criaIconeSobre(p1)
+        let div1 = document.createElement('div')
+        div1.setAttribute('class', 'nomePdt')
+        p1.appendChild(div1)
+        div1.innerHTML = `Açaí`
+
+        let div2 = document.createElement('div')
+        botaomenos(div2, p2, 17)
+        p2.appendChild(div2)
+        div2.setAttribute('class', 'unidades')
+        div2.setAttribute('id', 'unid18')
+        div2.innerHTML = `${qtdGeral[17]}`
+        botaomais(div2, p2, 17)
+
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `${total18}`
+        criaLixeira(divRevisao)
+}
+
+function calc19(){
+
+        var total19 = 1 * qtdGeral[18]
+        valorTotal += total19
+        verifica[18] = 1
+
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
+        let p1 = document.createElement('p')
+        divRevisao.appendChild(p1)
+        p1.innerHTML = 'LANCHE:'
+        let p2 = document.createElement('p')
+        divRevisao.appendChild(p2)
+        p2.innerHTML = 'QTD:'
+        let p3 = document.createElement('p')
+        divRevisao.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL:'
+
+        criaIconeSobre(p1)
+        let div1 = document.createElement('div')
+        div1.setAttribute('class', 'nomePdt')
+        p1.appendChild(div1)
+        div1.innerHTML = `Sorvete de Morango`
+
+        let div2 = document.createElement('div')
+        botaomenos(div2, p2, 18)
+        p2.appendChild(div2)
+        div2.setAttribute('class', 'unidades')
+        div2.setAttribute('id', 'unid19')
+        div2.innerHTML = `${qtdGeral[18]}`
+        botaomais(div2, p2, 18)
+
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `${total19}`
+        criaLixeira(divRevisao)
+}
+
+function calc20(){
+
+        var total20 = 1 * qtdGeral[19]
+        valorTotal += total20
+        verifica[19] = 1
+
+        let divRevisao = document.createElement('div')
+        divRevisao.setAttribute('class', 'telaRev')
+        divMain2.appendChild(divRevisao)
+        let p1 = document.createElement('p')
+        divRevisao.appendChild(p1)
+        p1.innerHTML = 'LANCHE'
+        let p2 = document.createElement('p')
+        divRevisao.appendChild(p2)
+        p2.innerHTML = 'QTD'
+        let p3 = document.createElement('p')
+        divRevisao.appendChild(p3)
+        p3.innerHTML = 'SUBTOTAL'
+
+        criaIconeSobre(p1)
+        let div1 = document.createElement('div')
+        div1.setAttribute('class', 'nomePdt')
+        p1.appendChild(div1)
+        div1.innerHTML = `Picolé`
+
+        let div2 = document.createElement('div')
+        botaomenos(div2, p2, 19)
+        p2.appendChild(div2)
+        div2.setAttribute('class', 'unidades')
+        div2.setAttribute('id', 'unid20')
+        div2.innerHTML = `${qtdGeral[19]}`
+        botaomais(div2, p2, 19)
+
+        let div3 = document.createElement('div')
+        p3.appendChild(div3)
+        div3.innerHTML = `${total20}`
         criaLixeira(divRevisao)
 }
 
@@ -915,16 +1102,61 @@ function criarAgua(){
                 divUnid.innerHTML = `${qtdGeral[14]}`
         }
 }
-
+function criarChoco(){
+        if(verifica[15] == 0){
+                calc16()
+        }
+        else{
+                let divUnid = document.getElementById('unid16')
+                divUnid.innerHTML = `${qtdGeral[15]}`
+        }
+}
+function criarMilk(){
+        if(verifica[16] == 0){
+                calc17()
+        }
+        else{
+                let divUnid = document.getElementById('unid17')
+                divUnid.innerHTML = `${qtdGeral[16]}`
+        }
+}
+function criarAcai(){
+        if(verifica[17] == 0){
+                calc18()
+        }
+        else{
+                let divUnid = document.getElementById('unid18')
+                divUnid.innerHTML = `${qtdGeral[17]}`
+        }
+}
+function criarMorango(){
+        if(verifica[18] == 0){
+                calc19()
+        }
+        else{
+                let divUnid = document.getElementById('unid19')
+                divUnid.innerHTML = `${qtdGeral[18]}`
+        }
+}
+function criarPicole(){
+        if(verifica[19] == 0){
+                calc20()
+        }
+        else{
+                let divUnid = document.getElementById('unid20')
+                divUnid.innerHTML = `${qtdGeral[19]}`
+        }
+}
 
 var contadorRev = 0
 function secRevisao(){
         if(numCompras.innerHTML != '0'){
                 mainPrincipal.style.display = 'none'
                 mainRevisao.style.display = 'block'
-
+                var cont = 0
                 for(var i=0; i < qtdGeral.length; i++){
                         if(qtdGeral[i] > 0){
+                                cont += 1
                                 if(i == 0){
                                         criarSimples()
                                 }
@@ -970,6 +1202,21 @@ function secRevisao(){
                                 else if(i == 14){
                                         criarAgua()
                                 }
+                                else if(i == 15){
+                                        criarChoco()
+                                }
+                                else if(i == 16){
+                                        criarMilk()
+                                }
+                                else if(i == 17){
+                                        criarAcai()
+                                }
+                                else if(i == 18){
+                                        criarMorango()
+                                }
+                                else{
+                                        criarPicole()
+                                }
                         }
                 }
                 if(contadorRev == 0){
@@ -985,6 +1232,7 @@ function secRevisao(){
                         divTotal.innerHTML = `Total a pagar: ${valorTotal}`
                 }
                 contadorRev = 1
+                numCompras2.innerHTML = `${cont} Lanches`
         }
         else{
                 window.alert('[ERRO] Nenhum lanche foi adiciodado ao carrinho!')
@@ -1053,311 +1301,409 @@ secSorvetes.style.display = 'none'
 // LISTA RELACIONADA A QUANTIDADE COMPRADA DE CADA PRODUTO
 var qtdGeral = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
-var totalCarro = 0
-
 // FUNÇÕES QUE ADICIONAM A QUANTIADE DOS PRODUTOS COMPRADOS
 
 // ------- SESSÃO DE HAMBÚRGUERES --------
 function simples(aviso){
+        var contParcial = 0
         qtdGeral[0] += 1
         unidSimples.style.display = 'inline'
         unidSimples.innerHTML = `${qtdGeral[0]}`
         if(qtdGeral[0] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[0]} Simples adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) SIMPLES adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
         
 }
 
 function picanha(aviso){
+        var contParcial = 0
         qtdGeral[1] += 1
         unidPicanha.style.display = 'block'
         unidPicanha.innerHTML = `${qtdGeral[1]}`
         if(qtdGeral[1] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[1]} X-Picanha adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) X-Picanha adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
         
 }
 
 function tudo(aviso){
+        var contParcial = 0
         qtdGeral[2] += 1
         unidTudo.style.display = 'block'
         unidTudo.innerHTML = `${qtdGeral[2]}`
         if(qtdGeral[2] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[2]} X-Tudo adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) X-Tudo adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function chicken(aviso){
+        var contParcial = 0
         qtdGeral[3] += 1
         unidChicken.style.display = 'block'
         unidChicken.innerHTML = `${qtdGeral[3]}`
         if(qtdGeral[3] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[3]} Chicken adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Chicken adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function duplo(aviso){
+        var contParcial = 0
         qtdGeral[4] += 1
         unidDuplo.style.display = 'block'
         unidDuplo.innerHTML = `${qtdGeral[4]}`
         if(qtdGeral[4] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[4]} Duplo X-Tudo de Picanha adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Duplo X-Tudo de Picanha adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 // ------- SESSÃO DE PIZZA --------
 function chefe(aviso){
+        var contParcial = 0
         qtdGeral[5] += 1
         unidChefe.style.display = 'block'
         unidChefe.innerHTML = `${qtdGeral[5]}`
         if(qtdGeral[5] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[5]} Chefe adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Chefe adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function queijos(aviso){
+        var contParcial = 0
         qtdGeral[6] += 1
         unidQueijos.style.display = 'block'
         unidQueijos.innerHTML = `${qtdGeral[6]}`
         if(qtdGeral[6] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[6]} 4-Queijos adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) 4-Queijos adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function paulista(aviso){
+        var contParcial = 0
         qtdGeral[7] += 1
         unidPaulista.style.display = 'block'
         unidPaulista.innerHTML = `${qtdGeral[7]}`
         if(qtdGeral[7] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[7]} Paulista adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Paulista adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function romana(aviso){
+        var contParcial = 0
         qtdGeral[8] += 1
         unidRomana.style.display = 'block'
         unidRomana.innerHTML = `${qtdGeral[8]}`
         if(qtdGeral[8] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[8]} Romana adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Romana adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function carne(aviso){
+        var contParcial = 0
         qtdGeral[9] += 1
         unidCarne.style.display = 'block'
         unidCarne.innerHTML = `${qtdGeral[9]}`
         if(qtdGeral[9] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[9]} Carne adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Carne adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 // ------- SESSÃO DE BEBIDAS --------
 function coca(aviso){
+        var contParcial = 0
         qtdGeral[10] += 1
         unidCoca.style.display = 'block'
         unidCoca.innerHTML = `${qtdGeral[10]}`
         if(qtdGeral[10] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[10]} Coca-Cola adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Coca-Cola adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function fanta(aviso){
+        var contParcial = 0
         qtdGeral[11] += 1
         unidFanta.style.display = 'block'
         unidFanta.innerHTML = `${qtdGeral[11]}`
         if(qtdGeral[11] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[11]} Fanta adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Fanta adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function guarana(aviso){
+        var contParcial = 0
         qtdGeral[12] += 1
         unidGuarana.style.display = 'block'
         unidGuarana.innerHTML = `${qtdGeral[12]}`
         if(qtdGeral[12] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[12]} Guaraná adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Guaraná adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function suco(aviso){
+        var contParcial = 0
         qtdGeral[13] += 1
         unidSuco.style.display = 'block'
         unidSuco.innerHTML = `${qtdGeral[13]}`
         if(qtdGeral[13] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[13]} Suco de Laranja adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Suco de Laranja adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function agua(aviso){
+        var contParcial = 0
         qtdGeral[14] += 1
         unidAgua.style.display = 'block'
         unidAgua.innerHTML = `${qtdGeral[14]}`
         if(qtdGeral[14] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[14]} Água adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Água adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 // ------- SESSÃO DE SOBREMESA --------
 function choco(aviso){
+        var contParcial = 0
         qtdGeral[15] += 1
         unidChoco.style.display = 'block'
         unidChoco.innerHTML = `${qtdGeral[15]}`
         if(qtdGeral[15] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[15]} Sorvete de Chocolate adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Sorvete de Chocolate adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function milk(aviso){
+        var contParcial = 0
         qtdGeral[16] += 1
         unidMilk.style.display = 'block'
         unidMilk.innerHTML = `${qtdGeral[16]}`
         if(qtdGeral[16] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[16]} MilkShake adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) MilkShake adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function acai(aviso){
+        var contParcial = 0
         qtdGeral[17] += 1
         unidAcai.style.display = 'block'
         unidAcai.innerHTML = `${qtdGeral[17]}`
         if(qtdGeral[17] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[17]} Açaí adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Açaí adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function morango(aviso){
+        var contParcial = 0
         qtdGeral[18] += 1
         unidMorango.style.display = 'block'
         unidMorango.innerHTML = `${qtdGeral[18]}`
         if(qtdGeral[18] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[18]} Sorvete de Morango adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Sorvete de Morango adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 function picole(aviso){
+        var contParcial = 0
         qtdGeral[19] += 1
         unidPicole.style.display = 'block'
         unidPicole.innerHTML = `${qtdGeral[19]}`
         if(qtdGeral[19] == 1){
                 compras.innerHTML = `<span class="material-symbols-outlined"> add_task </span> ${qtdGeral[19]} Picolé adicionado aos pedidos!`
-                totalCarro += 1
         }
         else{
                 compras.innerHTML =  '<span class="material-symbols-outlined"> add_task </span> Outro(a) Picolé adicionado aos pedidos!'
         }
         aviso
-        numCompras.innerHTML = `${totalCarro}`
+        for(var i=0; i < qtdGeral.length; i++){
+                if(qtdGeral[i] > 0){
+                        contParcial += 1
+                }
+        }
+        numCompras.innerHTML = `${contParcial}`
 }
 
 
