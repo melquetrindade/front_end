@@ -21,7 +21,7 @@ compras.style.right = '0px'
 compras.style.opacity ='1'
 compras.style.display = 'none'
 
-var valorTotal = 0
+var valorTotal2 = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 function botaomenos(div2, p2, num){
         let b1 = document.createElement('div')
@@ -41,86 +41,139 @@ function botaomenos(div2, p2, num){
         })
 }
 
+function atualizaTotal(num, valor){
+        var valorTotal = 0
+        valorTotal2[num] = qtdGeral[num] * valor
+        let divTotal = document.getElementById('numTotal')
+        for(var i=0; i < qtdGeral.length; i++){
+                valorTotal += valorTotal2[i]
+        }
+        divTotal.innerHTML = `Total a pagar: ${valorTotal}`
+}
+
 function addAlimentos(num){
         if(num == 0){
                 let qtd01 = document.getElementById('unidSimples')
                 qtd01.innerHTML = `${qtdGeral[num]}`
+                let sub01 = document.getElementById('sub01')
+                sub01.innerHTML = `R$ ${qtdGeral[num] * 7}`
+                atualizaTotal(num, 7)
         }
         else if(num == 1){
                 let qtd02 = document.getElementById('unidPicanha')
                 qtd02.innerHTML = `${qtdGeral[num]}`
+                let sub02 = document.getElementById('sub02')
+                sub02.innerHTML = `R$ ${qtdGeral[num] * 13}`
+                atualizaTotal(num, 13)
         }
         else if(num == 2){
                 let qtd03 = document.getElementById('unidTudo')
                 qtd03.innerHTML = `${qtdGeral[num]}`
+                let sub03 = document.getElementById('sub03')
+                sub03.innerHTML = `R$ ${qtdGeral[num] * 10}`
+                atualizaTotal(num, 10)
         }
         else if(num == 3){
                 let qtd04 = document.getElementById('unidChicken')
                 qtd04.innerHTML = `${qtdGeral[num]}`
+                let sub04 = document.getElementById('sub04')
+                sub04.innerHTML = `R$ ${qtdGeral[num] * 12}`
         }
         else if(num == 4){
                 let qtd05 = document.getElementById('unidDuplo')
                 qtd05.innerHTML = `${qtdGeral[num]}`
+                let sub05 = document.getElementById('sub05')
+                sub05.innerHTML = `R$ ${qtdGeral[num] * 17}`
         }
         else if(num == 5){
                 let qtd06 = document.getElementById('unidChefe')
                 qtd06.innerHTML = `${qtdGeral[num]}`
+                let sub06 = document.getElementById('sub06')
+                sub06.innerHTML = `R$ ${qtdGeral[num] * 19.50}`
         }
         else if(num == 6){
                 let qtd07 = document.getElementById('unidQueijos')
                 qtd07.innerHTML = `${qtdGeral[num]}`
+                let sub07 = document.getElementById('sub07')
+                sub07.innerHTML = `R$ ${qtdGeral[num] * 20}`
         }
         else if(num == 7){
                 let qtd08 = document.getElementById('unidPaulista')
                 qtd08.innerHTML = `${qtdGeral[num]}`
+                let sub08 = document.getElementById('sub08')
+                sub08.innerHTML = `R$ ${qtdGeral[num] * 19}`
         }
         else if(num == 8){
                 let qtd09 = document.getElementById('unidRomana')
                 qtd09.innerHTML = `${qtdGeral[num]}`
+                let sub09 = document.getElementById('sub09')
+                sub09.innerHTML = `R$ ${qtdGeral[num] * 19}`
         }
         else if(num == 9){
                 let qtd10 = document.getElementById('unidCarne')
                 qtd10.innerHTML = `${qtdGeral[num]}`
+                let sub10 = document.getElementById('sub10')
+                sub10.innerHTML = `R$ ${qtdGeral[num] * 20}`
         }
         else if(num == 10){
                 let qtd11 = document.getElementById('unidCoca')
                 qtd11.innerHTML = `${qtdGeral[num]}`
+                let sub11 = document.getElementById('sub11')
+                sub11.innerHTML = `R$ ${qtdGeral[num] * 2.50}`
         }
         else if(num == 11){
                 let qtd12 = document.getElementById('unidFanta')
                 qtd12.innerHTML = `${qtdGeral[num]}`
+                let sub12 = document.getElementById('sub12')
+                sub12.innerHTML = `R$ ${qtdGeral[num] * 2.50}`
         }
         else if(num == 12){
                 let qtd13 = document.getElementById('unidGuarana')
                 qtd13.innerHTML = `${qtdGeral[num]}`
+                let sub13 = document.getElementById('sub13')
+                sub13.innerHTML = `R$ ${qtdGeral[num] * 2.50}`
         }
         else if(num == 13){
                 let qtd14 = document.getElementById('unidSuco')
                 qtd14.innerHTML = `${qtdGeral[num]}`
+                let sub14 = document.getElementById('sub14')
+                sub14.innerHTML = `R$ ${qtdGeral[num] * 1.50}`
         }
         else if(num == 14){
                 let qtd15 = document.getElementById('unidAgua')
                 qtd15.innerHTML = `${qtdGeral[num]}`
+                let sub15 = document.getElementById('sub15')
+                sub15.innerHTML = `R$ ${qtdGeral[num] * 1}`
         }
         else if(num == 15){
                 let qtd16 = document.getElementById('unidChoco')
                 qtd16.innerHTML = `${qtdGeral[num]}`
+                let sub16 = document.getElementById('sub16')
+                sub16.innerHTML = `R$ ${qtdGeral[num] * 10}`
         }
         else if(num == 16){
                 let qtd17 = document.getElementById('unidMilk')
                 qtd17.innerHTML = `${qtdGeral[num]}`
+                let sub17 = document.getElementById('sub17')
+                sub17.innerHTML = `R$ ${qtdGeral[num] * 9}`
         }
         else if(num == 17){
                 let qtd18 = document.getElementById('unidAcai')
                 qtd18.innerHTML = `${qtdGeral[num]}`
+                let sub18 = document.getElementById('sub18')
+                sub18.innerHTML = `R$ ${qtdGeral[num] * 14.50}`
         }
         else if(num == 18){
                 let qtd19 = document.getElementById('unidMorango')
                 qtd19.innerHTML = `${qtdGeral[num]}`
+                let sub19 = document.getElementById('sub19')
+                sub19.innerHTML = `R$ ${qtdGeral[num] * 10}`
         }
         else{
                 let qtd20 = document.getElementById('unidPicole')
                 qtd20.innerHTML = `${qtdGeral[num]}`
+                let sub20 = document.getElementById('sub20')
+                sub20.innerHTML = `R$ ${qtdGeral[num] * 3.50}`
         }
 }
 
@@ -186,8 +239,9 @@ var verifica = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 // ---------------- SESSÃO DE SOBREMESA ----------------
 function calc01(){
-        var total01 = 7 * qtdGeral[0]
-        valorTotal += total01
+        //var total01 = 7 * qtdGeral[0]
+        //valorTotal += total01
+        valorTotal2[0] = 7 * qtdGeral[0]
         verifica[0] = 1
 
         let divRevisao = document.createElement('div')
@@ -218,15 +272,17 @@ function calc01(){
         botaomais(div2, p2, 0)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub01')
         p3.appendChild(div3)
-        div3.innerHTML = `${total01}`
+        div3.innerHTML = `R$ ${valorTotal2[0]}`
         criaLixeira(divRevisao)
 }
 
 function calc02(){
 
-        var total02 = 13 * qtdGeral[1]
-        valorTotal += total02
+        //var total02 = 13 * qtdGeral[1]
+        //valorTotal += total02
+        valorTotal2[1] = 13 * qtdGeral[1]
         verifica[1] = 1
 
         let divRevisao = document.createElement('div')
@@ -246,7 +302,7 @@ function calc02(){
         let div1 = document.createElement('div')
         p1.appendChild(div1)
         div1.setAttribute('class', 'nomePdt')
-        div1.innerHTML = `X-Picanha`
+        div1.innerHTML = `X-Picanha ----- R$ 13,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 1)
@@ -258,14 +314,16 @@ function calc02(){
 
         let div3 = document.createElement('div')
         p3.appendChild(div3)
-        div3.innerHTML = `${total02}`
+        div3.setAttribute('id', 'sub02')
+        div3.innerHTML = `R$ ${valorTotal2[1]}`
         criaLixeira(divRevisao)
 }
 
 function calc03(){
 
-        var total03 = 10 * qtdGeral[2]
-        valorTotal += total03
+        //var total03 = 10 * qtdGeral[2]
+        //valorTotal += total03
+        valorTotal2[2] = 10 * qtdGeral[2]
         verifica[2] = 1
 
         let divRevisao = document.createElement('div')
@@ -285,7 +343,7 @@ function calc03(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `X-Tudo`
+        div1.innerHTML = `X-Tudo ----- R$ 10,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 2)
@@ -297,7 +355,8 @@ function calc03(){
 
         let div3 = document.createElement('div')
         p3.appendChild(div3)
-        div3.innerHTML = `${total03}`
+        div3.setAttribute('id', 'sub03')
+        div3.innerHTML = `R$ ${valorTotal2[2]}`
         criaLixeira(divRevisao)
 }
 
@@ -324,7 +383,7 @@ function calc04(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Chicken`
+        div1.innerHTML = `Chicken ----- R$ 12,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 3)
@@ -335,8 +394,9 @@ function calc04(){
         botaomais(div2, p2, 3)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub04')
         p3.appendChild(div3)
-        div3.innerHTML = `${total04}`
+        div3.innerHTML = `R$ ${total04}`
         criaLixeira(divRevisao)
 }
 
@@ -363,7 +423,7 @@ function calc05(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Duplo X-Tudo de Picanha`
+        div1.innerHTML = `Duplo X-Tudo de Picanha ----- R$ 17,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 4)
@@ -374,8 +434,9 @@ function calc05(){
         botaomais(div2, p2, 4)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub05')
         p3.appendChild(div3)
-        div3.innerHTML = `${total05}`
+        div3.innerHTML = `R$ ${total05}`
         criaLixeira(divRevisao)
 }
 
@@ -403,7 +464,7 @@ function calc06(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Chefe`
+        div1.innerHTML = `Chefe ----- R$ 19,50`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 5)
@@ -414,8 +475,9 @@ function calc06(){
         botaomais(div2, p2, 5)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub06')
         p3.appendChild(div3)
-        div3.innerHTML = `${total06}`
+        div3.innerHTML = `R$ ${total06}`
         criaLixeira(divRevisao)
 }
 
@@ -442,7 +504,7 @@ function calc07(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `4 Queijos`
+        div1.innerHTML = `4 Queijos ----- R$ 20,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 6)
@@ -453,8 +515,9 @@ function calc07(){
         botaomais(div2, p2, 6)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub07')
         p3.appendChild(div3)
-        div3.innerHTML = `${total07}`
+        div3.innerHTML = `R$ ${total07}`
         criaLixeira(divRevisao)
 }
 
@@ -481,7 +544,7 @@ function calc08(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Paulista`
+        div1.innerHTML = `Paulista ----- R$ 19,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 7)
@@ -492,8 +555,9 @@ function calc08(){
         botaomais(div2, p2, 7)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub08')
         p3.appendChild(div3)
-        div3.innerHTML = `${total08}`
+        div3.innerHTML = `R$ ${total08}`
         criaLixeira(divRevisao)
 }
 
@@ -520,7 +584,7 @@ function calc09(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Romana`
+        div1.innerHTML = `Romana ----- R$ 19,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 8)
@@ -531,8 +595,9 @@ function calc09(){
         botaomais(div2, p2, 8)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub09')
         p3.appendChild(div3)
-        div3.innerHTML = `${total09}`
+        div3.innerHTML = `R$ ${total09}`
         criaLixeira(divRevisao)
 }
 
@@ -559,7 +624,7 @@ function calc10(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Carne`
+        div1.innerHTML = `Carne ----- R$ 20,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 9)
@@ -570,8 +635,9 @@ function calc10(){
         botaomais(div2, p2, 9)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub10')
         p3.appendChild(div3)
-        div3.innerHTML = `${total10}`
+        div3.innerHTML = `R$ ${total10}`
         criaLixeira(divRevisao)
 }
 
@@ -599,7 +665,7 @@ function calc11(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Coca-Cola`
+        div1.innerHTML = `Coca-Cola ----- R$ 2,50`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 10)
@@ -610,8 +676,9 @@ function calc11(){
         botaomais(div2, p2, 10)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub11')
         p3.appendChild(div3)
-        div3.innerHTML = `${total11}`
+        div3.innerHTML = `R$ ${total11}`
         criaLixeira(divRevisao)
 }
 
@@ -638,7 +705,7 @@ function calc12(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Refrigerante Fanta`
+        div1.innerHTML = `Refrigerante Fanta ----- R$ 2,50`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 11)
@@ -649,8 +716,9 @@ function calc12(){
         botaomais(div2, p2, 11)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub12')
         p3.appendChild(div3)
-        div3.innerHTML = `${total12}`
+        div3.innerHTML = `R$ ${total12}`
         criaLixeira(divRevisao)
 }
 
@@ -677,7 +745,7 @@ function calc13(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Refrigerante Guaraná`
+        div1.innerHTML = `Refrigerante Guaraná ----- R$ 2,50`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 12)
@@ -688,8 +756,9 @@ function calc13(){
         botaomais(div2, p2, 12)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub13')
         p3.appendChild(div3)
-        div3.innerHTML = `${total13}`
+        div3.innerHTML = `R$ ${total13}`
         criaLixeira(divRevisao)
 }
 
@@ -716,7 +785,7 @@ function calc14(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Suco de Laranja`
+        div1.innerHTML = `Suco de Laranja ----- R$ 1,50`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 13)
@@ -727,8 +796,9 @@ function calc14(){
         botaomais(div2, p2, 13)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub14')
         p3.appendChild(div3)
-        div3.innerHTML = `${total14}`
+        div3.innerHTML = `R$ ${total14}`
         criaLixeira(divRevisao)
 }
 
@@ -755,7 +825,7 @@ function calc15(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Água Mineral`
+        div1.innerHTML = `Água Mineral ----- R$ 1,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 14)
@@ -766,15 +836,16 @@ function calc15(){
         botaomais(div2, p2, 14)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub15')
         p3.appendChild(div3)
-        div3.innerHTML = `${total15}`
+        div3.innerHTML = `R$ ${total15}`
         criaLixeira(divRevisao)
 }
 
 // ---------------- SESSÃO DE SOBREMESA ----------------
 function calc16(){
 
-        var total16 = 1 * qtdGeral[15]
+        var total16 = 10 * qtdGeral[15]
         valorTotal += total16
         verifica[15] = 1
 
@@ -795,7 +866,7 @@ function calc16(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Sorvete de Chocolate`
+        div1.innerHTML = `Sorvete de Chocolate ----- R$ 10,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 15)
@@ -806,14 +877,15 @@ function calc16(){
         botaomais(div2, p2, 15)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub16')
         p3.appendChild(div3)
-        div3.innerHTML = `${total16}`
+        div3.innerHTML = `R$ ${total16}`
         criaLixeira(divRevisao)
 }
 
 function calc17(){
 
-        var total17 = 1 * qtdGeral[16]
+        var total17 = 9 * qtdGeral[16]
         valorTotal += total17
         verifica[16] = 1
 
@@ -834,7 +906,7 @@ function calc17(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Milkshake`
+        div1.innerHTML = `Milkshake ----- R$ 9,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 16)
@@ -845,14 +917,15 @@ function calc17(){
         botaomais(div2, p2, 16)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub17')
         p3.appendChild(div3)
-        div3.innerHTML = `${total17}`
+        div3.innerHTML = `R$ ${total17}`
         criaLixeira(divRevisao)
 }
 
 function calc18(){
 
-        var total18 = 1 * qtdGeral[17]
+        var total18 = 14.50 * qtdGeral[17]
         valorTotal += total18
         verifica[17] = 1
 
@@ -873,7 +946,7 @@ function calc18(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Açaí`
+        div1.innerHTML = `Açaí ----- R$ 14,50`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 17)
@@ -884,14 +957,15 @@ function calc18(){
         botaomais(div2, p2, 17)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub18')
         p3.appendChild(div3)
-        div3.innerHTML = `${total18}`
+        div3.innerHTML = `R$ ${total18}`
         criaLixeira(divRevisao)
 }
 
 function calc19(){
 
-        var total19 = 1 * qtdGeral[18]
+        var total19 = 10 * qtdGeral[18]
         valorTotal += total19
         verifica[18] = 1
 
@@ -912,7 +986,7 @@ function calc19(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Sorvete de Morango`
+        div1.innerHTML = `Sorvete de Morango ----- R$ 10,00`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 18)
@@ -923,14 +997,15 @@ function calc19(){
         botaomais(div2, p2, 18)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub19')
         p3.appendChild(div3)
-        div3.innerHTML = `${total19}`
+        div3.innerHTML = `R$ ${total19}`
         criaLixeira(divRevisao)
 }
 
 function calc20(){
 
-        var total20 = 1 * qtdGeral[19]
+        var total20 = 3.50 * qtdGeral[19]
         valorTotal += total20
         verifica[19] = 1
 
@@ -951,7 +1026,7 @@ function calc20(){
         let div1 = document.createElement('div')
         div1.setAttribute('class', 'nomePdt')
         p1.appendChild(div1)
-        div1.innerHTML = `Picolé`
+        div1.innerHTML = `Picolé ----- R$ 3,50`
 
         let div2 = document.createElement('div')
         botaomenos(div2, p2, 19)
@@ -962,8 +1037,9 @@ function calc20(){
         botaomais(div2, p2, 19)
 
         let div3 = document.createElement('div')
+        div3.setAttribute('id', 'sub20')
         p3.appendChild(div3)
-        div3.innerHTML = `${total20}`
+        div3.innerHTML = `R$ ${total20}`
         criaLixeira(divRevisao)
 }
 
@@ -974,6 +1050,9 @@ function criarSimples(){
         else{
                 let divUnid = document.getElementById('unid01')
                 divUnid.innerHTML = `${qtdGeral[0]}`
+                valorTotal2[0] = qtdGeral[0] * 7
+                let sub01 = document.getElementById('sub01')
+                sub01.innerHTML = `R$ ${valorTotal2[0]}`
         }
 }
 function criarPicanha(){
@@ -983,6 +1062,9 @@ function criarPicanha(){
         else{
                 let divUnid = document.getElementById('unid02')
                 divUnid.innerHTML = `${qtdGeral[1]}`
+                valorTotal2[1] = qtdGeral[1] * 13
+                let sub02 = document.getElementById('sub02')
+                sub02.innerHTML = `R$ ${valorTotal2[1]}`
         }
 }
 function criarTudo(){
@@ -1150,6 +1232,7 @@ function criarPicole(){
 
 var contadorRev = 0
 function secRevisao(){
+        var valorTotal = 0
         if(numCompras.innerHTML != '0'){
                 mainPrincipal.style.display = 'none'
                 mainRevisao.style.display = 'block'
@@ -1223,12 +1306,18 @@ function secRevisao(){
                         let numTotal = document.createElement('p')
                         numTotal.setAttribute('id', 'numTotal')
                         divMain2.appendChild(numTotal)
+                        for(var i=0; i < qtdGeral.length; i++){
+                                valorTotal += valorTotal2[i]
+                        }
                         numTotal.innerHTML = `Total a pagar: ${valorTotal}`
                         numTotal.style.backgroundColor = 'black'
                         numTotal.style.color = 'white'
                 }
                 else{
                         let divTotal = document.getElementById('numTotal')
+                        for(var i=0; i < qtdGeral.length; i++){
+                                valorTotal += valorTotal2[i]
+                        }
                         divTotal.innerHTML = `Total a pagar: ${valorTotal}`
                 }
                 contadorRev = 1
