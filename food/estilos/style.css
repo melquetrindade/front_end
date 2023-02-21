@@ -358,6 +358,7 @@ div#total{
 
 p#numTotal{
     display: inline;
+    font-size: 0.8em;
 }
 
 p#frase1{
@@ -368,6 +369,10 @@ p#frase1{
     color: white;
     display: inline;
     margin-right: 35px;
+}
+
+p#frase1:hover{
+    background-color: brown;
 }
 
 /* ---------------------- XXX -------------------- */

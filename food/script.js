@@ -232,11 +232,17 @@ function criaIconeSobre(p1){
         p1.appendChild(iconeSobre)
 }
 
-function criaLixeira(divRevisao){
+function criaLixeira(divRevisao, num, d){
         let lixeira = document.createElement('div')
         lixeira.setAttribute('class', 'lixo')
         lixeira.innerHTML = `<span class="material-symbols-outlined">delete</span>`
         divRevisao.appendChild(lixeira)
+        lixeira.addEventListener('click', function(){
+                qtdGeral[num] = 0
+                valorTotal2[num] = 0
+                let generico = document.getElementById(d)
+                generico.style.display = 'none'
+        })
 }
 
 function voltarPag(){
@@ -293,7 +299,7 @@ function calc01(){
         div3.setAttribute('id', 'sub01')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[0]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 0, 'div01')
 }
 
 function calc02(){
@@ -333,7 +339,7 @@ function calc02(){
         p3.appendChild(div3)
         div3.setAttribute('id', 'sub02')
         div3.innerHTML = `R$ ${valorTotal2[1]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 1, 'div02')
 }
 
 function calc03(){
