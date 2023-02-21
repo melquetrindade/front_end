@@ -78,102 +78,119 @@ function addAlimentos(num){
                 qtd04.innerHTML = `${qtdGeral[num]}`
                 let sub04 = document.getElementById('sub04')
                 sub04.innerHTML = `R$ ${qtdGeral[num] * 12}`
+                atualizaTotal(num, 12)
         }
         else if(num == 4){
                 let qtd05 = document.getElementById('unidDuplo')
                 qtd05.innerHTML = `${qtdGeral[num]}`
                 let sub05 = document.getElementById('sub05')
                 sub05.innerHTML = `R$ ${qtdGeral[num] * 17}`
+                atualizaTotal(num, 17)
         }
         else if(num == 5){
                 let qtd06 = document.getElementById('unidChefe')
                 qtd06.innerHTML = `${qtdGeral[num]}`
                 let sub06 = document.getElementById('sub06')
                 sub06.innerHTML = `R$ ${qtdGeral[num] * 19.50}`
+                atualizaTotal(num, 19.50)
         }
         else if(num == 6){
                 let qtd07 = document.getElementById('unidQueijos')
                 qtd07.innerHTML = `${qtdGeral[num]}`
                 let sub07 = document.getElementById('sub07')
                 sub07.innerHTML = `R$ ${qtdGeral[num] * 20}`
+                atualizaTotal(num, 20)
         }
         else if(num == 7){
                 let qtd08 = document.getElementById('unidPaulista')
                 qtd08.innerHTML = `${qtdGeral[num]}`
                 let sub08 = document.getElementById('sub08')
                 sub08.innerHTML = `R$ ${qtdGeral[num] * 19}`
+                atualizaTotal(num, 19)
         }
         else if(num == 8){
                 let qtd09 = document.getElementById('unidRomana')
                 qtd09.innerHTML = `${qtdGeral[num]}`
                 let sub09 = document.getElementById('sub09')
                 sub09.innerHTML = `R$ ${qtdGeral[num] * 19}`
+                atualizaTotal(num, 19)
         }
         else if(num == 9){
                 let qtd10 = document.getElementById('unidCarne')
                 qtd10.innerHTML = `${qtdGeral[num]}`
                 let sub10 = document.getElementById('sub10')
                 sub10.innerHTML = `R$ ${qtdGeral[num] * 20}`
+                atualizaTotal(num, 20)
         }
         else if(num == 10){
                 let qtd11 = document.getElementById('unidCoca')
                 qtd11.innerHTML = `${qtdGeral[num]}`
                 let sub11 = document.getElementById('sub11')
                 sub11.innerHTML = `R$ ${qtdGeral[num] * 2.50}`
+                atualizaTotal(num, 2.50)
         }
         else if(num == 11){
                 let qtd12 = document.getElementById('unidFanta')
                 qtd12.innerHTML = `${qtdGeral[num]}`
                 let sub12 = document.getElementById('sub12')
                 sub12.innerHTML = `R$ ${qtdGeral[num] * 2.50}`
+                atualizaTotal(num, 2.50)
         }
         else if(num == 12){
                 let qtd13 = document.getElementById('unidGuarana')
                 qtd13.innerHTML = `${qtdGeral[num]}`
                 let sub13 = document.getElementById('sub13')
                 sub13.innerHTML = `R$ ${qtdGeral[num] * 2.50}`
+                atualizaTotal(num, 2.50)
         }
         else if(num == 13){
                 let qtd14 = document.getElementById('unidSuco')
                 qtd14.innerHTML = `${qtdGeral[num]}`
                 let sub14 = document.getElementById('sub14')
                 sub14.innerHTML = `R$ ${qtdGeral[num] * 1.50}`
+                atualizaTotal(num, 1.50)
         }
         else if(num == 14){
                 let qtd15 = document.getElementById('unidAgua')
                 qtd15.innerHTML = `${qtdGeral[num]}`
                 let sub15 = document.getElementById('sub15')
                 sub15.innerHTML = `R$ ${qtdGeral[num] * 1}`
+                atualizaTotal(num, 1)
         }
         else if(num == 15){
                 let qtd16 = document.getElementById('unidChoco')
                 qtd16.innerHTML = `${qtdGeral[num]}`
                 let sub16 = document.getElementById('sub16')
                 sub16.innerHTML = `R$ ${qtdGeral[num] * 10}`
+                atualizaTotal(num, 10)
         }
         else if(num == 16){
                 let qtd17 = document.getElementById('unidMilk')
                 qtd17.innerHTML = `${qtdGeral[num]}`
                 let sub17 = document.getElementById('sub17')
                 sub17.innerHTML = `R$ ${qtdGeral[num] * 9}`
+                atualizaTotal(num, 9)
         }
         else if(num == 17){
                 let qtd18 = document.getElementById('unidAcai')
                 qtd18.innerHTML = `${qtdGeral[num]}`
                 let sub18 = document.getElementById('sub18')
                 sub18.innerHTML = `R$ ${qtdGeral[num] * 14.50}`
+                atualizaTotal(num, 14.50)
         }
         else if(num == 18){
                 let qtd19 = document.getElementById('unidMorango')
                 qtd19.innerHTML = `${qtdGeral[num]}`
                 let sub19 = document.getElementById('sub19')
                 sub19.innerHTML = `R$ ${qtdGeral[num] * 10}`
+                atualizaTotal(num, 10)
         }
         else{
                 let qtd20 = document.getElementById('unidPicole')
                 qtd20.innerHTML = `${qtdGeral[num]}`
                 let sub20 = document.getElementById('sub20')
                 sub20.innerHTML = `R$ ${qtdGeral[num] * 3.50}`
+                atualizaTotal(num, 3.50)
         }
 }
 
@@ -239,13 +256,13 @@ var verifica = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 // ---------------- SESSÃO DE SOBREMESA ----------------
 function calc01(){
-        //var total01 = 7 * qtdGeral[0]
-        //valorTotal += total01
+
         valorTotal2[0] = 7 * qtdGeral[0]
         verifica[0] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div01')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -280,13 +297,12 @@ function calc01(){
 
 function calc02(){
 
-        //var total02 = 13 * qtdGeral[1]
-        //valorTotal += total02
         valorTotal2[1] = 13 * qtdGeral[1]
         verifica[1] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div02')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -321,13 +337,12 @@ function calc02(){
 
 function calc03(){
 
-        //var total03 = 10 * qtdGeral[2]
-        //valorTotal += total03
         valorTotal2[2] = 10 * qtdGeral[2]
         verifica[2] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div03')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -362,12 +377,12 @@ function calc03(){
 
 function calc04(){
 
-        var total04 = 12 * qtdGeral[3]
-        valorTotal += total04
+        valorTotal2[3] = 12 * qtdGeral[3]
         verifica[3] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div04')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -396,18 +411,18 @@ function calc04(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub04')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total04}`
+        div3.innerHTML = `R$ ${valorTotal2[3]}`
         criaLixeira(divRevisao)
 }
 
 function calc05(){
 
-        var total05 = 17 * qtdGeral[4]
-        valorTotal += total05
+        valorTotal2[4] = 17 * qtdGeral[4]
         verifica[4] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div05')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -436,19 +451,19 @@ function calc05(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub05')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total05}`
+        div3.innerHTML = `R$ ${valorTotal2[4]}`
         criaLixeira(divRevisao)
 }
 
 // ---------------- SESSÃO DE PIZZA ----------------
 function calc06(){
 
-        var total06 = 19.50 * qtdGeral[5]
-        valorTotal += total06
+        valorTotal2[5] = 19.50 * qtdGeral[5]
         verifica[5] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div06')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -477,18 +492,18 @@ function calc06(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub06')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total06}`
+        div3.innerHTML = `R$ ${valorTotal2[5]}`
         criaLixeira(divRevisao)
 }
 
 function calc07(){
 
-        var total07 = 20 * qtdGeral[6]
-        valorTotal += total07
+        valorTotal2[6] = 20 * qtdGeral[6]
         verifica[6] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div07')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -517,18 +532,18 @@ function calc07(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub07')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total07}`
+        div3.innerHTML = `R$ ${valorTotal2[6]}`
         criaLixeira(divRevisao)
 }
 
 function calc08(){
 
-        var total08 = 19 * qtdGeral[7]
-        valorTotal += total08
+        valorTotal2[7] = 19 * qtdGeral[7]
         verifica[7] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div08')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -557,18 +572,18 @@ function calc08(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub08')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total08}`
+        div3.innerHTML = `R$ ${valorTotal2[7]}`
         criaLixeira(divRevisao)
 }
 
 function calc09(){
 
-        var total09 = 19 * qtdGeral[8]
-        valorTotal += total09
+        valorTotal2[8] = 19 * qtdGeral[8]
         verifica[8] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div09')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -597,18 +612,18 @@ function calc09(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub09')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total09}`
+        div3.innerHTML = `R$ ${valorTotal2[8]}`
         criaLixeira(divRevisao)
 }
 
 function calc10(){
 
-        var total10 = 20 * qtdGeral[9]
-        valorTotal += total10
+        valorTotal2[9] = 20 * qtdGeral[9]
         verifica[9] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div10')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -637,19 +652,19 @@ function calc10(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub10')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total10}`
+        div3.innerHTML = `R$ ${valorTotal2[9]}`
         criaLixeira(divRevisao)
 }
 
 // ---------------- SESSÃO DE BEBIDAS ----------------
 function calc11(){
 
-        var total11 = 2.50 * qtdGeral[10]
-        valorTotal += total11
+        valorTotal2[10] = 2.50 * qtdGeral[10]
         verifica[10] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div11')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -678,18 +693,18 @@ function calc11(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub11')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total11}`
+        div3.innerHTML = `R$ ${valorTotal2[10]}`
         criaLixeira(divRevisao)
 }
 
 function calc12(){
 
-        var total12 = 2.50 * qtdGeral[11]
-        valorTotal += total12
+        valorTotal2[11] = 2.50 * qtdGeral[11]
         verifica[11] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div12')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -718,18 +733,18 @@ function calc12(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub12')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total12}`
+        div3.innerHTML = `R$ ${valorTotal2[11]}`
         criaLixeira(divRevisao)
 }
 
 function calc13(){
 
-        var total13 = 2.50 * qtdGeral[12]
-        valorTotal += total13
+        valorTotal2[12] = 2.50 * qtdGeral[12]
         verifica[12] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div13')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -758,18 +773,18 @@ function calc13(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub13')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total13}`
+        div3.innerHTML = `R$ ${valorTotal2[12]}`
         criaLixeira(divRevisao)
 }
 
 function calc14(){
 
-        var total14 = 1.50 * qtdGeral[13]
-        valorTotal += total14
+        valorTotal2[13] = 1.50 * qtdGeral[13]
         verifica[13] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div14')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -798,18 +813,18 @@ function calc14(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub14')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total14}`
+        div3.innerHTML = `R$ ${valorTotal2[13]}`
         criaLixeira(divRevisao)
 }
 
 function calc15(){
 
-        var total15 = 1 * qtdGeral[14]
-        valorTotal += total15
+        valorTotal2[14] = 1 * qtdGeral[14]
         verifica[14] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div15')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -838,19 +853,19 @@ function calc15(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub15')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total15}`
+        div3.innerHTML = `R$ ${valorTotal2[14]}`
         criaLixeira(divRevisao)
 }
 
 // ---------------- SESSÃO DE SOBREMESA ----------------
 function calc16(){
 
-        var total16 = 10 * qtdGeral[15]
-        valorTotal += total16
+        valorTotal2[15] = 10 * qtdGeral[15]
         verifica[15] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div16')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -879,18 +894,18 @@ function calc16(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub16')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total16}`
+        div3.innerHTML = `R$ ${valorTotal2[15]}`
         criaLixeira(divRevisao)
 }
 
 function calc17(){
 
-        var total17 = 9 * qtdGeral[16]
-        valorTotal += total17
+        valorTotal2[16] = 9 * qtdGeral[16]
         verifica[16] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div17')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -919,18 +934,18 @@ function calc17(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub17')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total17}`
+        div3.innerHTML = `R$ ${valorTotal2[16]}`
         criaLixeira(divRevisao)
 }
 
 function calc18(){
 
-        var total18 = 14.50 * qtdGeral[17]
-        valorTotal += total18
+        valorTotal2[17] = 14.50 * qtdGeral[17]
         verifica[17] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div18')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -959,18 +974,18 @@ function calc18(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub18')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total18}`
+        div3.innerHTML = `R$ ${valorTotal2[17]}`
         criaLixeira(divRevisao)
 }
 
 function calc19(){
 
-        var total19 = 10 * qtdGeral[18]
-        valorTotal += total19
+        valorTotal2[18] = 10 * qtdGeral[18]
         verifica[18] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div19')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -999,18 +1014,18 @@ function calc19(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub19')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total19}`
+        div3.innerHTML = `R$ ${valorTotal2[18]}`
         criaLixeira(divRevisao)
 }
 
 function calc20(){
 
-        var total20 = 3.50 * qtdGeral[19]
-        valorTotal += total20
+        valorTotal2[19] = 3.50 * qtdGeral[19]
         verifica[19] = 1
 
         let divRevisao = document.createElement('div')
         divRevisao.setAttribute('class', 'telaRev')
+        divRevisao.setAttribute('id', 'div20')
         divMain2.appendChild(divRevisao)
         let p1 = document.createElement('p')
         divRevisao.appendChild(p1)
@@ -1039,7 +1054,7 @@ function calc20(){
         let div3 = document.createElement('div')
         div3.setAttribute('id', 'sub20')
         p3.appendChild(div3)
-        div3.innerHTML = `R$ ${total20}`
+        div3.innerHTML = `R$ ${valorTotal2[19]}`
         criaLixeira(divRevisao)
 }
 
@@ -1048,6 +1063,8 @@ function criarSimples(){
                 calc01()
         }
         else{
+                let div01 = document.getElementById('div01')
+                div01.style.display = 'block'
                 let divUnid = document.getElementById('unid01')
                 divUnid.innerHTML = `${qtdGeral[0]}`
                 valorTotal2[0] = qtdGeral[0] * 7
@@ -1060,6 +1077,8 @@ function criarPicanha(){
                 calc02()
         }
         else{
+                let div02 = document.getElementById('div02')
+                div02.style.display = 'block'
                 let divUnid = document.getElementById('unid02')
                 divUnid.innerHTML = `${qtdGeral[1]}`
                 valorTotal2[1] = qtdGeral[1] * 13
@@ -1072,8 +1091,13 @@ function criarTudo(){
                 calc03()
         }
         else{
+                let div03 = document.getElementById('div03')
+                div03.style.display = 'block'
                 let divUnid = document.getElementById('unid03')
                 divUnid.innerHTML = `${qtdGeral[2]}`
+                valorTotal2[2] = qtdGeral[2] * 10
+                let sub03 = document.getElementById('sub03')
+                sub03.innerHTML = `R$ ${valorTotal2[2]}`
         }
 }
 function criarChicken(){
@@ -1081,8 +1105,13 @@ function criarChicken(){
                 calc04()
         }
         else{
+                let div04 = document.getElementById('div04')
+                div04.style.display = 'block'
                 let divUnid = document.getElementById('unid04')
                 divUnid.innerHTML = `${qtdGeral[3]}`
+                valorTotal2[3] = qtdGeral[3] * 12
+                let sub04 = document.getElementById('sub04')
+                sub04.innerHTML = `R$ ${valorTotal2[3]}`
         }
 }
 function criarDuplo(){
@@ -1090,8 +1119,13 @@ function criarDuplo(){
                 calc05()
         }
         else{
+                let div05 = document.getElementById('div05')
+                div05.style.display = 'block'
                 let divUnid = document.getElementById('unid05')
                 divUnid.innerHTML = `${qtdGeral[4]}`
+                valorTotal2[4] = qtdGeral[4] * 17
+                let sub05 = document.getElementById('sub05')
+                sub05.innerHTML = `R$ ${valorTotal2[4]}`
         }
 }
 function criarChefe(){
@@ -1099,8 +1133,13 @@ function criarChefe(){
                 calc06()
         }
         else{
+                let div06 = document.getElementById('div06')
+                div06.style.display = 'block'
                 let divUnid = document.getElementById('unid06')
                 divUnid.innerHTML = `${qtdGeral[5]}`
+                valorTotal2[5] = qtdGeral[5] * 19.50
+                let sub06 = document.getElementById('sub06')
+                sub06.innerHTML = `R$ ${valorTotal2[5]}`
         }
 }
 function criarQueijos(){
@@ -1108,8 +1147,13 @@ function criarQueijos(){
                 calc07()
         }
         else{
+                let div07 = document.getElementById('div07')
+                div07.style.display = 'block'
                 let divUnid = document.getElementById('unid07')
                 divUnid.innerHTML = `${qtdGeral[6]}`
+                valorTotal2[6] = qtdGeral[6] * 20
+                let sub07 = document.getElementById('sub07')
+                sub07.innerHTML = `R$ ${valorTotal2[6]}`
         }
 }
 function criarPaulista(){
@@ -1117,8 +1161,13 @@ function criarPaulista(){
                 calc08()
         }
         else{
+                let div08 = document.getElementById('div08')
+                div08.style.display = 'block'
                 let divUnid = document.getElementById('unid08')
                 divUnid.innerHTML = `${qtdGeral[7]}`
+                valorTotal2[7] = qtdGeral[7] * 19
+                let sub08 = document.getElementById('sub08')
+                sub08.innerHTML = `R$ ${valorTotal2[7]}`
         }
 }
 function criarRomana(){
@@ -1126,8 +1175,13 @@ function criarRomana(){
                 calc09()
         }
         else{
+                let div09 = document.getElementById('div09')
+                div09.style.display = 'block'
                 let divUnid = document.getElementById('unid09')
                 divUnid.innerHTML = `${qtdGeral[8]}`
+                valorTotal2[8] = qtdGeral[8] * 19
+                let sub09 = document.getElementById('sub09')
+                sub09.innerHTML = `R$ ${valorTotal2[8]}`
         }
 }
 function criarCarne(){
@@ -1135,8 +1189,13 @@ function criarCarne(){
                 calc10()
         }
         else{
+                let div10 = document.getElementById('div10')
+                div10.style.display = 'block'
                 let divUnid = document.getElementById('unid10')
                 divUnid.innerHTML = `${qtdGeral[9]}`
+                valorTotal2[9] = qtdGeral[9] * 20
+                let sub10 = document.getElementById('sub10')
+                sub10.innerHTML = `R$ ${valorTotal2[9]}`
         }
 }
 function criarCoca(){
@@ -1144,8 +1203,13 @@ function criarCoca(){
                 calc11()
         }
         else{
+                let div11 = document.getElementById('div11')
+                div11.style.display = 'block'
                 let divUnid = document.getElementById('unid11')
                 divUnid.innerHTML = `${qtdGeral[10]}`
+                valorTotal2[10] = qtdGeral[10] * 2.50
+                let sub11 = document.getElementById('sub11')
+                sub11.innerHTML = `R$ ${valorTotal2[10]}`
         }
 }
 function criarFanta(){
@@ -1153,8 +1217,13 @@ function criarFanta(){
                 calc12()
         }
         else{
+                let div12 = document.getElementById('div12')
+                div12.style.display = 'block'
                 let divUnid = document.getElementById('unid12')
                 divUnid.innerHTML = `${qtdGeral[11]}`
+                valorTotal2[11] = qtdGeral[11] * 2.50
+                let sub12 = document.getElementById('sub12')
+                sub12.innerHTML = `R$ ${valorTotal2[11]}`
         }
 }
 function criarGuarana(){
@@ -1162,8 +1231,13 @@ function criarGuarana(){
                 calc13()
         }
         else{
+                let div13 = document.getElementById('div13')
+                div13.style.display = 'block'
                 let divUnid = document.getElementById('unid13')
                 divUnid.innerHTML = `${qtdGeral[12]}`
+                valorTotal2[12] = qtdGeral[12] * 2.50
+                let sub13 = document.getElementById('sub13')
+                sub13.innerHTML = `R$ ${valorTotal2[12]}`
         }
 }
 function criarSuco(){
@@ -1171,8 +1245,13 @@ function criarSuco(){
                 calc14()
         }
         else{
+                let div14 = document.getElementById('div14')
+                div14.style.display = 'block'
                 let divUnid = document.getElementById('unid14')
                 divUnid.innerHTML = `${qtdGeral[13]}`
+                valorTotal2[13] = qtdGeral[13] * 1.50
+                let sub14 = document.getElementById('sub14')
+                sub14.innerHTML = `R$ ${valorTotal2[13]}`
         }
 }
 function criarAgua(){
@@ -1180,8 +1259,13 @@ function criarAgua(){
                 calc15()
         }
         else{
+                let div15 = document.getElementById('div15')
+                div15.style.display = 'block'
                 let divUnid = document.getElementById('unid15')
                 divUnid.innerHTML = `${qtdGeral[14]}`
+                valorTotal2[14] = qtdGeral[14] * 1
+                let sub15 = document.getElementById('sub15')
+                sub15.innerHTML = `R$ ${valorTotal2[14]}`
         }
 }
 function criarChoco(){
@@ -1189,8 +1273,13 @@ function criarChoco(){
                 calc16()
         }
         else{
+                let div16 = document.getElementById('div16')
+                div16.style.display = 'block'
                 let divUnid = document.getElementById('unid16')
                 divUnid.innerHTML = `${qtdGeral[15]}`
+                valorTotal2[15] = qtdGeral[15] * 10
+                let sub16 = document.getElementById('sub16')
+                sub16.innerHTML = `R$ ${valorTotal2[15]}`
         }
 }
 function criarMilk(){
@@ -1198,8 +1287,13 @@ function criarMilk(){
                 calc17()
         }
         else{
+                let div17 = document.getElementById('div17')
+                div17.style.display = 'block'
                 let divUnid = document.getElementById('unid17')
                 divUnid.innerHTML = `${qtdGeral[16]}`
+                valorTotal2[16] = qtdGeral[16] * 9
+                let sub17 = document.getElementById('sub17')
+                sub17.innerHTML = `R$ ${valorTotal2[16]}`
         }
 }
 function criarAcai(){
@@ -1207,8 +1301,13 @@ function criarAcai(){
                 calc18()
         }
         else{
+                let div18 = document.getElementById('div18')
+                div18.style.display = 'block'
                 let divUnid = document.getElementById('unid18')
                 divUnid.innerHTML = `${qtdGeral[17]}`
+                valorTotal2[17] = qtdGeral[17] * 14.50
+                let sub18 = document.getElementById('sub18')
+                sub18.innerHTML = `R$ ${valorTotal2[17]}`
         }
 }
 function criarMorango(){
@@ -1216,8 +1315,13 @@ function criarMorango(){
                 calc19()
         }
         else{
+                let div19 = document.getElementById('div19')
+                div19.style.display = 'block'
                 let divUnid = document.getElementById('unid19')
                 divUnid.innerHTML = `${qtdGeral[18]}`
+                valorTotal2[18] = qtdGeral[18] * 10
+                let sub19 = document.getElementById('sub19')
+                sub19.innerHTML = `R$ ${valorTotal2[18]}`
         }
 }
 function criarPicole(){
@@ -1225,8 +1329,13 @@ function criarPicole(){
                 calc20()
         }
         else{
+                let div20 = document.getElementById('div20')
+                div20.style.display = 'block'
                 let divUnid = document.getElementById('unid20')
                 divUnid.innerHTML = `${qtdGeral[19]}`
+                valorTotal2[19] = qtdGeral[19] * 3.50
+                let sub20 = document.getElementById('sub20')
+                sub20.innerHTML = `R$ ${valorTotal2[19]}`
         }
 }
 
@@ -1299,6 +1408,98 @@ function secRevisao(){
                                 }
                                 else{
                                         criarPicole()
+                                }
+                        }
+                        else{
+                                if(i == 0){
+                                        if(verifica[0] == 1){
+                                                let div01 = document.getElementById('div01')
+                                                div01.style.display = 'none'
+                                        }
+                                }
+                                else if(i == 1){
+                                        if(verifica[1] == 1){
+                                                let div01 = document.getElementById('div01')
+                                                div01.style.display = 'none'
+                                        }
+                                }
+                                else if(i == 2){
+                                        if(verifica[2] == 1){
+                                                let div03 = document.getElementById('div03')
+                                                div03.style.display = 'none'
+                                        }
+                                }
+                                else if(i == 3){
+                                        if(verifica[3] == 1){
+                                                let div04 = document.getElementById('div04')
+                                                div04.style.display = 'none'
+                                        }
+                                }
+                                else if(i == 4){
+                                        if(verifica[4] == 1){
+                                                let div05 = document.getElementById('div05')
+                                                div05.style.display = 'none'
+                                        }
+                                }
+                                else if(i == 5){
+                                        let div06 = document.getElementById('div06')
+                                        div06.style.display = 'none'
+                                }
+                                else if(i == 6){
+                                        let div07 = document.getElementById('div07')
+                                        div07.style.display = 'none'
+                                }
+                                else if(i == 7){
+                                        let div08 = document.getElementById('div08')
+                                        div08.style.display = 'none'
+                                }
+                                else if(i == 8){
+                                        let div09 = document.getElementById('div09')
+                                        div09.style.display = 'none'
+                                }
+                                else if(i == 9){
+                                        let div10 = document.getElementById('div10')
+                                        div10.style.display = 'none'
+                                }
+                                else if(i == 10){
+                                        let div11 = document.getElementById('div11')
+                                        div11.style.display = 'none'
+                                }
+                                else if(i == 11){
+                                        let div12 = document.getElementById('div12')
+                                        div12.style.display = 'none'
+                                }
+                                else if(i == 12){
+                                        let div13 = document.getElementById('div13')
+                                        div13.style.display = 'none'
+                                }
+                                else if(i == 13){
+                                        let div14 = document.getElementById('div14')
+                                        div14.style.display = 'none'
+                                }
+                                else if(i == 14){
+                                        let div15 = document.getElementById('div15')
+                                        div15.style.display = 'none'
+                                }
+                                else if(i == 15){
+                                        let div16 = document.getElementById('div16')
+                                        div16.style.display = 'none'
+                                }
+                                else if(i == 16){
+                                        let div17 = document.getElementById('div17')
+                                        div17.style.display = 'none'
+                                }
+                                else if(i == 17){
+                                        let div18 = document.getElementById('div18')
+                                        div18.style.display = 'none'
+                                }
+                                else if(i == 18){
+                                        let div19 = document.getElementById('div19')
+                                        div19.style.display = 'none'
+                                }
+                                else{
+                                        let div20 = document.getElementById('div20')
+                                        div20.style.display = 'none'
                                 }
                         }
                 }
