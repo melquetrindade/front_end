@@ -11,6 +11,7 @@ let mainPrincipal = window.document.getElementById('pagPrincipal')
 let mainRevisao = window.document.getElementById('revisao')
 let divMain2 = window.document.getElementById('main2')
 let numCompras2 = window.document.getElementById('qtdCarro2')
+let vTotal = window.document.getElementById('total')
 
 
 mainRevisao.style.display = 'none'
@@ -1442,76 +1443,111 @@ function secRevisao(){
                                         }
                                 }
                                 else if(i == 5){
-                                        let div06 = document.getElementById('div06')
-                                        div06.style.display = 'none'
+                                        if(verifica[5] == 1){
+                                                let div06 = document.getElementById('div06')
+                                                div06.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 6){
-                                        let div07 = document.getElementById('div07')
-                                        div07.style.display = 'none'
+                                        if(verifica[6] == 1){
+                                                let div07 = document.getElementById('div07')
+                                                div07.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 7){
-                                        let div08 = document.getElementById('div08')
-                                        div08.style.display = 'none'
+                                        if(verifica[7] == 1){
+                                                let div08 = document.getElementById('div08')
+                                                div08.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 8){
-                                        let div09 = document.getElementById('div09')
-                                        div09.style.display = 'none'
+                                        if(verifica[8] == 1){
+                                                let div09 = document.getElementById('div09')
+                                                div09.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 9){
-                                        let div10 = document.getElementById('div10')
-                                        div10.style.display = 'none'
+                                        if(verifica[9] == 1){
+                                                let div10 = document.getElementById('div10')
+                                                div10.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 10){
-                                        let div11 = document.getElementById('div11')
-                                        div11.style.display = 'none'
+                                        if(verifica[10] == 1){
+                                                let div11 = document.getElementById('div11')
+                                                div11.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 11){
-                                        let div12 = document.getElementById('div12')
-                                        div12.style.display = 'none'
+                                        if(verifica[11] == 1){
+                                                let div12 = document.getElementById('div12')
+                                                div12.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 12){
-                                        let div13 = document.getElementById('div13')
-                                        div13.style.display = 'none'
+                                        if(verifica[12] == 1){
+                                                let div13 = document.getElementById('div13')
+                                                div13.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 13){
-                                        let div14 = document.getElementById('div14')
-                                        div14.style.display = 'none'
+                                        if(verifica[13] == 1){
+                                                let div14 = document.getElementById('div14')
+                                                div14.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 14){
-                                        let div15 = document.getElementById('div15')
-                                        div15.style.display = 'none'
+                                        if(verifica[14] == 1){
+                                                let div15 = document.getElementById('div15')
+                                                div15.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 15){
-                                        let div16 = document.getElementById('div16')
-                                        div16.style.display = 'none'
+                                        if(verifica[15] == 1){
+                                                let div16 = document.getElementById('div16')
+                                                div16.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 16){
-                                        let div17 = document.getElementById('div17')
-                                        div17.style.display = 'none'
+                                        if(verifica[16] == 1){
+                                                let div17 = document.getElementById('div17')
+                                                div17.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 17){
-                                        let div18 = document.getElementById('div18')
-                                        div18.style.display = 'none'
+                                        if(verifica[17] == 1){
+                                                let div18 = document.getElementById('div18')
+                                                div18.style.display = 'none'
+                                        }
                                 }
                                 else if(i == 18){
-                                        let div19 = document.getElementById('div19')
-                                        div19.style.display = 'none'
+                                        if(verifica[18] == 1){
+                                                let div19 = document.getElementById('div19')
+                                                div19.style.display = 'none'
+                                        }
                                 }
                                 else{
-                                        let div20 = document.getElementById('div20')
-                                        div20.style.display = 'none'
+                                        if(verifica[19] == 1){
+                                                let div20 = document.getElementById('div20')
+                                                div20.style.display = 'none'
+                                        }
                                 }
                         }
                 }
                 if(contadorRev == 0){
+                        let frase = document.createElement('p')
+                        frase.setAttribute('id', 'frase1')
+        
                         let numTotal = document.createElement('p')
                         numTotal.setAttribute('id', 'numTotal')
-                        divMain2.appendChild(numTotal)
+
+                        vTotal.appendChild(frase)
+                        vTotal.appendChild(numTotal)
                         for(var i=0; i < qtdGeral.length; i++){
                                 valorTotal += valorTotal2[i]
                         }
-                        numTotal.innerHTML = `Total a pagar: ${valorTotal}`
-                        numTotal.style.backgroundColor = 'black'
+                        frase.innerHTML = 'Finalizar Pedido'
+                        numTotal.innerHTML = `Total a pagar: R$ ${valorTotal}`
                         numTotal.style.color = 'white'
                 }
                 else{
@@ -1519,7 +1555,7 @@ function secRevisao(){
                         for(var i=0; i < qtdGeral.length; i++){
                                 valorTotal += valorTotal2[i]
                         }
-                        divTotal.innerHTML = `Total a pagar: ${valorTotal}`
+                        divTotal.innerHTML = `Total a pagar: R$ ${valorTotal}`
                 }
                 contadorRev = 1
                 numCompras2.innerHTML = `${cont} Lanches`

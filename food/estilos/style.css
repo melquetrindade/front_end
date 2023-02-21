@@ -346,11 +346,28 @@ div#main2 > div.telaRev > div.lixo:hover{
     color: red;
 }
 
-div#main2 > p#numTotal{
-    width: 90vw;
-    margin-top: 10px;
+div#total{
+    width: 83vw;
     margin-left: 4vw;
-    margin-right: 6vw;
+    margin-right: 7vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: black;
+    padding: 10px;
+}
+
+p#numTotal{
+    display: inline;
+}
+
+p#frase1{
+    background-color: red;
+    border-radius: 5px;
+    font-size: 0.6em;
+    padding: 8px;
+    color: white;
+    display: inline;
+    margin-right: 35px;
 }
 
 /* ---------------------- XXX -------------------- */
