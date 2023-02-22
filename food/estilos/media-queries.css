@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 390px) {
+    main > section > div{
+        width: 270px;
+    }
+    p#numTotal{
+        font-size: 0.7em;
+    }
+    
+    p#frase1{
+        font-size: 0.6em;
+        margin-right: 25px;
+    }
+    div#main2 > div.telaRev > p > div.nomePdt{
+        margin-left: 0px;
+        font-size: 0.9em;
+    }
+    section#revisao > header > div#carrinho2 > p#frase{
+        font-size: 0.7em;
+    }
+    section#revisao > header p#palavra4{
+
+        font-size: 0.7em;
+    }
+    section#revisao > header p#palavra3{
+        font-size: 0.7em;
+    }
+}

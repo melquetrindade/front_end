@@ -245,20 +245,20 @@ section#revisao > header p#palavra3{
     display: inline;
     font-weight: bold;
     color: white;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 section#revisao > header p#palavra4{
     display: inline;
     font-weight: bold;
     color: red;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 section#revisao > header > div#carrinho2 > p#frase{
     display: inline;
     color: white;
     font-weight: bold;
-    font-size: 0.7em;
+    font-size: 0.8em;
 }
 
 section#revisao > header > div#carrinho2 > p#qtdCarro2{
@@ -365,7 +365,7 @@ p#numTotal{
 p#frase1{
     background-color: red;
     border-radius: 5px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     padding: 8px;
     color: white;
     display: inline;
