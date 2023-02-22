@@ -232,7 +232,7 @@ function criaIconeSobre(p1){
         p1.appendChild(iconeSobre)
 }
 
-function criaLixeira(divRevisao, num, d){
+function criaLixeira(divRevisao, num, d, unidNome){
         let lixeira = document.createElement('div')
         lixeira.setAttribute('class', 'lixo')
         lixeira.innerHTML = `<span class="material-symbols-outlined">delete</span>`
@@ -242,6 +242,20 @@ function criaLixeira(divRevisao, num, d){
                 valorTotal2[num] = 0
                 let generico = document.getElementById(d)
                 generico.style.display = 'none'
+                let unidgeral = document.getElementById(unidNome)
+                unidgeral.innerHTML = `${qtdGeral[num]}`
+                var vtotal = 0
+                var lanches = 0
+                for(var i=0; i < qtdGeral.length; i++){
+                        vtotal += valorTotal2[i]
+                        if(qtdGeral[i] > 0){
+                                lanches += 1
+                        }
+                }
+                let numTotal = document.getElementById('numTotal')
+                numTotal.innerHTML = `Total a pagar: R$ ${vtotal}`
+                numCompras2.innerHTML = `${lanches} Lanches`
+
         })
 }
 
@@ -299,7 +313,7 @@ function calc01(){
         div3.setAttribute('id', 'sub01')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[0]}`
-        criaLixeira(divRevisao, 0, 'div01')
+        criaLixeira(divRevisao, 0, 'div01', 'unidSimples')
 }
 
 function calc02(){
@@ -339,7 +353,7 @@ function calc02(){
         p3.appendChild(div3)
         div3.setAttribute('id', 'sub02')
         div3.innerHTML = `R$ ${valorTotal2[1]}`
-        criaLixeira(divRevisao, 1, 'div02')
+        criaLixeira(divRevisao, 1, 'div02', 'unidPicanha')
 }
 
 function calc03(){
@@ -379,7 +393,7 @@ function calc03(){
         p3.appendChild(div3)
         div3.setAttribute('id', 'sub03')
         div3.innerHTML = `R$ ${valorTotal2[2]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 2, 'div03', 'unidTudo')
 }
 
 function calc04(){
@@ -419,7 +433,7 @@ function calc04(){
         div3.setAttribute('id', 'sub04')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[3]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 3, 'div04', 'unidChicken')
 }
 
 function calc05(){
@@ -459,7 +473,7 @@ function calc05(){
         div3.setAttribute('id', 'sub05')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[4]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 4, 'div05', 'unidDuplo')
 }
 
 // ---------------- SESSÃO DE PIZZA ----------------
@@ -500,7 +514,7 @@ function calc06(){
         div3.setAttribute('id', 'sub06')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[5]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 5, 'div06', 'unidChefe')
 }
 
 function calc07(){
@@ -540,7 +554,7 @@ function calc07(){
         div3.setAttribute('id', 'sub07')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[6]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 6, 'div07', 'unidQueijos')
 }
 
 function calc08(){
@@ -580,7 +594,7 @@ function calc08(){
         div3.setAttribute('id', 'sub08')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[7]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 7, 'div08', 'unidPaulista')
 }
 
 function calc09(){
@@ -620,7 +634,7 @@ function calc09(){
         div3.setAttribute('id', 'sub09')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[8]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 8, 'div09', 'unidRomana')
 }
 
 function calc10(){
@@ -660,7 +674,7 @@ function calc10(){
         div3.setAttribute('id', 'sub10')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[9]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 9, 'div10', 'unidCarne')
 }
 
 // ---------------- SESSÃO DE BEBIDAS ----------------
@@ -701,7 +715,7 @@ function calc11(){
         div3.setAttribute('id', 'sub11')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[10]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 10, 'div11', 'unidCoca')
 }
 
 function calc12(){
@@ -741,7 +755,7 @@ function calc12(){
         div3.setAttribute('id', 'sub12')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[11]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 11, 'div12', 'unidFanta')
 }
 
 function calc13(){
@@ -781,7 +795,7 @@ function calc13(){
         div3.setAttribute('id', 'sub13')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[12]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 12, 'div13', 'unidGuarana')
 }
 
 function calc14(){
@@ -821,7 +835,7 @@ function calc14(){
         div3.setAttribute('id', 'sub14')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[13]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 13, 'div14', 'unidSuco')
 }
 
 function calc15(){
@@ -861,7 +875,7 @@ function calc15(){
         div3.setAttribute('id', 'sub15')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[14]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 14, 'div15', 'unidAgua')
 }
 
 // ---------------- SESSÃO DE SOBREMESA ----------------
@@ -902,7 +916,7 @@ function calc16(){
         div3.setAttribute('id', 'sub16')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[15]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 15, 'div16', 'unidChoco')
 }
 
 function calc17(){
@@ -942,7 +956,7 @@ function calc17(){
         div3.setAttribute('id', 'sub17')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[16]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 16, 'div17', 'unidMilk')
 }
 
 function calc18(){
@@ -982,7 +996,7 @@ function calc18(){
         div3.setAttribute('id', 'sub18')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[17]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 17, 'div18', 'unidAcai')
 }
 
 function calc19(){
@@ -1022,7 +1036,7 @@ function calc19(){
         div3.setAttribute('id', 'sub19')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[18]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 18, 'div19', 'unidMorango')
 }
 
 function calc20(){
@@ -1062,7 +1076,7 @@ function calc20(){
         div3.setAttribute('id', 'sub20')
         p3.appendChild(div3)
         div3.innerHTML = `R$ ${valorTotal2[19]}`
-        criaLixeira(divRevisao)
+        criaLixeira(divRevisao, 19, 'div20', 'unidPicole')
 }
 
 function criarSimples(){
@@ -1553,6 +1567,18 @@ function secRevisao(){
                                 valorTotal += valorTotal2[i]
                         }
                         frase.innerHTML = 'Finalizar Pedido'
+                        frase.addEventListener('click', function(){
+                                var conta = 0
+                                for(var i=0; i < valorTotal2.length; i++){
+                                        conta += valorTotal2[i]
+                                }
+                                if(conta == 0){
+                                        window.alert('[ERRO] Nenhum produto no carrinho :(')
+                                }
+                                else{
+                                        window.alert('Pedido realizado com sucesso! :)')
+                                }
+                        })
                         numTotal.innerHTML = `Total a pagar: R$ ${valorTotal}`
                         numTotal.style.color = 'white'
                 }
