@@ -96,6 +96,9 @@
 }
 
 @media screen and (min-width: 992px) {
+    html, body{
+        width: 98vw;
+    }
     main > section > div{
         display: inline-block;
         width: 300px;
