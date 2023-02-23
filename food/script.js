@@ -49,7 +49,7 @@ function atualizaTotal(num, valor){
         for(var i=0; i < qtdGeral.length; i++){
                 valorTotal += valorTotal2[i]
         }
-        divTotal.innerHTML = `Total a pagar: ${valorTotal}`
+        divTotal.innerHTML = `Total a pagar: R$ ${valorTotal}`
 }
 
 function addAlimentos(num){

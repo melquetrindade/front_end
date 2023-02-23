@@ -81,6 +81,18 @@
     section#revisao > header > div#carrinho2 > p#qtdCarro2{
         font-size: 1.1em;
     }
+    div#total{
+        width: 385px;
+        margin: auto;
+        margin-top: 20px;
+        background-color: black;
+        padding: 15px;
+        transform: translateX(-3%);
+        border-radius: 7px;
+    }
+    p#numTotal{
+        margin-left: 40px;
+    }
 }
 
 @media screen and (min-width: 992px) {
@@ -102,10 +114,10 @@
     }
     div#main2 > div.telaRev{
         width: 520px;
-        display: block;
         margin: auto;
         margin-top: 30px;
         padding-left: 20px;
+        transform: translateX(10%);
     }
     div#main2 > div.telaRev > p{
         font-size: 1em;
@@ -133,5 +145,17 @@
     
     section#revisao > header > div#carrinho2 > p#qtdCarro2{
         font-size: 1.1em;
+    }
+    div#total{
+        width: 385px;
+        margin: auto;
+        margin-top: 20px;
+        background-color: black;
+        padding: 15px;
+        transform: translateX(-10%);
+        border-radius: 7px;
+    }
+    p#numTotal{
+        margin-left: 40px;
     }
 }
