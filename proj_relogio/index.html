@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="container-absoluto">
+        <div id="container">
+            <h1>AM</h1>
+            <div id="timer">
+                <div class="time" id="horas">00</div>
+                <div id="separador">:</div>
+                <div class="time" id="minutos">00</div>
+                <div id="separador">:</div>
+                <div class="time" id="segundos">00</div>
+            </div>
+        </div>
+    </div>
+    <div id="container-modos">
+        <div id="container-op">
+            <label for="com-amId">Modo 24 Horas</label>
+            <input type="radio" name="op" id="com-amId">
+            <label for="sem-amId">Modo AM-PM</label>
+            <input type="radio" name="op" id="sem-amId">
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
