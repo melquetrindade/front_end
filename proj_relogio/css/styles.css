@@ -35,7 +35,7 @@ body{
 }
 
 #container > h1{
-    display: block;
+
     background-color: var(--cor03);
     padding: 10px 0px;
     padding-left: 70px;
@@ -87,4 +87,13 @@ body{
     align-items: center;
     justify-content: center;
     box-shadow: 3px 3px 3px black;
+    font-weight: bolder;
+}
+
+#sem-amLal{
+    padding-left: 20px;
+}
+
+label.etiqueta{
+    padding-right: 5px;
 }

@@ -10,7 +10,7 @@
 <body>
     <div id="container-absoluto">
         <div id="container">
-            <h1>AM</h1>
+            <h1 id="frase-modo">Modo 24 horas</h1>
             <div id="timer">
                 <div class="time" id="horas">00</div>
                 <div id="separador">:</div>
@@ -22,10 +22,10 @@
     </div>
     <div id="container-modos">
         <div id="container-op">
-            <label for="com-amId">Modo 24 Horas</label>
+            <label class="etiqueta" id="com-amLal" for="com-amId">Modo AM/PM</label>
             <input type="radio" name="op" id="com-amId">
-            <label for="sem-amId">Modo AM-PM</label>
-            <input type="radio" name="op" id="sem-amId">
+            <label class="etiqueta" id="sem-amLal" for="sem-amId">Modo 24 Horas</label>
+            <input type="radio" name="op" id="sem-amId" checked>
         </div>
     </div>
     <script src="js/script.js"></script>
