@@ -7,7 +7,7 @@
     <title>Relógio Digital</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body id="corpo">
     <div id="container-absoluto">
         <div id="container">
             <h1 id="frase-modo">Modo 24 horas</h1>
@@ -28,6 +28,12 @@
                 <input type="radio" name="op" id="com-amId">
                 <label class="etiqueta" id="sem-amLal" for="sem-amId">24 Horas</label>
                 <input type="radio" name="op" id="sem-amId" checked>
+            </div>
+            <div id="container-escuro">
+                <label class="etiqueta" id="com-escLab" for="com-escId">Escuro</label>
+                <input type="radio" name="esc" id="com-escId">
+                <label class="etiqueta" id="sem-escLab" for="sem-escId">Claro</label>
+                <input type="radio" name="esc" id="sem-escId" checked>
             </div>
         </div>
     </div>

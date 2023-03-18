@@ -4,6 +4,13 @@ const segundosEl = document.querySelector("#segundos")
 const comAmEl = document.getElementById("com-amId")
 const semAmEl = document.getElementById("sem-amId")
 const modoel = document.querySelector("#frase-modo")
+const comEscEl = document.getElementById("com-escId")
+const semEscEl = document.getElementById("sem-escId")
+const bodyEl = document.querySelector("#corpo")
+const fraseEl = document.querySelector("#frase-modo")
+const numsEl = document.querySelectorAll(".time")
+
+console.log(numsEl)
 
 var hora = 0
 var minutos = 0
@@ -134,4 +141,20 @@ semAmEl.addEventListener("change", function(){
     clearInterval(intervalAm)
     atualiza()
     disparaRel()
+})
+
+semEscEl.addEventListener("change", function(){
+    bodyEl.style.background = "linear-gradient(to right, var(--cor01), var(--cor02))"
+    fraseEl.style.background = "var(--cor03)"
+    numsEl.forEach((el) => {
+        el.style.borderBottom = "5px solid var(--cor02)"
+    })
+})
+
+comEscEl.addEventListener("change", function(){
+    bodyEl.style.background = "rgb(44, 44, 44)"
+    fraseEl.style.background = "rgb(76, 76, 76)"
+    numsEl.forEach((el) => {
+        el.style.borderBottom = "5px solid rgb(76, 76, 76)"
+    })
 })
