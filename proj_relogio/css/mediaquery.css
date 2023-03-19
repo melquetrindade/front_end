@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 390px) {
+    #container-absoluto{
+        margin-top: 50px;
+    }
+    #container{
+        width: 300px;
+    }
+    h1#frase-modo{
+        padding-left: 100px;
+    }
+    #timer{
+        font-size: 2em;
+        gap: 0rem;
+    }
+    div.time{
+        width: 45px;
+        margin-bottom: 5px;
+        margin: auto;
+        text-align: center;
+    }
+    #segundos{
+        width: 30px;
+        font-size: 1rem;
+    }
+    #container-datas{
+        text-align: center;
+    }
+    #container-modos{
+        margin-top: 30px;
+    }
+    #container-op{
+        font-size: 0.9em;
+        width: 230px;
+        padding: 10px;
+    }
+}

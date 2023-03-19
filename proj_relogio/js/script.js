@@ -136,7 +136,7 @@ function pegaData(){
 
     let dia = dataCompleta.getDay()
     diaNumEl.innerHTML = formataDate(dataCompleta.getDate())
-    let mes = dataCompleta.getMonth()
+    mesEl.innerHTML = formataDate(dataCompleta.getMonth() +1)
     anoEl.innerHTML = `${dataCompleta.getFullYear()}`
 
     switch(dia){
