@@ -9,6 +9,12 @@ const semEscEl = document.getElementById("sem-escId")
 const bodyEl = document.querySelector("#corpo")
 const fraseEl = document.querySelector("#frase-modo")
 const numsEl = document.querySelectorAll(".time")
+const containerOpEl = document.querySelector("#container-op")
+const diaNomeEl = document.querySelector("#diaNome")
+const diaNumEl = document.querySelector("#diaNum")
+const mesEl = document.querySelector("#mes")
+const anoEl = document.querySelector("#ano")
+
 
 console.log(numsEl)
 
@@ -33,6 +39,8 @@ function atualiza(){
     minutos = dateAtual.getMinutes()
     segundos = dateAtual.getSeconds()
 }
+
+pegaData()
 
 if(altoriza == true){
     atualiza()
@@ -117,6 +125,56 @@ function formataTime(time){
     }
 }
 
+function pegaData(){
+    /*
+    console.log(dateAtual.getDay())
+    console.log(dateAtual.getFullYear())
+    console.log(dateAtual.getDate())
+    console.log(dateAtual.getMonth())*/
+
+    let dataCompleta = new Date()
+
+    let dia = dataCompleta.getDay()
+    diaNumEl.innerHTML = formataDate(dataCompleta.getDate())
+    let mes = dataCompleta.getMonth()
+    anoEl.innerHTML = `${dataCompleta.getFullYear()}`
+
+    switch(dia){
+        case 0:
+            diaNomeEl.innerHTML = "Dom"
+            break
+        case 1:
+            diaNomeEl.innerHTML = "Seg"
+            break
+        case 2:
+            diaNomeEl.innerHTML = "Ter"
+            break
+        case 3:
+            diaNomeEl.innerHTML = "Qua"
+            break
+        case 4:
+            diaNomeEl.innerHTML = "Qui"
+            break
+        case 5:
+            diaNomeEl.innerHTML = "Sex"
+            break
+        default:
+            diaNomeEl.innerHTML = "Sab"
+    }
+
+
+
+}
+
+function formataDate(dia){
+    if(dia < 10){
+        return `0${dia}`
+    }
+    else{
+        return `${dia}`
+    }
+}
+
 comAmEl.addEventListener("change", function(){
     dispara = false
     clearInterval(interval24)
@@ -149,6 +207,7 @@ semEscEl.addEventListener("change", function(){
     numsEl.forEach((el) => {
         el.style.borderBottom = "5px solid var(--cor02)"
     })
+    containerOpEl.style.background = "var(--cor03)"
 })
 
 comEscEl.addEventListener("change", function(){
@@ -157,4 +216,5 @@ comEscEl.addEventListener("change", function(){
     numsEl.forEach((el) => {
         el.style.borderBottom = "5px solid rgb(76, 76, 76)"
     })
+    containerOpEl.style.background = "rgb(76, 76, 76)"
 })

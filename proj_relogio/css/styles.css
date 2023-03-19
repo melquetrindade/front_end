@@ -32,11 +32,10 @@ body{
     background-color: black;
     color: white;
     width: 700px;
-    height: 200px;
     border-radius: 20px;
 }
 
-#container > h1{
+h1#frase-modo{
     background-color: var(--cor03);
     /*
     background-color: rgb(76, 76, 76);*/
@@ -69,6 +68,25 @@ body{
     border-bottom: 5px solid rgb(76, 76, 76);*/
 }
 
+#container-datas{
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    padding: 10px 10px;
+    padding-right: 60px;
+}
+
+#container-datas > p{
+    padding-right: 10px;
+}
+
+h1#frase-data{
+    padding: 10px;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 40px;
+}
+
 #segundos{
     font-size: 3rem;
 }
@@ -81,9 +99,9 @@ body{
 }
 
 #container-op{
+    background-color: var(--cor03);
     /*
-    background-color: var(--cor03);*/
-    background-color: rgb(76, 76, 76);
+    background-color: rgb(76, 76, 76);*/
     color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
