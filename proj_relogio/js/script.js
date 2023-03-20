@@ -15,9 +15,6 @@ const diaNumEl = document.querySelector("#diaNum")
 const mesEl = document.querySelector("#mes")
 const anoEl = document.querySelector("#ano")
 
-
-console.log(numsEl)
-
 var hora = 0
 var minutos = 0
 var segundos = 0
@@ -66,6 +63,7 @@ function disparaRel(){
             hora = 0
             minutos = 0
             segundos = 0
+            pegaData()
         }
     
         horaEl.innerHTML = formataTime(hora)
@@ -74,7 +72,6 @@ function disparaRel(){
     
     },1000)
 }
-
 
 function modoAm(){
     intervalAm = setInterval(() =>{
@@ -94,6 +91,7 @@ function modoAm(){
             }
             else{
                 modoel.innerHTML = "AM"
+                pegaData()
             }
         }
 
@@ -126,11 +124,6 @@ function formataTime(time){
 }
 
 function pegaData(){
-    /*
-    console.log(dateAtual.getDay())
-    console.log(dateAtual.getFullYear())
-    console.log(dateAtual.getDate())
-    console.log(dateAtual.getMonth())*/
 
     let dataCompleta = new Date()
 
@@ -161,8 +154,6 @@ function pegaData(){
         default:
             diaNomeEl.innerHTML = "Sab"
     }
-
-
 
 }
 
