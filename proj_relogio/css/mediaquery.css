@@ -13,6 +13,8 @@
     #timer{
         font-size: 2em;
         gap: 0rem;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     div.time{
         width: 45px;
@@ -43,7 +45,7 @@
         margin-top: 80px;
     }
     #container{
-        width: 390px;
+        width: 370px;
     }
     h1#frase-modo{
         padding-left: 100px;
@@ -51,15 +53,17 @@
     #timer{
         font-size: 3em;
         gap: 0rem;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     div.time{
-        width: 70px;
+        width: 60px;
         margin-bottom: 5px;
         margin: auto;
         text-align: center;
     }
     #segundos{
-        width: 40px;
+        width: 35px;
         font-size: 1.5rem;
     }
     #container-datas{
@@ -91,6 +95,8 @@
         font-size: 5em;
         gap: 0rem;
         padding-bottom: 15px;
+        padding-left: 50px;
+        padding-right: 50px;
     }
     div.time{
         width: 110px;
@@ -111,7 +117,7 @@
     }
     #container-op{
         font-size: 1.7em;
-        width: 530px;
+        width: 430px;
         padding: 20px;
     }
 }
