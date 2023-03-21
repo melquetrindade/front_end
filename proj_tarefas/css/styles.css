@@ -20,6 +20,7 @@ body{
 #frase1{
     color: white;
     text-align: center;
+    font-weight: bolder;
 }
 
 #container-input{
@@ -28,23 +29,32 @@ body{
     justify-content: center;
     margin-top: 25px;
     position: relative;
+    max-width: 700px;
 }
 
 span.add{
     position: absolute;
     top: 0px;
-    right: 0px;
+    right: -45px;
     width: 50px;
     line-height: 30px;
     border-left: 2px solid black;
-    height: 57px;
+    height: 58px;
     text-align: center;
     padding-top: 12px;
+    transition: 0.3s;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background-color: white;
+    cursor: pointer;
 }
 
-#tarefaId{
-    border-radius: none;
-    border: 2px solid rgb(0, 230, 23);
+span.add:hover{
+    background-color: rgb(23, 23, 132);
+}
+
+#tarefaId:focus{
+    outline: none;
 }
 
 #frase2{
@@ -52,6 +62,7 @@ span.add{
     color: white;
     text-align: center;
     font-size: 2em;
+    font-weight: bolder;
 }
 
 #container-main{
@@ -71,7 +82,7 @@ li.blocoTarefa{
     margin-bottom: 10px;
     padding-left: 10px;
     transition: 0.5s;
-    height: 50px;
+    min-height: 50px;
 }
 
 li.blocoTarefa > p{
@@ -79,6 +90,7 @@ li.blocoTarefa > p{
     overflow-wrap: break-word;
     min-height: 40px;
     padding: 5px;
+    font-weight: bolder;
 }
 
 .done, .close{
@@ -106,4 +118,14 @@ span.close{
 
 span.close:hover{
     background-color: red;
+}
+
+ul#list-cont > li.done{
+    background-color: rgb(23, 23, 132);
+    color: white;
+    text-decoration: line-through;
+}
+
+ul#list-cont > li.hide{
+    display: none;
 }

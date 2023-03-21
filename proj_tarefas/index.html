@@ -16,9 +16,9 @@
         <div id="containerEl">
             <h1 id="frase1">SALVE AQUI A SUA PRÓXIMA TAREFA:</h1>
             <div id="container-input" class="form-floating">
-                <input type="text" class="form-control shadow-none" name="tarefa" id="tarefaId" required placeholder="O que você vai fazer?">
-                <span class="material-symbols-outlined add">add</span>
+                <input type="text" class="form-control" name="tarefa" id="tarefaId" required placeholder="O que você vai fazer?">
                 <label for="tarefaId">O que você vai fazer?</label>
+                <span id="add-tarefa" class="material-symbols-outlined add">add</span>
             </div>
             <h1 id="frase2">Estas são as suas tarefas:</h1>
         </div>
@@ -26,8 +26,8 @@
     <div id="container-main">
         <div id="container-tarefas">
             <ul id="list-cont">
-                <li class="blocoTarefa">
-                    <p>Lavar o Carro</p>
+                <li class="blocoTarefa template hide">
+                    <p id="title">Lavar o Carro</p>
                     <span class="done"><span class="material-symbols-outlined">done</span></span>
                     <span class="close"><span class="material-symbols-outlined">close</span></span>
                 </li>
