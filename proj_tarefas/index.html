@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body>
+    <div id="container-header">
+        <div id="containerEl">
+            <h1 id="frase1">SALVE AQUI A SUA PRÓXIMA TAREFA:</h1>
+            <div id="container-input" class="form-floating">
+                <input type="text" class="form-control shadow-none" name="tarefa" id="tarefaId" required placeholder="O que você vai fazer?">
+                <span class="material-symbols-outlined add">add</span>
+                <label for="tarefaId">O que você vai fazer?</label>
+            </div>
+            <h1 id="frase2">Estas são as suas tarefas:</h1>
+        </div>
+    </div>
+    <div id="container-main">
+        <div id="container-tarefas">
+            <ul id="list-cont">
+                <li class="blocoTarefa">
+                    <p>Lavar o Carro</p>
+                    <span class="done"><span class="material-symbols-outlined">done</span></span>
+                    <span class="close"><span class="material-symbols-outlined">close</span></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
