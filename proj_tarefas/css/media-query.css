@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 390px) {
+    #frase1{
+        font-size: 1em;
+    }
+    #container-input{
+        width: 240px;
+        font-size: 1em;
+        margin-left: 8px;
+    }
+    #frase2{
+        font-size: 1em;
+    }
+    li.blocoTarefa{
+        width: 250px;
+        margin-left: -40px;
+    }
+}
+
+@media screen and (min-width: 390px) and (max-width: 768px) {
+    #frase1{
+        font-size: 1.2em;
+    }
+    #container-input{
+        width: 300px;
+        font-size: 1em;
+        margin-left: 5px;
+    }
+    #frase2{
+        margin-top: 20px;
+        font-size: 1.2em;
+    }
+    li.blocoTarefa{
+        width: 330px;
+        margin-left: -40px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px){
+    #frase1{
+        font-size: 1.8em;
+    }
+    #container-input{
+        width: 600px;
+        font-size: 1em;
+        margin-left: -15px;
+    }
+    #frase2{
+        margin-top: 20px;
+        font-size: 1.8em;
+    }
+    li.blocoTarefa{
+        width: 530px;
+        margin-left: -40px;
+    }
+}
