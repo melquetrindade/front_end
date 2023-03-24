@@ -8,8 +8,16 @@ function processTecla(e){
     const onlyNumbers = /[0-9,]/
     const key = String.fromCharCode(e.keyCode)
 
-    if(alturaEl.value.includes(",")){
+    let tamInputAlt = alturaEl.value
+
+    if(alturaEl.value.includes(",") && (e.key == ",")){
         e.preventDefault()
+        return
+    }
+
+    if(tamInputAlt.length === 0 && (e.key == ",")){
+        e.preventDefault()
+        return
     }
     
     if(!onlyNumbers.test(key)){
