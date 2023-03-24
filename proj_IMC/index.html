@@ -14,7 +14,7 @@
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
-    <div id="main" class="hide">
+    <div id="main" class="">
         <div id="calculadora">
             <h1>Calculadora de IMC</h1>
             <div id="entrada">
@@ -37,10 +37,16 @@
             </div>
         </div>
     </div>
-    <div id="container-info">
+    <div id="container-info" class="hide">
         <div id="informes">
-            <h1>Seu IMC: 00.0</h1>
-            <h2>Situação atual:</h2>
+            <div id="container-res">
+                <h1>Seu IMC: </h1>
+                <h1 id="res">999</h1>
+            </div>
+            <div id="container-clas">
+                <h2>Situação atual:</h2>
+                <h2 id="clas">Sobrepeso</h2>
+            </div>
             <h2 id="title-tab">Confira as classificações</h2>
             <div id="container-tabela">
                 <div class="esquerda">
@@ -68,6 +74,7 @@
                     <p>III</p>
                 </div>
             </div>
+            <button id="btnVoltar">Voltar</button>
         </div>
     </div>
     <script src="js/script.js"></script>
