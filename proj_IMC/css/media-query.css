@@ -35,3 +35,85 @@
         font-size: 0.8em;
     }
 }
+
+@media screen and (min-width: 390px) and (max-width: 768px) {
+    div#main{
+        margin-top: 90px;
+    }
+    div#calculadora{
+        width: 380px;
+    }
+    div#entrada > form input{
+        width: 320px;
+    }
+    button#calcBtn{
+        margin-right: 40px;
+    }
+    div#container-info{
+        margin-top: 80px;
+    }
+    div#informes{
+        width: 380px;
+    }
+    div#informes > h2{
+        font-size: 1.4em;
+    }
+    div#container-res > h1#res{
+        width: 70px;
+    }
+    div#container-clas > h2{
+        font-size: 1.4em;
+    }
+    div#container-clas > h2#clas{
+        font-size: 1.2em;
+    }
+    div#container-tabela p{
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    div#main{
+        margin-top: 90px;
+    }
+    div#calculadora{
+        width: 540px;
+    }
+    div#calculadora > h1{
+        font-size: 1.7em;
+    }
+    div#entrada p{
+        font-size: 1.4em;
+    }
+    div#entrada > form input{
+        width: 420px;
+        height: 65px;
+    }
+    button#calcBtn{
+        margin-right: 40px;
+    }
+    div#container-info{
+        margin-top: 80px;
+    }
+    div#informes{
+        width: 540px;
+    }
+    div#informes > h2{
+        font-size: 1.4em;
+    }
+    div#container-res > h1#res{
+        width: 90px;
+    }
+    div#container-clas > h2{
+        font-size: 1.7em;
+    }
+    div#container-clas > h2#clas{
+        font-size: 1.7em;
+    }
+    div#container-tabela p{
+        font-size: 1.5em;
+    }
+    div#informes > h2#title-tab{
+        font-size: 1.8em;
+    }
+}
