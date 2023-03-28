@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 390px) {
+    div#container-conteudo{
+        width: 300px;
+    }
+    div#title{
+        gap: 0px;
+        padding: 5px;
+    }
+    div#title > span{
+        color: var(--cor04);
+        font-size: 2em;
+    }
+    div#container-conteudo h1{
+        color: var(--cor03);
+        font-size: 1.3em;
+    }
+    form#input{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    input#cityId, select#regionId{
+        width: 145px;
+        margin-bottom: 5px;
+    }
+    div#container-buttons{
+        gap: 50px;
+    }
+    div#mensagem{
+        width: 280px;
+    }
+}
