@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+div#containerPricipal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+div#container2{
+    display: block;
+    width: 600px;
+}
+
+h1#perguntas{
+    background-color: rgb(0, 0, 0);
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+div#containerRespostas{
+    background-color: blueviolet;
+    height: 550px;
+    position: relative;
+}
+
+div.res1{
+    cursor: pointer;
+    display: inline-block;
+    margin: 25px;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    border-radius: 10px;
+}
+
+div.res2{
+    cursor: pointer;
+    color: white;
+    display: inline-block;
+    margin: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+}
+
+div.res1 > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+div.res2 > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: purple;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+div#containerObs{
+    background-color: rgb(83, 255, 80);
+    color: rgb(0, 70, 21);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+button.butto{
+    background-color: dodgerblue;
+    padding: 9px;
+    width: 200px;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 200px;
+    cursor: pointer;
+}
+
+button.butto:hover{
+    background-color: rgb(36, 203, 17);
+}
+
+.hide{
+    display: none;
+}
+
+.done{
+    display: block;
+}
+
+img.imgRaquel{
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+}
+
+a#link{
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+}
