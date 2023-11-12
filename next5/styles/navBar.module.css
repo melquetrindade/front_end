@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.ul{
+    display: flex;
+    align-items: center;
+    background-color: black;
+    height: 50px;
+    padding: 10px;
+    list-style: none;
+}
+
+.ul a{
+    text-decoration: none;
+    margin-right: 3em;
+    color: white;
+    transition: 0.3s;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.ul a:hover{
+    color: darkblue;
+}
